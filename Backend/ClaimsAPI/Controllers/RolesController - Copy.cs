@@ -52,7 +52,7 @@ namespace ClaimsAPI.Controllers
                 return NotFound();
             }
             GetRolesDTO role = new GetRolesDTO();
-            role.RoleId = id;
+            role.RoleId = temp[0].RoleId;
             role.RoleName = temp[0].RoleName;
           
 
@@ -62,7 +62,7 @@ namespace ClaimsAPI.Controllers
 
         //create role
         [HttpPost("[action]")]
-        public async Task<IActionResult> CreateRole(CreateUpdateRolesDTO roleDTO)
+        public async Task<IActionResult> CreateRole(GetRolesDTO roleDTO)
         {
             if (roleDTO == null)
             {
@@ -71,6 +71,7 @@ namespace ClaimsAPI.Controllers
             }
                Role role = new Role();
 
+            role.RoleId = roleDTO.RoleId;
             role.RoleName = roleDTO.RoleName;
 
 
@@ -83,11 +84,11 @@ namespace ClaimsAPI.Controllers
 
         // Update role
         [HttpPut("[action]")]
-        public async Task<IActionResult> UpdateRole(CreateUpdateRolesDTO rolesDTO,int id)
+        public async Task<IActionResult> UpdateRole(GetRolesDTO rolesDTO)
         {
 
 
-            var roleToUpdate = await _dbContext.Roles.FindAsync(id);
+            var roleToUpdate = await _dbContext.Roles.FindAsync(rolesDTO.RoleId);
             if (roleToUpdate == null)
             {
                 return NotFound("role not found.");
@@ -104,9 +105,9 @@ namespace ClaimsAPI.Controllers
 
         // Delete role
         [HttpDelete("[action]")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(GetRolesDTO rolesDTO)
         {
-            var role = await _dbContext.Roles.FindAsync(id);
+            var role = await _dbContext.Roles.FindAsync(rolesDTO.RoleId);
             if (role == null)
             {
                 return NotFound("role not found.");
