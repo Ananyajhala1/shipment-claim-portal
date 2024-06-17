@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET_projects\\claims-portal\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj": {}
+    "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj": {}
   },
   "projects": {
-    "D:\\.NET_projects\\claims-portal\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj": {
+    "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET_projects\\claims-portal\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+        "projectUniqueName": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
         "projectName": "ClaimsAPI",
-        "projectPath": "D:\\.NET_projects\\claims-portal\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET_projects\\claims-portal\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
+        "projectPath": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+        "packagesPath": "C:\\Users\\ANANYA\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ANANYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
