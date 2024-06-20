@@ -318,7 +318,7 @@ public partial class ShipmentClaimsContext : DbContext
 
         modelBuilder.Entity<UserRole>(entity =>
         {
-            entity.HasNoKey();
+           // entity.HasNoKey();
 
             entity.HasOne(d => d.Role).WithMany()
                 .HasForeignKey(d => d.RoleId)

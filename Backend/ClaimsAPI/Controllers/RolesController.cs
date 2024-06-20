@@ -119,6 +119,146 @@ namespace ClaimsAPI.Controllers
         }
 
 
+        // user role
+
+
+
+        //get users from role
+        [HttpGet("usersForRole")]
+
+        public async Task<IActionResult> GetUsersInRole(int rid)
+        {
+
+            var roles = await (from UserRole in _dbContext.UserRoles.Where(x => x.RoleId == rid)
+                               select new GetuserRoleDTO
+                               {
+                                   RoleId = UserRole.RoleId,
+                                   RoleName =UserRole.Role.RoleName,
+                                   UserId = UserRole.UserId,
+                                   FirstName = UserRole.User.FirstName
+
+
+                               }).ToListAsync();
+
+            if (roles == null || roles.Count == 0)
+            {
+                return NotFound();
+            }
+            
+            return Ok(roles);
+        }
+
+        // get roles from user
+        [HttpGet("rolesForUser")]
+
+        public async Task<IActionResult> GetRolesInUser(int uid)
+        {
+
+            var users = await (from UserRole in _dbContext.UserRoles.Where(x=>x.UserId == uid)
+                            select new GetuserRoleDTO
+                               {
+                                   RoleId = UserRole.RoleId,
+                                   RoleName = UserRole.Role.RoleName,
+                                   UserId = UserRole.UserId,
+                                   FirstName = UserRole.User.FirstName
+
+
+                               }).ToListAsync();
+
+            if (users == null || users.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(users);
+        }
+
+        // creating user role
+
+        [HttpPost("CreateUserRole")]
+        public async Task<IActionResult> CreateUserRole(int uid , int rid)
+        {
+         
+
+            var existingUserRole = await _dbContext.UserRoles
+                .FirstOrDefaultAsync(ur => ur.UserId == uid && ur.RoleId == rid);
+
+            if (existingUserRole != null)
+            {
+                return Conflict("User role association already exists.");
+            }
+
+            var newUserRole = new UserRole
+            {
+                UserId = uid,
+                RoleId = rid
+            };
+
+            _dbContext.UserRoles.Add(newUserRole);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(newUserRole);
+        }
+
+        // updating user role
+
+        [HttpPut("UpdateUserRole")]
+        public async Task<IActionResult> UpdateUserRole(UpdateuserRoleDTO userRoleDTO)
+        {
+            if (userRoleDTO == null)
+            {
+                return BadRequest("User role data is null.");
+            }
+
+            var userRoleToUpdate = await _dbContext.UserRoles.FindAsync(userRoleId);
+
+            if (userRoleToUpdate == null)
+            {
+                return NotFound("User role association not found.");
+            }
+
+            // Check if the specified UserId or RoleId has changed
+            if (userRoleToUpdate.UserId != userRoleDTO.UserId || userRoleToUpdate.RoleId != userRoleDTO.RoleId)
+            {
+                // Check if there is already an existing user role association with the new UserId and RoleId
+                var existingUserRole = await _dbContext.UserRoles
+                    .FirstOrDefaultAsync(ur => ur.UserId == userRoleDTO.UserId && ur.RoleId == userRoleDTO.RoleId);
+
+                if (existingUserRole != null && existingUserRole.UserRoleId != userRoleId)
+                {
+                    return Conflict("User role association already exists for the new UserId and RoleId.");
+                }
+            }
+
+            // Update user role association with new UserId and RoleId
+            userRoleToUpdate.UserId = userRoleDTO.UserId;
+            userRoleToUpdate.RoleId = userRoleDTO.RoleId;
+
+            _dbContext.UserRoles.Update(userRoleToUpdate);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        // delete user role
+        [HttpDelete("DeleteUserRole/{userRoleId}")]
+        public async Task<IActionResult> DeleteUserRole(int userRoleId)
+        {
+            var userRoleToDelete = await _dbContext.UserRoles.FindAsync(userRoleId);
+
+            if (userRoleToDelete == null)
+            {
+                return NotFound("User role association not found.");
+            }
+
+            _dbContext.UserRoles.Remove(userRoleToDelete);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
 
     }
 }
