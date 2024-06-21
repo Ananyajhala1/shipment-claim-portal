@@ -5,6 +5,8 @@ D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.runtimeconfig.json
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.pdb
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Identity.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Humanizer.dll

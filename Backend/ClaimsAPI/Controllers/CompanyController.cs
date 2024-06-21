@@ -29,9 +29,9 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{id : Guid}")]
+        [Route("{id : int}")]
 
-        public IActionResult GetCompanyById(Guid id)
+        public IActionResult GetCompanyById(int id)
         {
             var company = shipmentClaimsContext.Companies.Find(id);
             if (company == null)
@@ -70,9 +70,9 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpPut]
-        [Route("{id : Guid}")]
+        [Route("{id : int}")]
 
-        public IActionResult UpdateCompany(Guid id, Company company)
+        public IActionResult UpdateCompany(int id, Company company)
         {
             var Company = shipmentClaimsContext.Companies.Find(id);
             if (Company == null)
@@ -100,9 +100,9 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("{id : Guid}")]
+        [Route("{id : int}")]
 
-        public IActionResult DeleteCompany(Guid id)
+        public IActionResult DeleteCompany(int id)
         {
             var company = shipmentClaimsContext.Companies.Find(id);
             if (company == null)

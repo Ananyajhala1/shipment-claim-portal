@@ -5,11 +5,11 @@ namespace ClaimsAPI.Models.Entities;
 
 public partial class ClaimDocument
 {
-    public Guid DocId { get; set; }
+    public int DocId { get; set; }
 
-    public Guid? ClaimId { get; set; }
+    public int? ClaimId { get; set; }
 
-    public Guid? DocTypeId { get; set; }
+    public int? DocTypeId { get; set; }
 
     public byte[]? Document { get; set; }
 

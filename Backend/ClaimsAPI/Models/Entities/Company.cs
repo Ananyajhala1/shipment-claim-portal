@@ -5,7 +5,7 @@ namespace ClaimsAPI.Models.Entities;
 
 public partial class Company
 {
-    public Guid CompanyId { get; set; }
+    public int CompanyId { get; set; }
 
     public int? CompanyTypeId { get; set; }
 
@@ -13,7 +13,7 @@ public partial class Company
 
     public bool IsCorporate { get; set; }
 
-    public Guid? ParentCompanyId { get; set; }
+    public int? ParentCompanyId { get; set; }
 
     public virtual ICollection<Claim> ClaimCarriers { get; set; } = new List<Claim>();
 

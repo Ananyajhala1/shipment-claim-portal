@@ -5,7 +5,7 @@ namespace ClaimsAPI.Models.Entities;
 
 public partial class UserTemplate
 {
-    public Guid TemplateId { get; set; }
+    public int TemplateId { get; set; }
 
     public int? UserId { get; set; }
 

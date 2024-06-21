@@ -11,9 +11,9 @@ public partial class ClaimEmail
 
     public string? Body { get; set; }
 
-    public Guid? RecepientId { get; set; }
+    public int? RecepientId { get; set; }
 
-    public Guid? ClaimId { get; set; }
+    public int? ClaimId { get; set; }
 
     public int? FromId { get; set; }
 
