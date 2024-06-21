@@ -4529,11 +4529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\internWork\\Ananaya's Dad\\backend\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+      "projectUniqueName": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "projectName": "ClaimsAPI",
-      "projectPath": "D:\\internWork\\Ananaya's Dad\\backend\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+      "projectPath": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "packagesPath": "C:\\Users\\kunjt\\.nuget\\packages\\",
-      "outputPath": "D:\\internWork\\Ananaya's Dad\\backend\\Backend\\ClaimsAPI\\obj\\",
+      "outputPath": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

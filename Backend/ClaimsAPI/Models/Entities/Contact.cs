@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class Contact
 {
-    public Guid ContactId { get; set; }
+    public int ContactId { get; set; }
 
     public string? ContactName { get; set; }
 
@@ -13,7 +13,7 @@ public partial class Contact
 
     public string? Phone { get; set; }
 
-    public Guid? CompanyId { get; set; }
+    public int? CompanyId { get; set; }
 
     public virtual Company? Company { get; set; }
 }

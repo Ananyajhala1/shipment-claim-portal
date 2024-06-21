@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class Location
 {
-    public Guid LocationId { get; set; }
+    public int LocationId { get; set; }
 
     public string? Name { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Location
 
     public int? Zipcode { get; set; }
 
-    public Guid? CompanyId { get; set; }
+    public int? CompanyId { get; set; }
 
     public virtual Company? Company { get; set; }
 }

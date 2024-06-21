@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class UserTemplate
 {
-    public Guid TemplateId { get; set; }
+    public int TemplateId { get; set; }
 
     public int? UserId { get; set; }
 

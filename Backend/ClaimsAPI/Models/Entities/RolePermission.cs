@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class RolePermission
 {

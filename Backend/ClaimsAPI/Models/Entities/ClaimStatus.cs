@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class ClaimStatus
 {
@@ -9,7 +9,7 @@ public partial class ClaimStatus
 
     public string? StatusDesc { get; set; }
 
-    public Guid? ClaimId { get; set; }
+    public int? ClaimId { get; set; }
 
     public virtual Claim? Claim { get; set; }
 

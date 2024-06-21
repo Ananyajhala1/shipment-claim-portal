@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models;
 
 public partial class ClaimTask
 {
-    public Guid TaskId { get; set; }
+    public int TaskId { get; set; }
 
     public string? TaskDes { get; set; }
 
@@ -13,7 +13,7 @@ public partial class ClaimTask
 
     public int? UserId { get; set; }
 
-    public Guid? ClaimId { get; set; }
+    public int? ClaimId { get; set; }
 
     public DateOnly? DueDate { get; set; }
 
