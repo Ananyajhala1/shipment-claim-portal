@@ -46,7 +46,7 @@ namespace ClaimsAPI.Controllers
        
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> CompanyUsers(Guid cid)
+        public async Task<IActionResult> CompanyUsers(int cid)
         {
             var users = await _dbContext.UserInfos
                                       .Where(u => u.CompanyId == cid)

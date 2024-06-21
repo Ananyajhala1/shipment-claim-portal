@@ -292,7 +292,7 @@ public partial class ShipmentClaimsContext : DbContext
 
             entity.Property(e => e.UserId).ValueGeneratedNever();
             entity.Property(e => e.Password)
-                .HasColumnType("text")
+               // .HasColumnType("varchar")
                 .HasColumnName("password");
             entity.Property(e => e.UserName).HasMaxLength(100);
 

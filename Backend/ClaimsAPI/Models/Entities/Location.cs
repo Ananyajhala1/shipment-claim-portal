@@ -19,7 +19,7 @@ public partial class Location
 
     public int? Zipcode { get; set; }
 
-    public Guid? CompanyId { get; set; }
+    public int CompanyId { get; set; }
 
     public virtual Company? Company { get; set; }
 }

@@ -13,7 +13,7 @@ public partial class Contact
 
     public string? Phone { get; set; }
 
-    public Guid? CompanyId { get; set; }
+    public int CompanyId { get; set; }
 
     public virtual Company? Company { get; set; }
 }

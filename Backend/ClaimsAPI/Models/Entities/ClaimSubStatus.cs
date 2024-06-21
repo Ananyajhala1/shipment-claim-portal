@@ -9,7 +9,7 @@ public partial class ClaimSubStatus
 
     public int? StatusId { get; set; }
 
-    public Guid? CompanyId { get; set; }
+    public int CompanyId { get; set; }
 
     public virtual Company? Company { get; set; }
 

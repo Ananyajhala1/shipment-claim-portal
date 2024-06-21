@@ -14,7 +14,7 @@ namespace ClaimsAPI.Models.ViewModels
 
         public string? email { get; set; }
 
-        public Guid? CompanyId { get; set; }
+        public int CompanyId { get; set; }
 
 
 

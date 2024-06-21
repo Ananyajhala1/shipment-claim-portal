@@ -272,3 +272,4 @@ C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\scopedcss\bundl
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.csproj.Up2Date
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
+C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

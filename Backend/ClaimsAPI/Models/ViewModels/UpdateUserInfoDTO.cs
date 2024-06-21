@@ -12,7 +12,7 @@ namespace ClaimsAPI.Models.ViewModels
 
         public string? LastName { get; set; }
         public string? ContactNumber { get; set; }
-        public Guid? CompanyId { get; set; }
+        public int CompanyId { get; set; }
 
         public string? email { get; set; }
 

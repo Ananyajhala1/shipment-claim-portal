@@ -5,15 +5,15 @@ namespace ClaimsAPI.Models.Entities;
 
 public partial class Claim
 {
-    public Guid ClaimId { get; set; }
+    public int ClaimId { get; set; }
 
     public DateOnly? FileDate { get; set; }
 
-    public Guid? CustomerId { get; set; }
+    public int CustomerId { get; set; }
 
-    public Guid? CarrierId { get; set; }
+    public int CarrierId { get; set; }
 
-    public Guid? InsuranceId { get; set; }
+    public int InsuranceId { get; set; }
 
     public virtual Company? Carrier { get; set; }
 

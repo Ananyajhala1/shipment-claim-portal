@@ -210,7 +210,7 @@ namespace ClaimsAPI.Controllers
                 return BadRequest("User role data is null.");
             }
 
-            var userRoleToUpdate = await _dbContext.UserRoles.FindAsync(userRoleId);
+            var userRoleToUpdate = await _dbContext.UserRoles.FindAsync(userRoleDTO.UserRoleId);
 
             if (userRoleToUpdate == null)
             {
@@ -224,7 +224,7 @@ namespace ClaimsAPI.Controllers
                 var existingUserRole = await _dbContext.UserRoles
                     .FirstOrDefaultAsync(ur => ur.UserId == userRoleDTO.UserId && ur.RoleId == userRoleDTO.RoleId);
 
-                if (existingUserRole != null && existingUserRole.UserRoleId != userRoleId)
+                if (existingUserRole != null && existingUserRole.UserRoleId != userRoleDTO.UserRoleId)
                 {
                     return Conflict("User role association already exists for the new UserId and RoleId.");
                 }
