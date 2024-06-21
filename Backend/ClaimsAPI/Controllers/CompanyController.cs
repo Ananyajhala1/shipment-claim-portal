@@ -3,6 +3,7 @@ using ClaimsAPI.Models.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ClaimsAPI.Models.DTO.CompanyDTO;
 
 namespace ClaimsAPI.Controllers
 {
@@ -29,7 +30,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{id : int}")]
+        [Route("{id:int}")]
 
         public IActionResult GetCompanyById(int id)
         {
@@ -43,7 +44,7 @@ namespace ClaimsAPI.Controllers
 
         [HttpPost]
 
-        public IActionResult AddCompany(Company company)
+        public IActionResult AddCompany(CompanyPostDTO company)
         {
             var Company = new Company()
             {
@@ -70,14 +71,18 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpPut]
-        [Route("{id : int}")]
+        [Route("{id:int}")]
 
-        public IActionResult UpdateCompany(int id, Company company)
+        public IActionResult UpdateCompany(int id, CompanyUpdateDTO company)
         {
+            if(id != company.CompanyId)
+            {
+                return BadRequest();
+            }
             var Company = shipmentClaimsContext.Companies.Find(id);
             if (Company == null)
             {
-                return BadRequest();
+                return BadRequest("Company does not exist");
             }
             Company.CompanyTypeId = company.CompanyTypeId;
             Company.CompanyName = company.CompanyName;
@@ -100,7 +105,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("{id : int}")]
+        [Route("{id:int}")]
 
         public IActionResult DeleteCompany(int id)
         {

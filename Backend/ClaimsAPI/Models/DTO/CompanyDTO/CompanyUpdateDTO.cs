@@ -1,16 +1,17 @@
 ﻿using ClaimsAPI.Models.Entities;
 
-namespace ClaimsAPI.Models.DTO
+namespace ClaimsAPI.Models.DTO.CompanyDTO
 {
-    public class CompanyDTO
+    public class CompanyUpdateDTO
     {
+        public int CompanyId { get; set; }
         public int? CompanyTypeId { get; set; }
 
         public string CompanyName { get; set; } = null!;
 
         public bool IsCorporate { get; set; }
 
-        public Guid? ParentCompanyId { get; set; }
+        public int? ParentCompanyId { get; set; }
 
         public virtual ICollection<Claim> ClaimCarriers { get; set; } = new List<Claim>();
 

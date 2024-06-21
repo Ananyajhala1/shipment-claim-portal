@@ -1,6 +1,7 @@
-﻿namespace ClaimsAPI.Models.DTO.CompanyType
+﻿namespace ClaimsAPI.Models.DTO.CompanyTypeDTO
 {
-    public class CompanyTypePost
+    public class CompanyTypePostDTO
     {
+        public string? CompanyType1 { get; set; }
     }
 }
