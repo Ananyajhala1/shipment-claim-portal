@@ -243,8 +243,7 @@
               "RelativeToolTip": "Controllers\\ClaimDocumentsController.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAuwEEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T08:25:47.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T08:25:47.353Z"
             },
             {
               "$type": "Document",
@@ -266,7 +265,7 @@
               "RelativeDocumentMoniker": "Helpers\\FileHelper.cs",
               "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Helpers\\FileHelper.cs",
               "RelativeToolTip": "Helpers\\FileHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T08:20:01.777Z",
               "EditorCaption": ""
