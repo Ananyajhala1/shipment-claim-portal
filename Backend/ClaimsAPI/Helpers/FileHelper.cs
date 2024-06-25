@@ -8,7 +8,7 @@ namespace ClaimsApi.Helpers
 
         public static async Task<string> UploadFiles(MemoryStream memoryStream,string FileName)
         {
-            string connectionString = @"DefaultEndpointsProtocol=https;AccountName=musicstrgacc;AccountKey=qXECSVkO9xXDf0zkvQZ86zBNz7misCqaNAX0ph+vMImbVR0+gcN3Iq8Udn5eZZprhuED5dsI1q2i+AStjrKawA==;EndpointSuffix=core.windows.net";
+          
             string containerName = "musicgroup";
             BlobContainerClient blobContainerClient = new BlobContainerClient(connectionString, containerName);
             BlobClient blobClient = blobContainerClient.GetBlobClient(FileName);
