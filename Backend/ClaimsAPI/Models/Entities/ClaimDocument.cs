@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 
 namespace ClaimsAPI.Models.Entities;
@@ -7,11 +8,13 @@ public partial class ClaimDocument
 {
     public int DocId { get; set; }
 
-    public int ClaimId { get; set; }
+    public int? ClaimId { get; set; }
 
     public int DocTypeId { get; set; }
 
-    public byte[]? Document { get; set; }
+    public string DocumentUrl { get; set; }
+
+
 
     public virtual Claim? Claim { get; set; }
 
