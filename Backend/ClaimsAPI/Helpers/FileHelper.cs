@@ -13,7 +13,7 @@ namespace ClaimsApi.Helpers
             BlobContainerClient blobContainerClient = new BlobContainerClient(connectionString, containerName);
             BlobClient blobClient = blobContainerClient.GetBlobClient(FileName);
 
-          
+           //removed azue conncation 
             //todo: take base64 string as param and conver to stream
             //then following code will work
            
