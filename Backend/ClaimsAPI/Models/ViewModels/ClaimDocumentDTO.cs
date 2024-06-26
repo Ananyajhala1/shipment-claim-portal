@@ -2,8 +2,7 @@
 
 namespace ClaimsAPI.Models.ViewModels
 {
-    public class GetClaimDocumentDTO
-    {
+    public class CreateClaimDocumnentDTO {
        
 
         public int? ClaimId { get; set; }
@@ -17,5 +16,27 @@ namespace ClaimsAPI.Models.ViewModels
 
     }
 
+
+    public class GetClaimDocumentDTO
+    {
+
+        public string DocumentUrl { get; set; }
+        public int? ClaimId { get; set; }
+        public string? DoctypeDes { get; set; }
+        public int DocTypeId { get; set; }
+
+    }
+    public class GetClaimDocumentDTOById
+    {
+        public string  Base64string { get; set; }
+    
+        public int? ClaimId { get; set; }
+
+        public int DocTypeId { get; set; }
+
+
+
+
+    }
 
 }

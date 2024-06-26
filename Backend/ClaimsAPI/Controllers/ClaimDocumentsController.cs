@@ -21,7 +21,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(GetClaimDocumentDTO claimDocumentDTO)
+        public async Task<IActionResult> Post(CreateClaimDocumnentDTO claimDocumentDTO)
 
 
  
@@ -55,26 +55,82 @@ namespace ClaimsAPI.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetClaimDocument(int id)
+        public async Task<IActionResult> GetClaimDocument(int cid)
         {
-            var template = await _dbContext.ClaimDocuments
-                .Where(p => p.DocId == id)
+            var document = await _dbContext.ClaimDocuments
+                .Where(p => p.ClaimId== cid)
                 .Select(p => new GetClaimDocumentDTO
                 {
                     ClaimId = p.ClaimId,
                     DocTypeId = p.DocTypeId,
-                    DocumentBase64 = 
-                
+                    DocumentUrl = p.DocumentUrl,
+                    DoctypeDes = p.DocType.DoctypeDes
+
+
+
                 }).FirstOrDefaultAsync();
 
-            if (template == null)
+            if (document == null)
             {
                 return NotFound();
             }
 
-            return Ok(template);
+            return Ok(document);
         }
 
+        [HttpDelete()]
+        public async Task<IActionResult> DeleteClaimDocument(int id)
+        {
+            var document = await _dbContext.ClaimDocuments.FindAsync(id);
+            if (document == null)
+            {
+                return NotFound("document not found.");
+            }
+
+            _dbContext.ClaimDocuments.Remove(document);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
+        [HttpGet("getclaimdocumentbyId")]
+        public async Task<IActionResult> GetClaimDocumentbyId(int id)
+        {
+            var document = await _dbContext.ClaimDocuments
+                .Where(p => p.ClaimId == id)
+                .Select(p => new GetClaimDocumentDTO
+                {
+                    ClaimId = p.ClaimId,
+                    DocTypeId = p.DocTypeId,
+                    DocumentUrl = p.DocumentUrl,
+                    DoctypeDes = p.DocType.DoctypeDes
+
+                   
+
+
+                }).FirstOrDefaultAsync();
+
+            if (document == null)
+            {
+                return NotFound();
+            }
+
+            var base64Url = await FileHelper.DownloadFiles(document.DocumentUrl);
+
+            GetClaimDocumentDTOById document2 = new GetClaimDocumentDTOById();
+
+            document2.DocTypeId = document.DocTypeId; 
+            document2.ClaimId = document.ClaimId;
+            document2.Base64string = base64Url;
+
+
+
+
+
+            return Ok(document2);
+        }
 
 
 
