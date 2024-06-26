@@ -79,17 +79,11 @@ namespace ClaimsAPI.Controllers
             {
                 return BadRequest();
             }
-            Claim.FileDate = claim.FileDate;
-            Claim.CustomerId = claim.CustomerId;
-            Claim.CarrierId = claim.CarrierId;
-            Claim.InsuranceId = claim.InsuranceId;
-            Claim.Carrier = claim.Carrier;
+
             Claim.ClaimDocuments = claim.ClaimDocuments;
             Claim.ClaimSettings = claim.ClaimSettings;
             Claim.ClaimStatuses = claim.ClaimStatuses;
             Claim.ClaimTasks = claim.ClaimTasks;
-            Claim.Customer = claim.Customer;
-            Claim.Insurance = claim.Insurance;
             shipmentClaimsContext.SaveChanges();
             return Ok(Claim);
         }

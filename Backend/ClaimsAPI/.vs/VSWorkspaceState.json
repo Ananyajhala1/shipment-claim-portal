@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models",
-    "\\Models\\DTO"
+    "\\Controllers",
+    "\\Models"
   ],
   "SelectedNode": "\\ClaimsAPI.sln",
   "PreviewInSolutionExplorer": false
