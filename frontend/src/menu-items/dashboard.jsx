@@ -22,14 +22,6 @@ const dashboard = {
       expandable: true,
       children: [
         {
-          id: 'sample',
-          title: 'Sample Page',
-          type: 'item',
-          url: '/dashboard/sample-page',
-          icon: icons.DashboardOutlined,
-          breadcrumbs: false
-        },
-        {
           id: 'CP',
           title: 'Capacity Provider',
           type: 'item',
