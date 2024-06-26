@@ -2,9 +2,6 @@
   "version": 3,
   "targets": {
     "net8.0": {
-<<<<<<< HEAD
-      "Azure.Core/1.39.0": {
-=======
       "AutoMapper/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -34,8 +31,7 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Azure.Core/1.35.0": {
->>>>>>> company_companyType_location_claim
+      "Azure.Core/1.39.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -405,8 +401,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -416,7 +410,6 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
->>>>>>> company_companyType_location_claim
       "Microsoft.Data.SqlClient/5.1.5": {
         "type": "package",
         "dependencies": {
@@ -1668,10 +1661,6 @@
     }
   },
   "libraries": {
-<<<<<<< HEAD
-    "Azure.Core/1.39.0": {
-      "sha512": "9vaV4ZICtVQp+2wjOKrIAjEjMzBkUohaBbKGqqcTW993MRfHA0N4L1BszQjWynS7lRvlYQLxaFK4wh9ewNm4HQ==",
-=======
     "AutoMapper/12.0.1": {
       "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "type": "package",
@@ -1701,9 +1690,8 @@
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "Azure.Core/1.35.0": {
-      "sha512": "hENcx03Jyuqv05F4RBEPbxz29UrM3Nbhnr6Wl6NQpoU9BCIbL3XLentrxDCTrH54NLS11Exxi/o8MYgT/cnKFA==",
->>>>>>> company_companyType_location_claim
+    "Azure.Core/1.39.0": {
+      "sha512": "9vaV4ZICtVQp+2wjOKrIAjEjMzBkUohaBbKGqqcTW993MRfHA0N4L1BszQjWynS7lRvlYQLxaFK4wh9ewNm4HQ==",
       "type": "package",
       "path": "azure.core/1.39.0",
       "files": [
@@ -2263,8 +2251,6 @@
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
-<<<<<<< HEAD
-=======
     "Microsoft.CSharp/4.7.0": {
       "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
@@ -2334,7 +2320,6 @@
         "version.txt"
       ]
     },
->>>>>>> company_companyType_location_claim
     "Microsoft.Data.SqlClient/5.1.5": {
       "sha512": "6kvhQjY5uBCdBccezFD2smfnpQjQ33cZtUZVrNvxlwoBu6uopM5INH6uSgLI7JRLtlQ3bMPwnhMq4kchsXeZ5w==",
       "type": "package",
@@ -4529,13 +4514,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-<<<<<<< HEAD
-      "Azure.Storage.Blobs >= 12.20.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.6",
-=======
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
->>>>>>> company_companyType_location_claim
+      "Azure.Storage.Blobs >= 12.20.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
@@ -4594,15 +4576,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-<<<<<<< HEAD
-          "Azure.Storage.Blobs": {
-            "target": "Package",
-            "version": "[12.20.0, )"
-          },
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[8.0.6, )"
-=======
           "AutoMapper": {
             "target": "Package",
             "version": "[12.0.1, )"
@@ -4610,7 +4583,14 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
->>>>>>> company_companyType_location_claim
+          },
+          "Azure.Storage.Blobs": {
+            "target": "Package",
+            "version": "[12.20.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[8.0.6, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
