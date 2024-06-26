@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace ClaimsAPI.Models.DTO.LocationDTO;
+using ClaimsAPI.Models.Entites;
 
-namespace ClaimsAPI.Models.Entites;
-
-public partial class Location
-{
-    public int LocationId { get; set; }
-
+public class LocationPostDTO
+{ 
     public string? Name { get; set; }
 
     public string? Address { get; set; }

@@ -5,6 +5,8 @@ D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.runtimeconfig.json
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.pdb
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Identity.dll
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Humanizer.dll
@@ -135,6 +137,7 @@ D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
+<<<<<<< HEAD
 <<<<<<< HEAD
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.csproj.AssemblyReference.cache
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.GeneratedMSBuildEditorConfig.editorconfig
@@ -554,3 +557,5 @@ D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 >>>>>>> mergeBranch
+=======
+>>>>>>> company_companyType_location_claim

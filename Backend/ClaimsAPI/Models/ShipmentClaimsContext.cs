@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ClaimsAPI.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models.Entites;
 
@@ -7,9 +8,7 @@ namespace ClaimsAPI.Models;
 
 public partial class ShipmentClaimsContext : DbContext
 {
-    public ShipmentClaimsContext()
-    {
-    }
+
 
     public ShipmentClaimsContext(DbContextOptions<ShipmentClaimsContext> options)
         : base(options)
