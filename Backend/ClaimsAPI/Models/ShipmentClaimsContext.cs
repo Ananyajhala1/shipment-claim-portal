@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models.Entites;
 

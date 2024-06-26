@@ -1,6 +1,6 @@
 ﻿using ClaimsApi.Helpers;
 using ClaimsAPI.Models;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
 
 using Microsoft.AspNetCore.Http;
@@ -62,7 +62,7 @@ namespace ClaimsAPI.Controllers
                 .Select(p => new GetClaimDocumentDTO
                 {
                     ClaimId = p.ClaimId,
-                    DocTypeId = p.DocTypeId,
+                    DocTypeId = (int)p.DocTypeId,
                     DocumentUrl = p.DocumentUrl,
                     DoctypeDes = p.DocType.DoctypeDes
 
@@ -103,7 +103,7 @@ namespace ClaimsAPI.Controllers
                 .Select(p => new GetClaimDocumentDTO
                 {
                     ClaimId = p.ClaimId,
-                    DocTypeId = p.DocTypeId,
+                    DocTypeId = (int)p.DocTypeId,
                     DocumentUrl = p.DocumentUrl,
                     DoctypeDes = p.DocType.DoctypeDes
 

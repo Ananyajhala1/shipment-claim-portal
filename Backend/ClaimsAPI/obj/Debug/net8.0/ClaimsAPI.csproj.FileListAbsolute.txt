@@ -138,7 +138,6 @@ D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.csproj.AssemblyReference.cache
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.AssemblyInfoInputs.cache
@@ -557,5 +556,4 @@ D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 >>>>>>> mergeBranch
-=======
 >>>>>>> company_companyType_location_claim

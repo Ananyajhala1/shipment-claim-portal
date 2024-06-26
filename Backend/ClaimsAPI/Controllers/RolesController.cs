@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 using ClaimsAPI.Models;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
 
 

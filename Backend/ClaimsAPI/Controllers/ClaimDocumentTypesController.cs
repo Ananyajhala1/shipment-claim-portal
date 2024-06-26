@@ -1,6 +1,6 @@
 ﻿using ClaimsApi.Helpers;
 using ClaimsAPI.Models;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
 
 using Microsoft.AspNetCore.Http;
