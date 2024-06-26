@@ -10,12 +10,10 @@ public partial class UserInfo
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
+    public string? ContactNumber { get; set; } // Added property for contact number
 
-    public int? CompanyId { get; set; }
-
-    public string? ContactNumber { get; set; }
-
-    public string? Email { get; set; }
+    public string? email { get; set; }
+    public int CompanyId { get; set; }
 
     public virtual ICollection<ClaimEmail> ClaimEmails { get; set; } = new List<ClaimEmail>();
 

@@ -79,7 +79,9 @@ public partial class ShipmentClaimsContext : DbContext
 
         modelBuilder.Entity<ClaimDocument>(entity =>
         {
-            entity.HasKey(e => e.DocId).HasName("PK__ClaimDoc__3EF188ADE3F3DAE2");
+            entity.HasKey(e => e.DocId).HasName("PK__ClaimDoc__3EF188ADD5E2C10D");
+
+            entity.Property(e => e.DocId).ValueGeneratedOnAdd();
 
             entity.HasOne(d => d.Claim).WithMany(p => p.ClaimDocuments)
                 .HasForeignKey(d => d.ClaimId)
@@ -301,7 +303,7 @@ public partial class ShipmentClaimsContext : DbContext
 
             entity.Property(e => e.UserId).ValueGeneratedOnAdd();
             entity.Property(e => e.Password)
-                .HasColumnType("text")
+               // .HasColumnType("varchar")
                 .HasColumnName("password");
             entity.Property(e => e.UserName)
                 .HasMaxLength(100)
@@ -355,13 +357,9 @@ public partial class ShipmentClaimsContext : DbContext
         {
             entity.HasKey(e => e.TemplateId).HasName("PK__UserTemp__F87ADD27576ABDF3");
 
-            entity.Property(e => e.TemplateContent).IsUnicode(false);
-            entity.Property(e => e.TemplateName)
-                .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.TemplateType)
-                .HasMaxLength(10)
-                .IsUnicode(false);
+            entity.Property(e => e.TemplateId).ValueGeneratedOnAdd();
+            entity.Property(e => e.TemplateName).HasMaxLength(100);
+            entity.Property(e => e.TemplateType).HasMaxLength(10);
             entity.Property(e => e.UserId).HasColumnName("UserID");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserTemplates)
