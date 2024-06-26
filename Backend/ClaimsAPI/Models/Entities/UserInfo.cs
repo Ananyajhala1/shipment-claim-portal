@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models.Entites;
 
 public partial class UserInfo
 {
@@ -22,6 +22,8 @@ public partial class UserInfo
     public virtual Company? Company { get; set; }
 
     public virtual UserCredential? UserCredential { get; set; }
+
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 
     public virtual ICollection<UserTemplate> UserTemplates { get; set; } = new List<UserTemplate>();
 }

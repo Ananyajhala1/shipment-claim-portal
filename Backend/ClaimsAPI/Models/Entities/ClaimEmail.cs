@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
-
+namespace ClaimsAPI.Models.Entites;
 public partial class ClaimEmail
 {
     public string EmailId { get; set; } = null!;

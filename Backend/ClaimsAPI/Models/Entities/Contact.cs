@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models.Entites;
 
 public partial class Contact
 {
-    public Guid ContactId { get; set; }
+    public int ContactId { get; set; }
 
     public string? ContactName { get; set; }
 

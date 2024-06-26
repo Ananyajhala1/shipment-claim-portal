@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models.Entites;
 
 public partial class Claim
 {
@@ -9,11 +9,11 @@ public partial class Claim
 
     public DateOnly? FileDate { get; set; }
 
-    public int CustomerId { get; set; }
+    public int? CustomerId { get; set; }
 
-    public int CarrierId { get; set; }
+    public int? CarrierId { get; set; }
 
-    public int InsuranceId { get; set; }
+    public int? InsuranceId { get; set; }
 
     public virtual Company? Carrier { get; set; }
 

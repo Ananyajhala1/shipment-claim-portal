@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClaimsAPI.Models.Entities;
+namespace ClaimsAPI.Models.Entites;
 
 public partial class Location
 {
-    public Guid LocationId { get; set; }
+    public int LocationId { get; set; }
 
     public string? Name { get; set; }
 

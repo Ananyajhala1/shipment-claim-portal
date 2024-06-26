@@ -12,13 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaimsAPI")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7e6b8fa3b8292bbae18264845c2bc0740af079d")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+168332e1bf0b16f753bc9689ae24e9ed3c354e31")]
->>>>>>> mergeBranch
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7ad117f4e6c5cb392f72c6fcd477282dfc8114a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
