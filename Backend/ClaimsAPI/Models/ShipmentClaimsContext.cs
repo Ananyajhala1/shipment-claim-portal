@@ -92,7 +92,7 @@ public partial class ShipmentClaimsContext : DbContext
         {
             entity.HasKey(e => e.DocId).HasName("PK__ClaimDoc__3EF188ADD5E2C10D");
 
-            entity.Property(e => e.DocId).ValueGeneratedNever();
+            entity.Property(e => e.DocId).ValueGeneratedOnAdd();
 
             entity.HasOne(d => d.Claim).WithMany(p => p.ClaimDocuments)
                 .HasForeignKey(d => d.ClaimId)
@@ -333,7 +333,7 @@ public partial class ShipmentClaimsContext : DbContext
         {
             entity.HasKey(e => e.TemplateId).HasName("PK__UserTemp__F87ADD27F05A8EF7");
 
-            entity.Property(e => e.TemplateId).ValueGeneratedNever();
+            entity.Property(e => e.TemplateId).ValueGeneratedOnAdd();
             entity.Property(e => e.TemplateName).HasMaxLength(100);
             entity.Property(e => e.TemplateType).HasMaxLength(10);
             entity.Property(e => e.UserId).HasColumnName("UserID");
