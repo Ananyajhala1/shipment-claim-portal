@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fdd090eb7244049808b7192be3cb6fc6baccf91")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8a02e0af548f1b2257bbbd4968354bb7900f620")]
->>>>>>> claimEmail_claimSetting_userRolePermissions
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9457b2a0868926b7d095cba4fdcf5b0828ddfc0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
