@@ -31,7 +31,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{id:string}")]
+        [Route("{id}")]
         public IActionResult GetClaimEmailsById(string id)
         {
             var claimEmails = shipmentClaimsContext.ClaimEmails.Find(id);
@@ -62,7 +62,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpPut]
-        [Route("{id:string}")]
+        [Route("{id}")]
 
         public IActionResult UpdateClaimEmail(string id, ClaimEmailUpdateDTO claimEmail)
         {
@@ -82,7 +82,7 @@ namespace ClaimsAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:string}")]
+        [Route("{id}")]
 
         public IActionResult DeleteClaimEmail(string id)
         {
