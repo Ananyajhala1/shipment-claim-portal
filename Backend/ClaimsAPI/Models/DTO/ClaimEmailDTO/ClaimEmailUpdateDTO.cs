@@ -1,4 +1,4 @@
-﻿using ClaimsAPI.Models.Entities;
+﻿using ClaimsAPI.Models.Entites;
 
 namespace ClaimsAPI.Models.DTO.ClaimEmailDTO
 {

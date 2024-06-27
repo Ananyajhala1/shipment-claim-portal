@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "tKa00DsWq5M=",
-=======
-  "dgSpecHash": "fqGoY3vpQeg=",
->>>>>>> claimEmail_claimSetting_userRolePermissions
   "success": true,
   "projectFilePath": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
   "expectedPackageFiles": [

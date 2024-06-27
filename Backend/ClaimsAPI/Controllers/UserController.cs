@@ -1,5 +1,5 @@
 ﻿using ClaimsAPI.Models;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

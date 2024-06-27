@@ -1,6 +1,6 @@
 ﻿using ClaimsAPI.Models;
 using ClaimsAPI.Models.DTO.ClaimSettingsDTO;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
