@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ClaimsAPI.Models.DTO.Claims;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 using System.Threading;
 
 namespace ClaimsAPI.Controllers

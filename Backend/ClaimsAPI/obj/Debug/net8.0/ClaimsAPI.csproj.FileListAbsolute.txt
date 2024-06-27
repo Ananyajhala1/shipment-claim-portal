@@ -414,3 +414,5 @@ D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 =======
 >>>>>>> company_companyType_location_claim
+D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.dll
+D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

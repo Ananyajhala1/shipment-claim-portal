@@ -1,5 +1,5 @@
 ﻿namespace ClaimsAPI.Models.DTO.LocationDTO;
-using ClaimsAPI.Models.Entities;
+using ClaimsAPI.Models.Entites;
 
 public class LocationPostDTO
 { 
