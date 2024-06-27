@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+923974b0a0459492953bef5d0b907c1245b5b63a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ecb940bb0291c6bc7e954f3ef56bc0dc11c0f82")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
