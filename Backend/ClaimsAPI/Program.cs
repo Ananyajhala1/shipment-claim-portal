@@ -1,4 +1,5 @@
 using ClaimsAPI.Models;
+using ClaimsAPI.Service.CompanyTypeService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +32,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 builder.Services.AddMvc();
-builder.Services.AddControllers();
+builder.Services.AddTransient<ICompanyTypeService, CompanyTypeService>();
 
 
 var app = builder.Build();
