@@ -13,7 +13,7 @@ public partial class ClaimTask
 
     public int? UserId { get; set; }
 
-    public int? ClaimId { get; set; }
+    public int ClaimId { get; set; }
 
     public DateOnly? DueDate { get; set; }
 
