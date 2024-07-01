@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Models"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\ClaimsAPI.sln",
   "PreviewInSolutionExplorer": false
 }
