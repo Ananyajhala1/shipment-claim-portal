@@ -48,7 +48,7 @@ namespace ClaimsAPI.Controllers
             NewClaimDocumentType.DoctypeDes = cdt.DoctypeDes;
             NewClaimDocumentType.ClaimDocuments = cdt.ClaimDocuments;
             NewClaimDocumentType.Company = cdt.Company;
-            NewClaimDocumentType.CompanyId = cdt.CompanyId;
+            NewClaimDocumentType.CompanyId = (int)cdt.CompanyId;
             shipmentClaimsContext.ClaimDocumentTypes.Add(NewClaimDocumentType);
             await shipmentClaimsContext.SaveChangesAsync();
             return Ok();
@@ -70,7 +70,7 @@ namespace ClaimsAPI.Controllers
             UpdatedClaimDocumentType.DoctypeDes = cdt.DoctypeDes;
             UpdatedClaimDocumentType.ClaimDocuments = cdt.ClaimDocuments;
             UpdatedClaimDocumentType.Company = cdt.Company;
-            UpdatedClaimDocumentType.CompanyId = cdt.CompanyId;
+            UpdatedClaimDocumentType.CompanyId = (int)cdt.CompanyId;
             return Ok(UpdatedClaimDocumentType);
         }
         [HttpDelete]

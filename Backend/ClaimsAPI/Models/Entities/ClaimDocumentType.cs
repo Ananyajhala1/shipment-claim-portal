@@ -9,7 +9,7 @@ public partial class ClaimDocumentType
 
     public string? DoctypeDes { get; set; }
 
-    public int? CompanyId { get; set; }
+    public int CompanyId { get; set; }
 
     public virtual ICollection<ClaimDocument> ClaimDocuments { get; set; } = new List<ClaimDocument>();
 
