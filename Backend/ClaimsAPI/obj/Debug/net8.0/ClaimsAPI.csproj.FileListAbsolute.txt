@@ -566,3 +566,8 @@ D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.ClientModel.dll
 D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.IO.Hashing.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Common.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.ClientModel.dll
+D:\.NET_projects\claims-portal\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.IO.Hashing.dll
