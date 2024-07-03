@@ -132,12 +132,12 @@ namespace ClaimsAPI.Controllers
         {
 
 
-            var existingUserRole = await _rolesService.CreateUserRole(uid, rid);
-            if(existingUserRole == null)
+            var newUserRole = await _rolesService.CreateUserRole(uid, rid);
+            if(newUserRole == null)
             {
                 return NotFound();
             }
-            return Ok(existingUserRole);
+            return Ok(newUserRole);
         }
 
         // updating user role
