@@ -1,4 +1,9 @@
 using ClaimsAPI.Models;
+using ClaimsAPI.Service.claim;
+using ClaimsAPI.Service.claimEmail;
+using ClaimsAPI.Service.claimSettings;
+using ClaimsAPI.Service.company;
+using ClaimsAPI.Service.location;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +37,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddMvc();
 builder.Services.AddControllers();
-
+builder.Services.AddTransient<IClaimEmail, ClaimEmailService>();
+builder.Services.AddTransient<IClaim, ClaimService>();
+builder.Services.AddTransient<IClaimSettings, ClaimSettingService>();
+builder.Services.AddTransient<ICompany, CompanyService>();
+builder.Services.AddTransient<ILocation, LocationService>();
 
 var app = builder.Build();
 
