@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ClaimsAPI.Service.DocumentTypeService;
 
 namespace ClaimsAPI.Controllers
 {
@@ -15,15 +16,15 @@ namespace ClaimsAPI.Controllers
     [ApiController]
     public class DocumentTypeController : ControllerBase
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
-        public DocumentTypeController(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly IDocumentTypeService _documentTypeService;
+        public DocumentTypeController(IDocumentTypeService documentTypeService)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            _documentTypeService = documentTypeService;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ClaimDocumentType>>> GetDocumentTypes()
         {
-            var docTypes = await shipmentClaimsContext.ClaimDocumentTypes.ToListAsync();
+            var docTypes = await _documentTypeService.GetDocumentTypes();
             if(docTypes == null)
             {
                 return NotFound();
@@ -34,58 +35,46 @@ namespace ClaimsAPI.Controllers
         [Route("{id:int}")]
         public async Task<ActionResult<ClaimDocumentType>> GetDocumentTypeByID(int id)
         {
-            var doctype = await shipmentClaimsContext.ClaimDocumentTypes.FirstOrDefaultAsync(dt => dt.DocTypeId == id);
-            if (doctype == null)
+            var docType = await _documentTypeService.GetDocumentTypeByID(id);
+            if(docType == null)
             {
                 return NotFound();
             }
-            return Ok(doctype);
+            return Ok(docType);
         }
         [HttpPost]
         public async Task<ActionResult<ClaimDocumentType>> AddDocType(DocumentTypePostDTO cdt)
         {
-            var NewClaimDocumentType = new ClaimDocumentType();
-            NewClaimDocumentType.DoctypeDes = cdt.DoctypeDes;
-            NewClaimDocumentType.ClaimDocuments = cdt.ClaimDocuments;
-            NewClaimDocumentType.Company = cdt.Company;
-            NewClaimDocumentType.CompanyId = (int)cdt.CompanyId;
-            shipmentClaimsContext.ClaimDocumentTypes.Add(NewClaimDocumentType);
-            await shipmentClaimsContext.SaveChangesAsync();
-            return Ok();
+            var docType = await _documentTypeService.AddDocType(cdt);
+            return Ok(docType);
         }
         [HttpPut]
         [Route("{id:int}")]
-        public async Task<ActionResult<ClaimDocumentType>> UpdateDocType(int id , DocumentTypeUpdateDTO cdt)
+        public async Task<ActionResult<ClaimDocumentType>> UpdateDocType(int id, DocumentTypeUpdateDTO cdt)
         {
-            if(id != cdt.DocTypeId)
+            var docType = await _documentTypeService.UpdateDocType(id, cdt);
+            if(docType.DocTypeId != id)
             {
                 return BadRequest();
             }
-            var UpdatedClaimDocumentType = await shipmentClaimsContext.ClaimDocumentTypes.FirstOrDefaultAsync(dt => dt.DocTypeId == id);
-            if (UpdatedClaimDocumentType == null)
-            {
-                return BadRequest();
-            }
-            UpdatedClaimDocumentType.DocTypeId = cdt.DocTypeId;
-            UpdatedClaimDocumentType.DoctypeDes = cdt.DoctypeDes;
-            UpdatedClaimDocumentType.ClaimDocuments = cdt.ClaimDocuments;
-            UpdatedClaimDocumentType.Company = cdt.Company;
-            UpdatedClaimDocumentType.CompanyId = (int)cdt.CompanyId;
-            return Ok(UpdatedClaimDocumentType);
-        }
-        [HttpDelete]
-        [Route("{id:int}")]
-        public async Task<ActionResult<ClaimDocumentType>> DeleteDocType(int id)
-        {
-            var deleteDocType = await shipmentClaimsContext.ClaimDocumentTypes.FirstOrDefaultAsync(dt => dt.DocTypeId == id);
-            if (deleteDocType == null)
+            if(docType == null)
             {
                 return NotFound();
             }
-            shipmentClaimsContext.ClaimDocumentTypes.Remove(deleteDocType);
-            await shipmentClaimsContext.SaveChangesAsync();
-            return Ok(deleteDocType);
+            return Ok(docType);
         }
+        [HttpDelete]
+        public async Task<ActionResult<ClaimDocumentType>> DeleteDocType(int id)
+        {
+            var docType = await _documentTypeService.DeleteDocType(id);
+            if(docType == null)
+            {
+                return NotFound();
+            }
+            return Ok(docType);
+        }
+
+
 
     }
 }
