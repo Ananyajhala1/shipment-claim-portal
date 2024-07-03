@@ -18,7 +18,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
         }
         public async Task<IEnumerable<CompanyType>> GetCompanyTypes()
         {
-            var companyTypes = shipmentClaimsContext.CompanyTypes.ToList();
+            var companyTypes = await shipmentClaimsContext.CompanyTypes.ToListAsync();
             if (companyTypes == null)
             {
                 return Enumerable.Empty<CompanyType>();
@@ -27,7 +27,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
         }
         public async Task<CompanyType> GetCompanyTypeById(int id)
         {
-            var companyType = shipmentClaimsContext.CompanyTypes.Find(id);
+            var companyType = await shipmentClaimsContext.CompanyTypes.FirstOrDefaultAsync(ct => ct.CompanyTypeId == id);
             if (companyType == null)
             {
                 throw new Exception($"company type with id : {id} not found");
@@ -41,7 +41,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
                 CompanyType1 = company.CompanyType1
             };
             shipmentClaimsContext.CompanyTypes.Add(CompanyType);
-            shipmentClaimsContext.SaveChanges();
+            await shipmentClaimsContext.SaveChangesAsync();
             return CompanyType;
         }
         public async Task<CompanyType> UpdateCompany(int id, CompanyTypeUpdateDTO company)

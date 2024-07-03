@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
+using ClaimsAPI.Service.RolesService;
 
 
 namespace ClaimsAPI.Controllers
@@ -16,44 +17,35 @@ namespace ClaimsAPI.Controllers
 
     public class RolesController : ControllerBase
     {
-        private ShipmentClaimsContext _dbContext;
+        private IRolesService _rolesService;
 
-        public RolesController(ShipmentClaimsContext dbcontext)
+        public RolesController(IRolesService rolesService)
         {
-            _dbContext = dbcontext;
+            _rolesService = rolesService;
         }
         [HttpGet]
         //get all roles
-        public async Task<IActionResult> GetRole()
+        public async Task<ActionResult<IEnumerable<Role>>> GetRole()
 
         {
-            var roles = await (from role in _dbContext.Roles
-                               select new GetRolesDTO
-                               {
-                                RoleId = role.RoleId,
-                                RoleName = role.RoleName
-                               }).ToListAsync();
-
+            var roles = await _rolesService.GetRole();
+            if(roles == null)
+            {
+                return NotFound();
+            }
             return Ok(roles);
         }
         //get single role
 
 
-        [HttpGet("[action]/{id}")]
-        public async Task<IActionResult> GetRole(int id)
+        [HttpGet("[action]/{id:int}")]
+        public async Task<ActionResult<Role>> GetRole(int id)
         {
-            var temp = await _dbContext.Roles
-                                      .Where(u => u.RoleId == id)
-                                      .ToListAsync();
-
-            if (temp == null || temp.Count == 0)
+            var role = await _rolesService.GetRoleById(id);
+            if( role == null)
             {
                 return NotFound();
             }
-            GetRolesDTO role = new GetRolesDTO();
-            role.RoleId = id;
-            role.RoleName = temp[0].RoleName;
-          
 
             return Ok(role);
         }
@@ -61,60 +53,44 @@ namespace ClaimsAPI.Controllers
 
         //create role
         [HttpPost("[action]")]
-        public async Task<IActionResult> CreateRole(CreateUpdateRolesDTO roleDTO)
+        public async Task<ActionResult<Role>> CreateRole(CreateUpdateRolesDTO roleDTO)
         {
-            if (roleDTO == null)
+            var role = await _rolesService.CreateRole(roleDTO);
+            if(role == null)
             {
-
-                return BadRequest("role is null.");
-            }
-               Role role = new Role();
-
-            role.RoleName = roleDTO.RoleName;
-
-
-            _dbContext.Roles.Add(role);
-            await _dbContext.SaveChangesAsync();
-
-        
-            return Ok(roleDTO);
+                return BadRequest();
+            }        
+            return Ok(role);
         }
 
         // Update role
         [HttpPut("[action]")]
-        public async Task<IActionResult> UpdateRole(CreateUpdateRolesDTO rolesDTO,int id)
+        public async Task<ActionResult<Role>> UpdateRole(CreateUpdateRolesDTO rolesDTO,int id)
         {
 
 
-            var roleToUpdate = await _dbContext.Roles.FindAsync(id);
-            if (roleToUpdate == null)
+            var role = await _rolesService.UpdateRole(id, rolesDTO);
+            if(role.RoleId != id)
             {
-                return NotFound("role not found.");
+                return BadRequest();
             }
-
-            roleToUpdate.RoleName = rolesDTO.RoleName;
-          
-
-            _dbContext.Roles.Update(roleToUpdate);
-            await _dbContext.SaveChangesAsync();
-
-            return NoContent();
+            if(role == null)
+            {
+                return NotFound();
+            }
+            return Ok(role);
         }
 
         // Delete role
         [HttpDelete("[action]")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<ActionResult<Role>> DeleteUser(int id)
         {
-            var role = await _dbContext.Roles.FindAsync(id);
-            if (role == null)
+            var role = await _rolesService.DeleteRole(id);
+            if(role == null)
             {
-                return NotFound("role not found.");
+                return BadRequest();
             }
-
-            _dbContext.Roles.Remove(role);
-            await _dbContext.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(role);
         }
 
 
@@ -127,24 +103,12 @@ namespace ClaimsAPI.Controllers
 
         public async Task<IActionResult> GetUsersInRole(int rid)
         {
-
-            var roles = await (from UserRole in _dbContext.UserRoles.Where(x => x.RoleId == rid)
-                               select new GetuserRoleDTO
-                               {
-                                   RoleId = UserRole.RoleId,
-                                   RoleName =UserRole.Role.RoleName,
-                                   UserId = UserRole.UserId,
-                                   FirstName = UserRole.User.FirstName
-
-
-                               }).ToListAsync();
-
-            if (roles == null || roles.Count == 0)
+            var usersInRole = await _rolesService.GetUserInRole(rid);
+            if(usersInRole == null)
             {
                 return NotFound();
             }
-            
-            return Ok(roles);
+            return Ok(usersInRole);
         }
 
         // get roles from user
@@ -153,23 +117,12 @@ namespace ClaimsAPI.Controllers
         public async Task<IActionResult> GetRolesInUser(int uid)
         {
 
-            var users = await (from UserRole in _dbContext.UserRoles.Where(x=>x.UserId == uid)
-                            select new GetuserRoleDTO
-                               {
-                                   RoleId = UserRole.RoleId,
-                                   RoleName = UserRole.Role.RoleName,
-                                   UserId = UserRole.UserId,
-                                   FirstName = UserRole.User.FirstName
-
-
-                               }).ToListAsync();
-
-            if (users == null || users.Count == 0)
+            var rolesInUser = await _rolesService.GetRolesInUser(uid);
+            if(rolesInUser == null)
             {
                 return NotFound();
             }
-
-            return Ok(users);
+            return Ok(rolesInUser);
         }
 
         // creating user role
@@ -177,26 +130,14 @@ namespace ClaimsAPI.Controllers
         [HttpPost("CreateUserRole")]
         public async Task<IActionResult> CreateUserRole(int uid , int rid)
         {
-         
 
-            var existingUserRole = await _dbContext.UserRoles
-                .FirstOrDefaultAsync(ur => ur.UserId == uid && ur.RoleId == rid);
 
-            if (existingUserRole != null)
+            var existingUserRole = await _rolesService.CreateUserRole(uid, rid);
+            if(existingUserRole == null)
             {
-                return Conflict("User role association already exists.");
+                return NotFound();
             }
-
-            var newUserRole = new UserRole
-            {
-                UserId = uid,
-                RoleId = rid
-            };
-
-            _dbContext.UserRoles.Add(newUserRole);
-            await _dbContext.SaveChangesAsync();
-
-            return Ok(newUserRole);
+            return Ok(existingUserRole);
         }
 
         // updating user role
@@ -204,61 +145,25 @@ namespace ClaimsAPI.Controllers
         [HttpPut("UpdateUserRole")]
         public async Task<IActionResult> UpdateUserRole(UpdateuserRoleDTO userRoleDTO)
         {
-            if (userRoleDTO == null)
-            {
-                return BadRequest("User role data is null.");
-            }
-
-            var userRoleToUpdate = await _dbContext.UserRoles.FindAsync(userRoleDTO.UserRoleId);
-
+            var userRoleToUpdate = await _rolesService.UpdateUserRole(userRoleDTO);
             if (userRoleToUpdate == null)
             {
-                return NotFound("User role association not found.");
+                return NotFound();
             }
-
-            // Check if the specified UserId or RoleId has changed
-            if (userRoleToUpdate.UserId != userRoleDTO.UserId || userRoleToUpdate.RoleId != userRoleDTO.RoleId)
-            {
-                // Check if there is already an existing user role association with the new UserId and RoleId
-                var existingUserRole = await _dbContext.UserRoles
-                    .FirstOrDefaultAsync(ur => ur.UserId == userRoleDTO.UserId && ur.RoleId == userRoleDTO.RoleId);
-
-                if (existingUserRole != null && existingUserRole.UserRoleId != userRoleDTO.UserRoleId)
-                {
-                    return Conflict("User role association already exists for the new UserId and RoleId.");
-                }
-            }
-
-            // Update user role association with new UserId and RoleId
-            userRoleToUpdate.UserId = userRoleDTO.UserId;
-            userRoleToUpdate.RoleId = userRoleDTO.RoleId;
-
-            _dbContext.UserRoles.Update(userRoleToUpdate);
-            await _dbContext.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(userRoleToUpdate);
         }
 
         // delete user role
         [HttpDelete("DeleteUserRole/{userRoleId}")]
         public async Task<IActionResult> DeleteUserRole(int userRoleId)
         {
-            var userRoleToDelete = await _dbContext.UserRoles.FindAsync(userRoleId);
-
+            var userRoleToDelete = await _rolesService.DeleteUserRole(userRoleId);
             if (userRoleToDelete == null)
             {
-                return NotFound("User role association not found.");
+                return NotFound();
             }
-
-            _dbContext.UserRoles.Remove(userRoleToDelete);
-            await _dbContext.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(userRoleToDelete);
         }
-
-
-
-
     }
 }
 

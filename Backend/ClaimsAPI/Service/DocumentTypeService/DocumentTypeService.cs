@@ -17,7 +17,7 @@ namespace ClaimsAPI.Service.DocumentTypeService
         }
         public async Task<IEnumerable<ClaimDocumentType>> GetDocumentTypes()
         {
-            var documentTypes = shipmentClaimsContext.ClaimDocumentTypes.ToList();
+            var documentTypes = await shipmentClaimsContext.ClaimDocumentTypes.ToListAsync();
             if (documentTypes == null)
             {
                 return Enumerable.Empty<ClaimDocumentType>();
@@ -26,12 +26,12 @@ namespace ClaimsAPI.Service.DocumentTypeService
         }
         public async Task<ClaimDocumentType> GetDocumentTypeByID(int id)
         {
-            var documentType = shipmentClaimsContext.ClaimDocumentTypes.FirstOrDefaultAsync(dt => dt.DocTypeId == id);
+            var documentType = await shipmentClaimsContext.ClaimDocumentTypes.FirstOrDefaultAsync(dt => dt.DocTypeId == id);
             if (documentType == null)
             {
                 throw new Exception($"claim document type with id {id} doesnot exits");
             }
-            return await documentType;
+            return documentType;
         }
         public async Task<ClaimDocumentType> AddDocType(DocumentTypePostDTO cdt)
         {
