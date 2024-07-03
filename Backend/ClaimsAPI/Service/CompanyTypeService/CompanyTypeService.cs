@@ -16,7 +16,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
         }
-        public IEnumerable<CompanyType> GetCompanyTypes()
+        public async Task<IEnumerable<CompanyType>> GetCompanyTypes()
         {
             var companyTypes = shipmentClaimsContext.CompanyTypes.ToList();
             if (companyTypes == null)
@@ -25,7 +25,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
             }
             return companyTypes;
         }
-        public CompanyType GetCompanyTypeById(int id)
+        public async Task<CompanyType> GetCompanyTypeById(int id)
         {
             var companyType = shipmentClaimsContext.CompanyTypes.Find(id);
             if (companyType == null)
@@ -34,7 +34,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
             }
             return companyType;
         }
-        public CompanyType AddCompany(CompanyTypePostDTO company)
+        public async Task<CompanyType> AddCompany(CompanyTypePostDTO company)
         {
             var CompanyType = new CompanyType()
             {
@@ -44,7 +44,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
             shipmentClaimsContext.SaveChanges();
             return CompanyType;
         }
-        public CompanyType UpdateCompany(int id, CompanyTypeUpdateDTO company)
+        public async Task<CompanyType> UpdateCompany(int id, CompanyTypeUpdateDTO company)
         {
             if (id != company.CompanyTypeId)
             {
@@ -59,7 +59,7 @@ namespace ClaimsAPI.Service.CompanyTypeService
             shipmentClaimsContext.SaveChanges();
             return CompanyType;
         }
-        public CompanyType DeleteCompany(int id)
+        public async Task<CompanyType> DeleteCompany(int id)
         {
             var companyType = shipmentClaimsContext.CompanyTypes.Find(id);
             if (companyType == null)

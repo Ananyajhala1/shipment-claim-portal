@@ -5,11 +5,11 @@ namespace ClaimsAPI.Service.CompanyTypeService
 {
     public interface ICompanyTypeService
     {
-        IEnumerable<CompanyType> GetCompanyTypes();
-        CompanyType GetCompanyTypeById(int id);
-        CompanyType AddCompany(CompanyTypePostDTO company);
-        CompanyType UpdateCompany(int id, CompanyTypeUpdateDTO company);
-        CompanyType DeleteCompany(int id);
+        Task<IEnumerable<CompanyType>> GetCompanyTypes();
+        Task<CompanyType> GetCompanyTypeById(int id);
+        Task<CompanyType> AddCompany(CompanyTypePostDTO company);
+        Task<CompanyType> UpdateCompany(int id, CompanyTypeUpdateDTO company);
+        Task<CompanyType> DeleteCompany(int id);
 
 
     }
