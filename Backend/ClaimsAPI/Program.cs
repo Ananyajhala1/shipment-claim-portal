@@ -4,10 +4,16 @@ using ClaimsAPI.Service.claimEmail;
 using ClaimsAPI.Service.claimSettings;
 using ClaimsAPI.Service.company;
 using ClaimsAPI.Service.location;
+using ClaimsAPI.Service.ClaimDocumentService;
+using ClaimsAPI.Service.CompanyTypeService;
+using ClaimsAPI.Service.DocumentTypeService;
+using ClaimsAPI.Service.PermissionService;
+using ClaimsAPI.Service.RolesService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +48,13 @@ builder.Services.AddTransient<IClaim, ClaimService>();
 builder.Services.AddTransient<IClaimSettings, ClaimSettingService>();
 builder.Services.AddTransient<ICompany, CompanyService>();
 builder.Services.AddTransient<ILocation, LocationService>();
+builder.Services.AddTransient<ICompanyTypeService, CompanyTypeService>();
+builder.Services.AddTransient<IDocumentTypeService, DocumentTypeService>();
+builder.Services.AddTransient<IRolesService, RolesService>();
+builder.Services.AddTransient<IPermissionService, PermissionService>();
+builder.Services.AddTransient<IPermissionRoleService, PermissionRoleService>();
+builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
+
 
 var app = builder.Build();
 

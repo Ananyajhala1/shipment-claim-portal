@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
   "Documents": [
     {
@@ -25,6 +26,25 @@
     {
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\claimdocumentservice\\iclaimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\claimdocumentservice\\iclaimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\controllers\\claimdocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimdocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\claimdocumentservice\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\claimdocumentservice\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> service-layer
     }
   ],
   "DocumentGroupContainers": [
@@ -33,15 +53,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 26,
           "SelectedChildIndex": 5,
+=======
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+>>>>>>> service-layer
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
@@ -50,6 +80,8 @@
             },
             {
               "$type": "Bookmark",
+=======
+>>>>>>> service-layer
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
@@ -58,6 +90,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "LocationController.cs",
               "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\LocationController.cs",
@@ -93,11 +126,23 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T20:17:49.645Z",
+=======
+              "DocumentIndex": 1,
+              "Title": "ClaimDocumentsController.cs",
+              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimDocumentsController.cs",
+              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimDocumentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T09:36:30.705Z",
+>>>>>>> service-layer
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< HEAD
               "Title": "ClaimsController.cs",
               "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
@@ -106,10 +151,21 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T20:16:23.497Z",
+=======
+              "Title": "ClaimDocumentService.cs",
+              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\ClaimDocumentService.cs",
+              "RelativeDocumentMoniker": "Service\\ClaimDocumentService\\ClaimDocumentService.cs",
+              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\ClaimDocumentService.cs",
+              "RelativeToolTip": "Service\\ClaimDocumentService\\ClaimDocumentService.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAkwEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T15:48:02.876Z",
+>>>>>>> service-layer
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "ClaimEmailController.cs",
               "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimEmailController.cs",
@@ -132,6 +188,30 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T19:54:50.273Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACwAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T10:47:49.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IClaimDocumentService.cs",
+              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\IClaimDocumentService.cs",
+              "RelativeDocumentMoniker": "Service\\ClaimDocumentService\\IClaimDocumentService.cs",
+              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\IClaimDocumentService.cs",
+              "RelativeToolTip": "Service\\ClaimDocumentService\\IClaimDocumentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T15:47:44.204Z",
+>>>>>>> service-layer
               "EditorCaption": ""
             }
           ]
