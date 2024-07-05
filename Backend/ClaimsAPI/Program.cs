@@ -1,4 +1,5 @@
 using ClaimsAPI.Models;
+using ClaimsAPI.Service.ClaimDocumentService;
 using ClaimsAPI.Service.CompanyTypeService;
 using ClaimsAPI.Service.DocumentTypeService;
 using ClaimsAPI.Service.PermissionService;
@@ -41,6 +42,7 @@ builder.Services.AddTransient<IDocumentTypeService, DocumentTypeService>();
 builder.Services.AddTransient<IRolesService, RolesService>();
 builder.Services.AddTransient<IPermissionService, PermissionService>();
 builder.Services.AddTransient<IPermissionRoleService, PermissionRoleService>();
+builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
 
 
 var app = builder.Build();
