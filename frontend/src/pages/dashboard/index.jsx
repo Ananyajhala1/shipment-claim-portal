@@ -4,8 +4,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemButton from '@mui/material/ListItemButton';
+import ListItemAvatar from '@mui/material/ListItemButton';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
@@ -14,7 +13,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
-import FormGroup from '@mui/material/FormGroup'; // Import FormGroup
+import FormGroup from '@mui/material/FormGroup';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 // project import
 import MainCard from 'components/MainCard';
@@ -26,10 +26,11 @@ function createUser(id, name, email, role, dateJoined, status) {
   return { id, name, email, role, dateJoined, status };
 }
 
+// Initial users data
 const initialUsers = [
-  createUser(1, 'John Doe', 'john@example.com', 'Admin', '2021-05-20', 1),
-  createUser(2, 'Jane Smith', 'jane@example.com', 'User', '2022-03-14', 0),
-  createUser(3, 'Sam Wilson', 'sam@example.com', 'Moderator', '2023-01-10', 1)
+  createUser(101, 'John Doe', 'john@example.com', 'Admin', '2021-05-20', 1),
+  createUser(102, 'Jane Smith', 'jane@example.com', 'User', '2022-03-14', 0),
+  createUser(103, 'Sam Wilson', 'sam@example.com', 'Moderator', '2023-01-10', 1)
 ];
 
 export default function DashboardDefault() {
@@ -45,6 +46,7 @@ export default function DashboardDefault() {
     status: 1
   });
 
+  // Toggle form visibility and reset form data
   const handleClickOpen = () => {
     setIsFormVisible(!isFormVisible);
     setIsEdit(false);
@@ -58,6 +60,7 @@ export default function DashboardDefault() {
     });
   };
 
+  // Handle edit button click
   const handleEditClick = (user) => {
     setSelectedUser(user);
     setFormData(user);
@@ -65,6 +68,7 @@ export default function DashboardDefault() {
     setIsFormVisible(true);
   };
 
+  // Handle form data change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -72,17 +76,25 @@ export default function DashboardDefault() {
     });
   };
 
+  // Add new user
   const handleAddUser = () => {
+    const newId = users.length > 0 ? users[users.length - 1].id + 1 : 101;
     setUsers([
       ...users,
-      createUser(users.length + 1, formData.name, formData.email, formData.role, formData.dateJoined, formData.status)
+      createUser(newId, formData.name, formData.email, formData.role, formData.dateJoined, formData.status)
     ]);
     setIsFormVisible(false);
   };
 
+  // Edit existing user
   const handleEditUser = () => {
     setUsers(users.map(user => user.id === selectedUser.id ? { ...selectedUser, ...formData } : user));
     setIsFormVisible(false);
+  };
+
+  // Delete user
+  const handleDeleteUser = (id) => {
+    setUsers(users.filter(user => user.id !== id));
   };
 
   const [roles, setRoles] = useState([]);
@@ -99,7 +111,7 @@ export default function DashboardDefault() {
 
   return (
     <Grid container rowSpacing={0} columnSpacing={0}>
-      {/* row 3 */}
+      {/* Users section */}
       <Grid item xs={12}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -114,9 +126,9 @@ export default function DashboardDefault() {
         {isFormVisible && (
           <Paper sx={{ mt: 2, p: 2 }}>
             <FormGroup>
-            <TextField label="Name" name="name" value={formData.name} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
-<TextField label="Email" name="email" value={formData.email} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
-<TextField label="Role" name="role" value={formData.role} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Name" name="name" value={formData.name} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Email" name="email" value={formData.email} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Role" name="role" value={formData.role} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
               <TextField
                 label="Date Joined"
                 name="dateJoined"
@@ -150,11 +162,11 @@ export default function DashboardDefault() {
           </Paper>
         )}
         <MainCard sx={{ mt: 2 }} content={false}>
-          <OrdersTable users={users} setUsers={setUsers} handleEditClick={handleEditClick} />
+          <OrdersTable users={users} setUsers={setUsers} handleEditClick={handleEditClick} handleDeleteUser={handleDeleteUser} />
         </MainCard>
       </Grid>
 
-      {/* row 4 */}
+      {/* Roles section */}
       <Grid item xs={12} sx={{ mt: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>

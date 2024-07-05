@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Backend",
-    "\\Backend\\ClaimsAPI"
+    "\\Backend\\ClaimsAPI",
+    "\\Backend\\ClaimsAPI\\Models",
+    "\\Backend\\ClaimsAPI\\Models\\Entities"
   ],
-  "SelectedNode": "\\Backend\\ClaimsAPI",
+  "SelectedNode": "\\Backend\\ClaimsAPI\\ClaimsAPI.sln",
   "PreviewInSolutionExplorer": false
 }

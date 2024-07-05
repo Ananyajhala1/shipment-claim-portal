@@ -1,1 +1,0 @@
-# shipment-claim-portal

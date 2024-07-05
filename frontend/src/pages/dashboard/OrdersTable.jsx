@@ -5,6 +5,7 @@ import {
   Typography, Box, IconButton, Paper
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete'; // Import DeleteIcon
 
 // project import
 import Dot from 'components/@extended/Dot';
@@ -36,6 +37,7 @@ function stableSort(array, comparator) {
 }
 
 const headCells = [
+  { id: 'id', align: 'left', disablePadding: false, label: 'UserID' },
   { id: 'name', align: 'left', disablePadding: false, label: 'Name' },
   { id: 'email', align: 'left', disablePadding: false, label: 'Email' },
   { id: 'role', align: 'left', disablePadding: false, label: 'Role' },
@@ -89,7 +91,7 @@ function UserStatus({ status }) {
   );
 }
 
-export default function UserTable({ users, setUsers, handleEditClick }) {
+export default function UserTable({ users, setUsers, handleEditClick, handleDeleteUser }) {
   const order = 'asc';
   const orderBy = 'name';
 
@@ -111,8 +113,9 @@ export default function UserTable({ users, setUsers, handleEditClick }) {
                   key={user.id}
                 >
                   <TableCell component="th" id={labelId} scope="row" sx={{ padding: '8px' }}>
-                    <Link color="secondary">{user.name}</Link>
+                    <Link color="secondary">{user.id}</Link>
                   </TableCell>
+                  <TableCell sx={{ padding: '8px' }}>{user.name}</TableCell>
                   <TableCell sx={{ padding: '8px' }}>{user.email}</TableCell>
                   <TableCell sx={{ padding: '8px' }}>{user.role}</TableCell>
                   <TableCell sx={{ padding: '8px' }}>{user.dateJoined}</TableCell>
@@ -122,6 +125,9 @@ export default function UserTable({ users, setUsers, handleEditClick }) {
                   <TableCell align="center" sx={{ padding: '8px' }}>
                     <IconButton color="primary" onClick={() => handleEditClick(user)}>
                       <EditIcon />
+                    </IconButton>
+                    <IconButton color="secondary" onClick={() => handleDeleteUser(user.id)}>
+                      <DeleteIcon />
                     </IconButton>
                   </TableCell>
                 </TableRow>
@@ -137,7 +143,8 @@ export default function UserTable({ users, setUsers, handleEditClick }) {
 UserTable.propTypes = {
   users: PropTypes.array.isRequired,
   setUsers: PropTypes.func.isRequired,
-  handleEditClick: PropTypes.func.isRequired
+  handleEditClick: PropTypes.func.isRequired,
+  handleDeleteUser: PropTypes.func.isRequired
 };
 
 UserTableHead.propTypes = { order: PropTypes.any, orderBy: PropTypes.string };
