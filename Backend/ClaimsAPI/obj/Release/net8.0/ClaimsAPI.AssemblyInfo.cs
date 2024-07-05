@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ecb940bb0291c6bc7e954f3ef56bc0dc11c0f82")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45a8b819abcabc3f8fabb2a3f3c177a1bb2cfa60")]
->>>>>>> users-roles
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fafbe804fe517e5326dbed3f0600a49ed9038ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaimsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
