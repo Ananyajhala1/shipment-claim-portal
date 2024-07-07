@@ -1,9 +1,14 @@
 using ClaimsAPI.Models;
+using ClaimsAPI.Service.ClaimDocumentService;
 using ClaimsAPI.Service.CompanyTypeService;
+using ClaimsAPI.Service.DocumentTypeService;
+using ClaimsAPI.Service.PermissionService;
+using ClaimsAPI.Service.RolesService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +38,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddMvc();
 builder.Services.AddTransient<ICompanyTypeService, CompanyTypeService>();
+builder.Services.AddTransient<IDocumentTypeService, DocumentTypeService>();
+builder.Services.AddTransient<IRolesService, RolesService>();
+builder.Services.AddTransient<IPermissionService, PermissionService>();
+builder.Services.AddTransient<IPermissionRoleService, PermissionRoleService>();
+builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
 
 
 var app = builder.Build();
