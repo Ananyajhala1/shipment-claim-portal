@@ -17,9 +17,9 @@ namespace ClaimsAPI.Controllers
             _companyTypeService = companyTypeService;
         }
         [HttpGet]
-        public IActionResult GetCompanyTypes()
+        public async Task<ActionResult<IEnumerable<CompanyType>>> GetCompanyTypes()
         {
-            var CompanyTypeService = _companyTypeService.GetCompanyTypes();
+            var CompanyTypeService = await _companyTypeService.GetCompanyTypes();
             if(CompanyTypeService == null)
             {
                 return NotFound();
@@ -28,9 +28,9 @@ namespace ClaimsAPI.Controllers
         }
         [HttpGet]
         [Route("{id:int}")]
-        public IActionResult GetCompanyTypeById(int id)
+        public async Task<ActionResult<CompanyType>> GetCompanyTypeById(int id)
         {
-            var companyType = _companyTypeService.GetCompanyTypeById(id);
+            var companyType = await _companyTypeService.GetCompanyTypeById(id);
             if(companyType == null)
             {
                 return NotFound();
