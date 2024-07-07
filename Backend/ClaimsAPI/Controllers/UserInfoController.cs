@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
+using ClaimsAPI.Service.UserInfoService;
+using System.Security.Cryptography;
 
 
 namespace ClaimsAPI.Controllers
@@ -17,142 +19,89 @@ namespace ClaimsAPI.Controllers
 
     public class UserInfoController : ControllerBase
     {
-        private ShipmentClaimsContext _dbContext;
-
-        public UserInfoController(ShipmentClaimsContext dbcontext)
+        private readonly IUserInfoService _UserInfoService;
+        public UserInfoController(IUserInfoService userInfoService)
         {
-            _dbContext = dbcontext;
+            _UserInfoService = userInfoService;
         }
         [HttpGet]
         //get all users
         public async Task<IActionResult> GetUserInfo(int? pageNumber, int? pageSize)
 
         {
-            int currentPageNumber = pageNumber ?? 1;
-            var currentPageSize = pageSize ?? 1;
-            var users = await (from user in _dbContext.UserInfos
-                                select new GetUserInfoDTO
-                                {
-                                   UserId = user.UserId,
-                                   FirstName = user.FirstName,
-                                    LastName = user.LastName,
-                                    email = user.email,
-                                    ContactNumber = user.ContactNumber
-                                }).ToListAsync();
-
-            return Ok(users.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
+            var UserInfoService = _UserInfoService.GetUserInfo(pageNumber, pageSize);
+            if (UserInfoService == null)
+            {
+                return NotFound();
+            }
+            return Ok(UserInfoService);
         }
         //get all users by companyId
-       
+
 
         [HttpGet("[action]")]
         public async Task<IActionResult> CompanyUsers(int cid)
         {
-            var users = await _dbContext.UserInfos
-                                      .Where(u => u.CompanyId == cid)
-                                      .ToListAsync();
-
-            if (users == null || users.Count == 0)
+            var UserInfoService = _UserInfoService.CompanyUsers(cid);
+            if (UserInfoService == null)
             {
                 return NotFound();
             }
-            GetUserInfoDTO user = new GetUserInfoDTO();
-            user.UserId = users[0].UserId;
-            user.FirstName = users[0].FirstName;
-            user.LastName = users[0].LastName;
-            user.email = users[0].email; 
-            user.ContactNumber = users[0].ContactNumber;    
-            user.CompanyId = users[0].CompanyId;
-
-            return Ok(user);
+            return Ok(UserInfoService);
         }
-        //get a single user
+    
+    //get a single user
 
-        [HttpGet("[action]")]
-        public async Task<IActionResult> UserDetails(int userId)
+    [HttpGet("[action]")]
+    public async Task<IActionResult> UserDetails(int userId)
         {
-            var users = await _dbContext.UserInfos
-                                      .Where(u => u.UserId == userId)
-                                      .ToListAsync();
-
-            if (users == null || users.Count == 0)
+            var UserInfoService = _UserInfoService.UserDetails(userId);
+            if (UserInfoService == null)
             {
                 return NotFound();
             }
-            GetUserInfoDTO user = new GetUserInfoDTO();
-            user.UserId = users[0].UserId;
-            user.FirstName = users[0].FirstName;
-            user.LastName = users[0].LastName;
-            user.email = users[0].email;
-            user.ContactNumber = users[0].ContactNumber;
-            user.CompanyId = users[0].CompanyId;
-
-
-            return Ok(user);
+            return Ok(UserInfoService);
         }
+
 
         //create user
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateUser(CreateUserInfoDTO userInfoDTO)
         {
-            if (userInfoDTO == null)
+            var UserInfoService = _UserInfoService.CreateUser(userInfoDTO);
+            if (UserInfoService == null)
             {
-
-                return BadRequest("User info is null.");
+                return NotFound();
             }
-             UserInfo userInfo = new UserInfo();
+            return Ok(UserInfoService);
 
-            userInfo.FirstName = userInfoDTO.FirstName;
-            userInfo.LastName = userInfoDTO.LastName;
-            userInfo.email = userInfoDTO.email;
-            userInfo.ContactNumber = userInfoDTO.ContactNumber;
-            userInfo.CompanyId = userInfoDTO.CompanyId;
-
-           
-            _dbContext.UserInfos.Add(userInfo);
-            await _dbContext.SaveChangesAsync();
-
-            return Ok(userInfoDTO);
         }
 
         // Update an existing user
         [HttpPut("[action]")]
         public async Task<IActionResult> UpdateUser( UpdateUserInfoDTO userInfoDTO)
         {
-       
-
-            var userToUpdate = await _dbContext.UserInfos.FindAsync(userInfoDTO.UserId);
-            if (userToUpdate == null)
+            var UserInfoService = _UserInfoService.UpdateUser(userInfoDTO); 
+            if (UserInfoService == null)
             {
-                return NotFound("User not found.");
+                return NotFound();
             }
+            return Ok(UserInfoService);
 
-            userToUpdate.FirstName = userInfoDTO.FirstName;
-            userToUpdate.LastName = userInfoDTO.LastName;
-            userToUpdate.ContactNumber = userInfoDTO.ContactNumber;
-            userToUpdate.email = userInfoDTO.email;
-            userToUpdate.CompanyId = userInfoDTO.CompanyId;
 
-            _dbContext.UserInfos.Update(userToUpdate);
-            await _dbContext.SaveChangesAsync();
 
-            return NoContent();
         }
 
         // Delete a user
         [HttpDelete("[action]")]
         public async Task<IActionResult> DeleteUser(UpdateUserInfoDTO userInfoDTO)
         {
-            var user = await _dbContext.UserInfos.FindAsync(userInfoDTO.UserId);
-            if (user == null)
+            var UserInfoService = _UserInfoService.DeleteUser(userInfoDTO);
+            if (UserInfoService == null)
             {
-                return NotFound("User not found.");
+                return NotFound();
             }
-
-            _dbContext.UserInfos.Remove(user);
-            await _dbContext.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(UserInfoService);
         }
 
 
