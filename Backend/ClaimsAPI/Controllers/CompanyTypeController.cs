@@ -38,16 +38,16 @@ namespace ClaimsAPI.Controllers
             return Ok(companyType);
         }
         [HttpPost]
-        public IActionResult AddCompany(CompanyTypePostDTO companyType)
+        public async Task<ActionResult<CompanyType>> AddCompany(CompanyTypePostDTO companyType)
         {
-            var CompanyType = _companyTypeService.AddCompany(companyType);
+            var CompanyType = await _companyTypeService.AddCompany(companyType);
             return Ok(CompanyType);
         }
         [HttpPut]
         [Route("{id:int}")]
-        public IActionResult UpdateCompany(int id, CompanyTypeUpdateDTO companyType)
+        public async Task<ActionResult<CompanyType>> UpdateCompany(int id, CompanyTypeUpdateDTO companyType)
         {
-            var CompanyType = _companyTypeService.UpdateCompany(id, companyType);
+            var CompanyType = await _companyTypeService.UpdateCompany(id, companyType);
 
             if(companyType.CompanyTypeId != id)
             {
@@ -61,9 +61,9 @@ namespace ClaimsAPI.Controllers
         }
         [HttpDelete]
         [Route("{id:int}")]
-        public IActionResult DeleteCompany(int id)
+        public async Task<ActionResult<CompanyType>> DeleteCompany(int id)
         {
-            var companyType = _companyTypeService.DeleteCompany(id);
+            var companyType = await _companyTypeService.DeleteCompany(id);
             if(companyType == null)
             {
                 return NotFound();
