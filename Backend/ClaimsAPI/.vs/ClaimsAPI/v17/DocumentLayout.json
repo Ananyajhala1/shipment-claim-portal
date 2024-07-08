@@ -1,50 +1,30 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\models\\viewmodels\\claimdocumentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:models\\viewmodels\\claimdocumentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\claimsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\claimemailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimemailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\models\\entities\\claimdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:models\\entities\\claimdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\claimdocumentservice\\iclaimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\claimdocumentservice\\iclaimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\controllers\\claimdocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\controllers\\claimdocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimdocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\internwork\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\claimdocumentservice\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\claimdocumentservice\\claimdocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> service-layer
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\users\\prakh\\onedrive\\desktop\\shipment2\\backend\\claimsapi\\controllers\\claimsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\claimsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,13 +33,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-<<<<<<< HEAD
-          "DockedWidth": 26,
-          "SelectedChildIndex": 5,
-=======
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
->>>>>>> service-layer
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,17 +46,6 @@
             },
             {
               "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-=======
->>>>>>> service-layer
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
@@ -90,128 +54,75 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-              "Title": "LocationController.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\LocationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LocationController.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\LocationController.cs*",
-              "RelativeToolTip": "Controllers\\LocationController.cs*",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAxwE4AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:19:48.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CompanyController.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CompanyController.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs*",
-              "RelativeToolTip": "Controllers\\CompanyController.cs*",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:18:50.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClaimSettingsController.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimSettingsController.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs*",
-              "RelativeToolTip": "Controllers\\ClaimSettingsController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:17:49.645Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "ClaimDocumentsController.cs",
-              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimDocumentsController.cs",
-              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
-              "RelativeToolTip": "Controllers\\ClaimDocumentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T09:36:30.705Z",
->>>>>>> service-layer
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "ClaimsController.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs*",
-              "RelativeToolTip": "Controllers\\ClaimsController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAlAAAA",
+              "Title": "ClaimDocument.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Models\\Entities\\ClaimDocument.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\ClaimDocument.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Models\\Entities\\ClaimDocument.cs",
+              "RelativeToolTip": "Models\\Entities\\ClaimDocument.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:16:23.497Z",
-=======
-              "Title": "ClaimDocumentService.cs",
-              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\ClaimDocumentService.cs",
-              "RelativeDocumentMoniker": "Service\\ClaimDocumentService\\ClaimDocumentService.cs",
-              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\ClaimDocumentService.cs",
-              "RelativeToolTip": "Service\\ClaimDocumentService\\ClaimDocumentService.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAkwEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T15:48:02.876Z",
->>>>>>> service-layer
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T16:29:39.857Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 4,
-              "Title": "ClaimEmailController.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimEmailController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimEmailController.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimEmailController.cs*",
-              "RelativeToolTip": "Controllers\\ClaimEmailController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAqAAAA",
+              "Title": "ClaimDocumentsController.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimDocumentsController.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimDocumentsController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:04:02.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T16:29:24.342Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ClaimSettingsController.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimSettingsController.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimSettingsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T19:54:50.273Z",
-=======
+              "WhenOpened": "2024-07-04T05:13:42.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClaimDocumentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Models\\ViewModels\\ClaimDocumentDTO.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ClaimDocumentDTO.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Models\\ViewModels\\ClaimDocumentDTO.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ClaimDocumentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T05:13:17.648Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACwAAABNAAAA",
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimsController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T10:47:49.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T05:11:22.011Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IClaimDocumentService.cs",
-              "DocumentMoniker": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\IClaimDocumentService.cs",
-              "RelativeDocumentMoniker": "Service\\ClaimDocumentService\\IClaimDocumentService.cs",
-              "ToolTip": "D:\\internWork\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\ClaimDocumentService\\IClaimDocumentService.cs",
-              "RelativeToolTip": "Service\\ClaimDocumentService\\IClaimDocumentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T15:47:44.204Z",
->>>>>>> service-layer
+              "WhenOpened": "2024-07-04T05:06:56.788Z",
               "EditorCaption": ""
             }
           ]
