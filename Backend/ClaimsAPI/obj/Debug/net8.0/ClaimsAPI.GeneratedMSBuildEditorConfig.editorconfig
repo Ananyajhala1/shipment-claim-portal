@@ -15,5 +15,5 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI
+build_property.MSBuildProjectDirectory = C:\work\shipment-claim-portal\Backend\ClaimsAPI
 build_property._RazorSourceGeneratorDebug = 
