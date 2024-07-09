@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-using ClaimsAPI.Service.LoginService;
+
 
 namespace ClaimsAPI.Controllers
 {
@@ -33,7 +33,7 @@ namespace ClaimsAPI.Controllers
         [HttpPost]
         public async Task<IActionResult>Login(string username, string password)
         {
-            var TemplateService = _LoginService.Login(username, password, _configuration);
+            var TemplateService = await _LoginService.Login(username, password, _configuration);
             if (TemplateService == null)
             {
                 return NotFound();

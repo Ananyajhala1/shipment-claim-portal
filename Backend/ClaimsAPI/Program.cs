@@ -4,6 +4,9 @@ using ClaimsAPI.Service.CompanyTypeService;
 using ClaimsAPI.Service.DocumentTypeService;
 using ClaimsAPI.Service.PermissionService;
 using ClaimsAPI.Service.RolesService;
+using ClaimsAPI.Service.UserInfoService;
+using ClaimsAPI.Service.TemplatesService;
+using ClaimsAPI.Service.LoginService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +46,9 @@ builder.Services.AddTransient<IRolesService, RolesService>();
 builder.Services.AddTransient<IPermissionService, PermissionService>();
 builder.Services.AddTransient<IPermissionRoleService, PermissionRoleService>();
 builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
+builder.Services.AddScoped<IUserInfoService, UserInfoService>();
+builder.Services.AddScoped<ITemplateService, TemplatesService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 
 var app = builder.Build();
