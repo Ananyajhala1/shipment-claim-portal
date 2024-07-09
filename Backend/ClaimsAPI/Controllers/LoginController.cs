@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-using ClaimsAPI.Service.LoginService;
+
 
 namespace ClaimsAPI.Controllers
 {
