@@ -143,11 +143,6 @@ C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 <<<<<<< HEAD
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Blobs.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Common.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.ClientModel.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.IO.Hashing.dll
 >>>>>>> users-roles
 D:\internWork\Ananaya's Dad\backend\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.Development.json
 D:\internWork\Ananaya's Dad\backend\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.json
