@@ -143,11 +143,6 @@ C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 C:\work\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
 <<<<<<< HEAD
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Blobs.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\Azure.Storage.Common.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.ClientModel.dll
-C:\work\shipment-claim-portal\Backend\ClaimsAPI\bin\Debug\net8.0\System.IO.Hashing.dll
 >>>>>>> users-roles
 D:\internWork\Ananaya's Dad\backend\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.Development.json
 D:\internWork\Ananaya's Dad\backend\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.json
@@ -582,7 +577,6 @@ D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\refint
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
-<<<<<<< HEAD
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.exe
@@ -727,7 +721,6 @@ C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ref
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
-=======
 =======
 >>>>>>> service-layer
 >>>>>>> ef16ab9db57db416ac34000cb8ca8f638a697069
