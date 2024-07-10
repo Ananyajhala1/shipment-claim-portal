@@ -1,31 +1,59 @@
-import { FormControl, InputLabel, TextField } from '@mui/material';
+import { FormControl, InputLabel, TextField, Select, MenuItem } from '@mui/material';
 
-export default function BottomPart() {
+export default function TopPart() {
     return (
         <div>
-            {/* line 1 */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px' }}>
                 <FormControl variant="outlined" fullWidth>
                     <InputLabel htmlFor="customer-code-input"></InputLabel>
                     <TextField
-                        id="customer-code-input"
-                        placeholder=""
-                        variant="outlined"
-                        label="Payee Name"
-                        fullWidth
+                    id="customer-code-input"
+                    placeholder=""
+                    variant="outlined"
+                    label="Carrier Provider Name"
+                    fullWidth
                     />
                 </FormControl>
                 <FormControl variant="outlined" fullWidth>
                     <InputLabel htmlFor="company-name-input"></InputLabel>
                     <TextField
-                        id="company-name-input"
-                        variant="outlined"
-                        label="Payee Email"
-                        fullWidth
+                    id="company-name-input"
+                    variant="outlined"
+                    label="DBA"
+                    fullWidth
                     />
                 </FormControl>
             </div>
-            {/* line 2 */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginTop: '16px' }}>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel htmlFor="customer-code-input"></InputLabel>
+                    <TextField
+                    id="customer-code-input"
+                    placeholder=""
+                    variant="outlined"
+                    label="Carrier Code/SCAC"
+                    fullWidth
+                    />
+                </FormControl>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel htmlFor="company-name-input"></InputLabel>
+                    <TextField
+                    id="company-name-input"
+                    variant="outlined"
+                    label="MC Number"
+                    fullWidth
+                    />
+                </FormControl>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel htmlFor="company-name-input"></InputLabel>
+                    <TextField
+                    id="company-name-input"
+                    variant="outlined"
+                    label="DOT Number"
+                    fullWidth
+                    />
+                </FormControl>
+            </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginTop: '16px' }}>
                 <FormControl variant="outlined" fullWidth>
                     <InputLabel htmlFor="name-input"></InputLabel>
@@ -45,7 +73,7 @@ export default function BottomPart() {
                         fullWidth
                     />
                 </FormControl>
-                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '16px',}}>
                     <FormControl variant="outlined" fullWidth>
                         <InputLabel htmlFor="name-input"></InputLabel>
                         <TextField
@@ -74,6 +102,18 @@ export default function BottomPart() {
                         />
                     </FormControl>
                 </div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginTop: "16px" }}>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel htmlFor="customer-code-input"></InputLabel>
+                    <TextField
+                    id="customer-code-input"
+                    placeholder=""
+                    variant="outlined"
+                    label="Website"
+                    fullWidth
+                    />
+                </FormControl>
             </div>
         </div>
     );

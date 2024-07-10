@@ -22,29 +22,21 @@ const dashboard = {
       expandable: true,
       children: [
         {
-          id: 'CP',
-          title: 'Capacity Provider',
-          type: 'item',
-          url: '/dashboard/CapacityProvider',
-          icon: icons.DashboardOutlined,
-          breadcrumbs: false
-        },
-        {
-          id: 'Carrier',
+          id: '1',
           title: 'Carrier',
           type: 'item',
-          url: '/dashboard/Carrier',
+          url: '/dashboard/carrier',
           icon: icons.DashboardOutlined,
           breadcrumbs: false
         },
         {
-          id: 'Insurance',
-          title: 'Insurance',
+          id: '2',
+          title: 'CompanyId',
           type: 'item',
-          url: '/dashboard/Insurance',
+          url: '/dashboard/companyId',
           icon: icons.DashboardOutlined,
           breadcrumbs: false
-        }
+        },
       ]
     }
   ]
