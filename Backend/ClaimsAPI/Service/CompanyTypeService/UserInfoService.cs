@@ -10,6 +10,7 @@ using System.Data;
 namespace ClaimsAPI.Service.UserInfoService
 {
     public class UserInfoService: IUserInfoService
+
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
         public UserInfoService(ShipmentClaimsContext shipmentClaimsContext)
@@ -17,12 +18,12 @@ namespace ClaimsAPI.Service.UserInfoService
             this.shipmentClaimsContext = shipmentClaimsContext;
         }
         // get all users 
-        public async Task<IEnumerable<GetUserInfoDTO>> GetUserInfo(int? pageNumber, int? pageSize)
+        public  async Task<IList<GetUserInfoDTO>> GetUserInfo(int? pageNumber, int? pageSize)
 
         {
             int currentPageNumber = pageNumber ?? 1;
             var currentPageSize = pageSize ?? 1;
-            var users = await (from user in shipmentClaimsContext.UserInfos
+            var users = await  (from user in shipmentClaimsContext.UserInfos
                                select new GetUserInfoDTO
                                {
                                    UserId = user.UserId,
@@ -30,16 +31,16 @@ namespace ClaimsAPI.Service.UserInfoService
                                    LastName = user.LastName,
                                    email = user.email,
                                    ContactNumber = user.ContactNumber
-                               }).ToListAsync();
+                               }).ToListAsync< GetUserInfoDTO>();
 
             return users;
         }
         //get all users by companyId
-        public async Task<IEnumerable<GetUserInfoDTO>> CompanyUsers(int cid)
+        public async Task<IList<GetUserInfoDTO>> CompanyUsers(int cid)
         {
    
 
-            var users2 = await (from user in shipmentClaimsContext.UserInfos.Where(u => u.CompanyId == cid)
+            var users2 =  await (from user in shipmentClaimsContext.UserInfos.Where(u => u.CompanyId == cid)
                                select new GetUserInfoDTO
                                {
                                    UserId = user.UserId,

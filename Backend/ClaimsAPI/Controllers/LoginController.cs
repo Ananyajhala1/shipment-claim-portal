@@ -33,7 +33,7 @@ namespace ClaimsAPI.Controllers
         [HttpPost]
         public async Task<IActionResult>Login(string username, string password)
         {
-            var TemplateService = _LoginService.Login(username, password, _configuration);
+            var TemplateService = await _LoginService.Login(username, password, _configuration);
             if (TemplateService == null)
             {
                 return NotFound();

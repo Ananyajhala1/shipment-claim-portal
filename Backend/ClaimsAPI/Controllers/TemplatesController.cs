@@ -23,7 +23,7 @@ namespace ClaimsAPI.Controllers;
         public async Task<IActionResult> GetTemplate(int id)
         {
 
-            var TemplateService = _TemplateService.GetTemplate(id);
+            var TemplateService = await _TemplateService.GetTemplate(id);
             if (TemplateService == null)
             {
                 return NotFound();
@@ -35,7 +35,7 @@ namespace ClaimsAPI.Controllers;
         [HttpPost]
         public async Task<IActionResult> CreateTempate(int uid, GetTemplateDTO templateDTO)
         {
-        var TemplateService = _TemplateService.CreateTempate(uid, templateDTO);
+        var TemplateService = await _TemplateService.CreateTempate(uid, templateDTO);
         if (TemplateService == null)
         {
             return NotFound();
@@ -48,7 +48,7 @@ namespace ClaimsAPI.Controllers;
         [HttpPut]
         public async Task<IActionResult> UpdateTemplate(int id, UpdateTemplateDTO templateDTO)
         {
-        var TemplateService = _TemplateService.UpdateTemplate(id, templateDTO);
+        var TemplateService = await _TemplateService.UpdateTemplate(id, templateDTO);
         if (TemplateService == null)
         {
             return NotFound();
@@ -60,7 +60,7 @@ namespace ClaimsAPI.Controllers;
     [HttpDelete()]
         public async Task<IActionResult> DeleteTemplate(int id)
         {
-        var TemplateService = _TemplateService.DeleteTemplate(id);
+        var TemplateService = await _TemplateService.DeleteTemplate(id);
         if (TemplateService == null)
         {
             return NotFound();
