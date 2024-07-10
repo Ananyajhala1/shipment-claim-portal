@@ -3,6 +3,7 @@ using ClaimsAPI.Models.Entites;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ClaimsAPI.Models.DTO.CompanyTypeDTO;
+using ClaimsAPI.Service.CompanyTypeService;
 
 namespace ClaimsAPI.Controllers
 {
@@ -10,82 +11,65 @@ namespace ClaimsAPI.Controllers
     [ApiController]
     public class CompanyTypeController : ControllerBase
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
-
-        public CompanyTypeController(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly ICompanyTypeService _companyTypeService;
+        public CompanyTypeController(ICompanyTypeService companyTypeService)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            _companyTypeService = companyTypeService;
         }
-
         [HttpGet]
-        public IActionResult GetCompanyTypes()
+        public async Task<ActionResult<IEnumerable<CompanyType>>> GetCompanyTypes()
         {
-            var companyType = shipmentClaimsContext.CompanyTypes.ToList();
-            if (companyType == null)
+            var CompanyTypeService = await _companyTypeService.GetCompanyTypes();
+            if(CompanyTypeService == null)
             {
                 return NotFound();
             }
-            return Ok(companyType);
+            return Ok(CompanyTypeService);
         }
-
         [HttpGet]
         [Route("{id:int}")]
-
-        public IActionResult GetCompanyTypeById(int id)
+        public async Task<ActionResult<CompanyType>> GetCompanyTypeById(int id)
         {
-            var companyType = shipmentClaimsContext.CompanyTypes.Find(id);
-            if (companyType == null)
+            var companyType = await _companyTypeService.GetCompanyTypeById(id);
+            if(companyType == null)
             {
                 return NotFound();
             }
             return Ok(companyType);
         }
-
         [HttpPost]
-
-        public IActionResult AddCompany(CompanyTypePostDTO companyType)
+        public async Task<ActionResult<CompanyType>> AddCompany(CompanyTypePostDTO companyType)
         {
-            var CompanyType = new CompanyType()
-            {
-                CompanyType1 = companyType.CompanyType1
-            };
-            shipmentClaimsContext.CompanyTypes.Add(CompanyType);
-            shipmentClaimsContext.SaveChanges();
+            var CompanyType = await _companyTypeService.AddCompany(companyType);
             return Ok(CompanyType);
         }
-
         [HttpPut]
         [Route("{id:int}")]
-
-        public IActionResult UpdateCompany(int id, CompanyTypeUpdateDTO companyType)
+        public async Task<ActionResult<CompanyType>> UpdateCompany(int id, CompanyTypeUpdateDTO companyType)
         {
-            if (id != companyType.CompanyTypeId)
+            var CompanyType = await _companyTypeService.UpdateCompany(id, companyType);
+
+            if(companyType.CompanyTypeId != id)
             {
                 return BadRequest();
             }
-            var CompanyType = shipmentClaimsContext.CompanyTypes.Find(id);
-            if (CompanyType == null)
+            if(CompanyType == null)
             {
-                return BadRequest();
+                return NotFound();
             }
-            CompanyType.CompanyType1 = companyType.CompanyType1;
-            shipmentClaimsContext.SaveChanges();
             return Ok(CompanyType);
         }
-
         [HttpDelete]
         [Route("{id:int}")]
-
-        public IActionResult DeleteCompany(int id)
+        public async Task<ActionResult<CompanyType>> DeleteCompany(int id)
         {
-            var companyType = shipmentClaimsContext.CompanyTypes.Find(id);
-            if (companyType == null)
+            var companyType = await _companyTypeService.DeleteCompany(id);
+            if(companyType == null)
             {
-                return BadRequest();
+                return NotFound();
             }
-            shipmentClaimsContext.CompanyTypes.Remove(companyType);
-            shipmentClaimsContext.SaveChanges();
             return Ok(companyType);
         }
+
     }
 }

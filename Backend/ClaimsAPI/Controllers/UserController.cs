@@ -20,9 +20,10 @@ namespace ClaimsAPI.Controllers
 
         public IActionResult GetUserPermissions(int id)
         {
-            var user = shipmentClaimContext.UserInfos.SingleOrDefault(user => user.UserId == id);
+            var user = shipmentClaimContext.UserInfos.FirstOrDefault(u => u.UserId == id);
             if(user == null)
             {
+                
                 return NotFound();
             }
             var userRoles = shipmentClaimContext.UserRoles.Where(user => user.UserId == id).Select(user => user.RoleId).ToList();
