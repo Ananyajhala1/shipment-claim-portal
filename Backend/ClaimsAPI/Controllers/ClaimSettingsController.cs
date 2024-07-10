@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
 using System.Security.Claims;
+using System.Linq;
 
 namespace ClaimsAPI.Controllers
 {
