@@ -39,7 +39,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
     };
 });
-builder.Services.AddMvc();
 builder.Services.AddTransient<ICompanyTypeService, CompanyTypeService>();
 builder.Services.AddTransient<IDocumentTypeService, DocumentTypeService>();
 builder.Services.AddTransient<IRolesService, RolesService>();
