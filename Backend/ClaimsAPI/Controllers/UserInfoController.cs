@@ -29,7 +29,7 @@ namespace ClaimsAPI.Controllers
         public async Task<IActionResult> GetUserInfo(int? pageNumber, int? pageSize)
 
         {
-            var UserInfoService = _UserInfoService.GetUserInfo(pageNumber, pageSize);
+            var UserInfoService = await  _UserInfoService.GetUserInfo(pageNumber, pageSize);
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -42,7 +42,7 @@ namespace ClaimsAPI.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> CompanyUsers(int cid)
         {
-            var UserInfoService = _UserInfoService.CompanyUsers(cid);
+            var UserInfoService = await _UserInfoService.CompanyUsers(cid);
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace ClaimsAPI.Controllers
     [HttpGet("[action]")]
     public async Task<IActionResult> UserDetails(int userId)
         {
-            var UserInfoService = _UserInfoService.UserDetails(userId);
+            var UserInfoService = await _UserInfoService.UserDetails(userId);
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -68,7 +68,7 @@ namespace ClaimsAPI.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateUser(CreateUserInfoDTO userInfoDTO)
         {
-            var UserInfoService = _UserInfoService.CreateUser(userInfoDTO);
+            var UserInfoService = await _UserInfoService.CreateUser(userInfoDTO);
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -81,7 +81,7 @@ namespace ClaimsAPI.Controllers
         [HttpPut("[action]")]
         public async Task<IActionResult> UpdateUser( UpdateUserInfoDTO userInfoDTO)
         {
-            var UserInfoService = _UserInfoService.UpdateUser(userInfoDTO); 
+            var UserInfoService = await _UserInfoService.UpdateUser(userInfoDTO); 
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -96,7 +96,7 @@ namespace ClaimsAPI.Controllers
         [HttpDelete("[action]")]
         public async Task<IActionResult> DeleteUser(UpdateUserInfoDTO userInfoDTO)
         {
-            var UserInfoService = _UserInfoService.DeleteUser(userInfoDTO);
+            var UserInfoService = await _UserInfoService.DeleteUser(userInfoDTO);
             if (UserInfoService == null)
             {
                 return NotFound();
