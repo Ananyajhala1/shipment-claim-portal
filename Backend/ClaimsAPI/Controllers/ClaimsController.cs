@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ClaimsAPI.Models.DTO.Claims;
 using ClaimsAPI.Models.Entites;
 using System.Threading;
+using ClaimsAPI.Service.claim;
 
 namespace ClaimsAPI.Controllers
 {
@@ -11,17 +12,17 @@ namespace ClaimsAPI.Controllers
     [ApiController]
     public class ClaimsController : ControllerBase
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private readonly IClaim _claim;
 
-        public ClaimsController(ShipmentClaimsContext shipmentClaimsContext)
+        public ClaimsController(IClaim claim)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            this._claim = claim;
         }
 
         [HttpGet]
-        public IActionResult GetClaims()
+        public async Task<IActionResult> GetClaims()
         {
-            var claims = shipmentClaimsContext.Claims.ToList();
+            var claims =await _claim.GetClaims();
             if (claims == null)
             {
                 return NotFound();
@@ -32,9 +33,9 @@ namespace ClaimsAPI.Controllers
         [HttpGet]
         [Route("{id:int}")]
 
-        public IActionResult GetCompanyTypeById(int id)
+        public async Task<IActionResult> GetClaimTypeById(int id)
         {
-            var claim = shipmentClaimsContext.Claims.Find(id);
+            var claim =await _claim.GetClaimTypeById(id);
             if (claim == null)
             {
                 return NotFound();
@@ -44,62 +45,35 @@ namespace ClaimsAPI.Controllers
 
         [HttpPost]
 
-        public IActionResult AddCompany(ClaimPostDTO claim)
+        public async Task<IActionResult> AddClaim(ClaimPostDTO claim)
         {
-            var Claim = new Claim()
-            {
-                FileDate = claim.FileDate,
-                CustomerId = claim.CustomerId,
-                CarrierId = claim.CarrierId,
-                InsuranceId = claim.InsuranceId,
-                Carrier = claim.Carrier,
-                ClaimDocuments = claim.ClaimDocuments,
-                ClaimSettings = claim.ClaimSettings,
-                ClaimStatuses = claim.ClaimStatuses,
-                ClaimTasks = claim.ClaimTasks,
-                Customer = claim.Customer,
-                Insurance = claim.Insurance
-            };
-            shipmentClaimsContext.Claims.Add(Claim);
-            shipmentClaimsContext.SaveChanges();
+            var Claim = await _claim.AddClaim(claim);
             return Ok(Claim);
         }
 
         [HttpPut]
         [Route("{id:int}")]
 
-        public IActionResult UpdateCompany(int id, ClaimUpdateDTO claim)
+        public async Task<IActionResult> UpdateClaims(int id, ClaimUpdateDTO claim)
         {
-            if (id != claim.ClaimId)
-            {
-                return BadRequest();
-            }
-            var Claim = shipmentClaimsContext.Claims.Find(id);
+           var Claim = await _claim.UpdateClaims(id, claim);
             if (Claim == null)
             {
                 return BadRequest();
             }
-
-            Claim.ClaimDocuments = claim.ClaimDocuments;
-            Claim.ClaimSettings = claim.ClaimSettings;
-            Claim.ClaimStatuses = claim.ClaimStatuses;
-            Claim.ClaimTasks = claim.ClaimTasks;
-            shipmentClaimsContext.SaveChanges();
             return Ok(Claim);
         }
 
         [HttpDelete]
         [Route("{id:int}")]
 
-        public IActionResult DeleteCompany(int id)
+        public async Task<IActionResult> DeleteClaims(int id)
         {
-            var claim = shipmentClaimsContext.Claims.Find(id);
+            var claim = await _claim.DeleteClaims(id);
             if (claim == null)
             {
                 return BadRequest();
             }
-            shipmentClaimsContext.Claims.Remove(claim);
-            shipmentClaimsContext.SaveChanges();
             return Ok(claim);
         }
     }
