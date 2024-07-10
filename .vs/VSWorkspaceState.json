@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Backend",
-    "\\Backend\\ClaimsAPI",
-    "\\Backend\\ClaimsAPI\\Controllers"
+    "\\Backend\\ClaimsAPI"
   ],
-  "SelectedNode": "\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs",
+  "SelectedNode": "\\Backend\\ClaimsAPI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
