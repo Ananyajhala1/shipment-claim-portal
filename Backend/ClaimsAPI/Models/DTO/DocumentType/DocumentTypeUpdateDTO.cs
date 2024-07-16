@@ -9,8 +9,8 @@ namespace ClaimsAPI.Models.DTO.DocumentType
 
         public int? CompanyId { get; set; }
 
-        public virtual ICollection<ClaimDocument> ClaimDocuments { get; set; } = new List<ClaimDocument>();
+        
 
-        public virtual Company? Company { get; set; }
+        
     }
 }

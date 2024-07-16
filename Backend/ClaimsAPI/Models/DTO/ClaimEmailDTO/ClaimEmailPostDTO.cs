@@ -16,8 +16,6 @@ namespace ClaimsAPI.Models.DTO.ClaimEmailDTO
 
         public DateOnly? DateSent { get; set; }
 
-        public virtual UserInfo? From { get; set; }
-
-        public virtual Company? Recepient { get; set; }
+        
     }
 }

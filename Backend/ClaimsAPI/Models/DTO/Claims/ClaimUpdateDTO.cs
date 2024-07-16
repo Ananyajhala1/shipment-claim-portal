@@ -6,13 +6,13 @@ namespace ClaimsAPI.Models.DTO.Claims
     {
         public int ClaimId { get; set; }
 
-        public virtual ICollection<ClaimDocument> ClaimDocuments { get; set; } = new List<ClaimDocument>();
+        public DateOnly? FileDate { get; set; }
 
-        public virtual ICollection<ClaimSetting> ClaimSettings { get; set; } = new List<ClaimSetting>();
+        public int? CustomerId { get; set; }
 
-        public virtual ICollection<ClaimStatus> ClaimStatuses { get; set; } = new List<ClaimStatus>();
+        public int? CarrierId { get; set; }
 
-        public virtual ICollection<ClaimTask> ClaimTasks { get; set; } = new List<ClaimTask>();
+        public int? InsuranceId { get; set; }
 
     }
 }
