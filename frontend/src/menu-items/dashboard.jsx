@@ -37,6 +37,14 @@ const dashboard = {
           icon: icons.DashboardOutlined,
           breadcrumbs: false
         },
+        {
+          id: '3',
+          title: 'Cfdsfdsa',
+          type: 'item',
+          url: '/dashboard/companyId',
+          icon: icons.DashboardOutlined,
+          breadcrumbs: false
+        },
       ]
     }
   ]
