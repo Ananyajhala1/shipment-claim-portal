@@ -439,7 +439,6 @@ D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\refint
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
-<<<<<<< HEAD
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\bin\Debug\net8.0\ClaimsAPI.exe
@@ -584,6 +583,5 @@ C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ref
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.pdb
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ClaimsAPI.genruntimeconfig.cache
 C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\obj\Debug\net8.0\ref\ClaimsAPI.dll
-=======
 >>>>>>> service-layer-controller
 >>>>>>> service-layer

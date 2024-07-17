@@ -42,9 +42,6 @@ namespace ClaimsAPI.Service.claimSettings
                 CompanyId = claimSetting.CompanyId,
                 DocId = claimSetting.DocId,
                 IsRequired = claimSetting.IsRequired,
-                Claim = claimSetting.Claim,
-                Company = claimSetting.Company,
-                Doc = claimSetting.Doc
             };
             shipmentClaimsContext.ClaimSettings.Add(claimsetting);
             await shipmentClaimsContext.SaveChangesAsync();

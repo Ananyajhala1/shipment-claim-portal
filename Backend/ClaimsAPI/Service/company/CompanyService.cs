@@ -41,18 +41,6 @@ namespace ClaimsAPI.Service.company
                 CompanyName = company.CompanyName,
                 IsCorporate = company.IsCorporate,
                 ParentCompanyId = company.ParentCompanyId,
-                ClaimCarriers = company.ClaimCarriers,
-                ClaimCustomers = company.ClaimCustomers,
-                ClaimDocumentTypes = company.ClaimDocumentTypes,
-                ClaimEmails = company.ClaimEmails,
-                ClaimInsurances = company.ClaimInsurances,
-                ClaimSettings = company.ClaimSettings,
-                ClaimSubStatuses = company.ClaimSubStatuses,
-                Contacts = company.Contacts,
-                InverseParentCompany = company.InverseParentCompany,
-                Locations = company.Locations,
-                ParentCompany = company.ParentCompany,
-                UserInfos = company.UserInfos
             };
             shipmentClaimsContext.Companies.Add(Company);
             await shipmentClaimsContext.SaveChangesAsync();
@@ -74,18 +62,6 @@ namespace ClaimsAPI.Service.company
             Company.CompanyName = company.CompanyName;
             Company.IsCorporate = company.IsCorporate;
             Company.ParentCompanyId = company.ParentCompanyId;
-            Company.ClaimCarriers = company.ClaimCarriers;
-            Company.ClaimCustomers = company.ClaimCustomers;
-            Company.ClaimDocumentTypes = company.ClaimDocumentTypes;
-            Company.ClaimEmails = company.ClaimEmails;
-            Company.ClaimInsurances = company.ClaimInsurances;
-            Company.ClaimSettings = company.ClaimSettings;
-            Company.ClaimSubStatuses = company.ClaimSubStatuses;
-            Company.Contacts = company.Contacts;
-            Company.InverseParentCompany = company.InverseParentCompany;
-            Company.Locations = company.Locations;
-            Company.ParentCompany = company.ParentCompany;
-            Company.UserInfos = company.UserInfos;
             await shipmentClaimsContext.SaveChangesAsync();
             return Company;
         }

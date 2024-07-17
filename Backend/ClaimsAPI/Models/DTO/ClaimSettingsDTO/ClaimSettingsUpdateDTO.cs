@@ -14,10 +14,6 @@ namespace ClaimsAPI.Models.DTO.ClaimSettingsDTO
 
         public bool? IsRequired { get; set; }
 
-        public virtual Claim? Claim { get; set; }
-
-        public virtual Company? Company { get; set; }
-
-        public virtual ClaimDocument? Doc { get; set; }
+        
     }
 }

@@ -47,13 +47,6 @@ namespace ClaimsAPI.Service.claim
                 CustomerId = claim.CustomerId,
                 CarrierId = claim.CarrierId,
                 InsuranceId = claim.InsuranceId,
-                Carrier = claim.Carrier,
-                ClaimDocuments = claim.ClaimDocuments,
-                ClaimSettings = claim.ClaimSettings,
-                ClaimStatuses = claim.ClaimStatuses,
-                ClaimTasks = claim.ClaimTasks,
-                Customer = claim.Customer,
-                Insurance = claim.Insurance
             };
             shipmentClaimsContext.Claims.Add(Claim);
             await shipmentClaimsContext.SaveChangesAsync();
@@ -75,10 +68,11 @@ namespace ClaimsAPI.Service.claim
                 return null;
             }
 
-            Claim.ClaimDocuments = claim.ClaimDocuments;
-            Claim.ClaimSettings = claim.ClaimSettings;
-            Claim.ClaimStatuses = claim.ClaimStatuses;
-            Claim.ClaimTasks = claim.ClaimTasks;
+            Claim.ClaimId = claim.ClaimId;
+            Claim.FileDate = claim.FileDate;
+            Claim.CustomerId = claim.CustomerId;
+            Claim.CarrierId = claim.CarrierId;
+            Claim.InsuranceId = claim.InsuranceId;
             await shipmentClaimsContext.SaveChangesAsync();
             return Claim;
         }
