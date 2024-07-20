@@ -43,8 +43,6 @@ namespace ClaimsAPI.Service.claimEmail
                 ClaimId = claimEmail.ClaimId,
                 FromId = claimEmail.FromId,
                 DateSent = claimEmail.DateSent,
-                From = claimEmail.From,
-                Recepient = claimEmail.Recepient
             };
 
             shipmentClaimsContext.ClaimEmails.Add(newClaimEmail);

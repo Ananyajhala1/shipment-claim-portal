@@ -42,7 +42,6 @@ namespace ClaimsAPI.Service.location
                 Country = location.Country,
                 Zipcode = location.Zipcode,
                 CompanyId = location.CompanyId,
-                Company = location.Company
             };
             shipmentClaimsContext.Locations.Add(Location);
             await shipmentClaimsContext.SaveChangesAsync();
@@ -66,7 +65,6 @@ namespace ClaimsAPI.Service.location
             Location.Country = location.Country;
             Location.Zipcode = location.Zipcode;
             Location.CompanyId = location.CompanyId;
-            Location.Company = location.Company;
             await shipmentClaimsContext.SaveChangesAsync();
             return Location;
         }
