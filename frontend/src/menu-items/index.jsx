@@ -1,13 +1,6 @@
 // project import
-/*import dashboard from './dashboard';
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-import utilities from './utilities';
-=======
->>>>>>> Stashed changes
->>>>>>> update_dtos_kunj
-*/
+import dashboard from './dashboard';
+
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
