@@ -39,7 +39,7 @@ const Login = () => {
       }
     } catch (err) {
       console.error('Network error:', err);
-      setError('Network error. Please try again later.');
+      setError('Login failed. Please check your username and password.');
       setUserDetails(null);
     }
   };
