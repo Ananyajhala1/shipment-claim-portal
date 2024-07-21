@@ -10,18 +10,26 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ClaimsAPI
 build_property.RootNamespace = ClaimsAPI
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\
 =======
 build_property.ProjectDir = C:\Users\Manav\Desktop\New folder\shipment-claim-portal\Backend\ClaimsAPI\
 >>>>>>> ef54501c4a02f2f271dcf67b91c053cc5790cdfc
+=======
+build_property.ProjectDir = D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI\
+>>>>>>> 9e4f9643b13c3c8db4a23540dac74643f4b86b3e
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI
 =======
 build_property.MSBuildProjectDirectory = C:\Users\Manav\Desktop\New folder\shipment-claim-portal\Backend\ClaimsAPI
 >>>>>>> ef54501c4a02f2f271dcf67b91c053cc5790cdfc
+=======
+build_property.MSBuildProjectDirectory = D:\internWork\ShipmentClaim\backend\shipment-claim-portal\Backend\ClaimsAPI
+>>>>>>> 9e4f9643b13c3c8db4a23540dac74643f4b86b3e
 build_property._RazorSourceGeneratorDebug = 
