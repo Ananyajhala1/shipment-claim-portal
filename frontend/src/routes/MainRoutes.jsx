@@ -6,7 +6,7 @@ import Dashboard from 'layout/Dashboard';
 import Carrier from 'pages/Carrier/Presentation/Form/Carrier';
 import { User } from 'pages/CompanyId/Container/Grid';
 
-const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/index')));
+const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/container/index')));
 // const Carrier = Loadable(lazy(() => import('pages/Carrier/Presentation/Form/Carrier')));
 
 // ==============================|| MAIN ROUTING ||============================== //
