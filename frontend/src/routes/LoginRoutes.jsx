@@ -1,18 +1,8 @@
-import { Login } from "../pages/Login/Presentation/index.jsx";
+import  Login  from "../pages/Login/Container/index.jsx";
 
 const LoginRoutes = {
-  path: '/',
-  element: <MinimalLayout />,
-  children: [
-    {
-      path: '/login',
-      element: <AuthLogin />
-    },
-    {
-      path: '/register',
-      element: <AuthRegister />
-    }
-  ]
-};
+    path : 'login',
+    element : <Login/>
+}
 
 export default LoginRoutes;

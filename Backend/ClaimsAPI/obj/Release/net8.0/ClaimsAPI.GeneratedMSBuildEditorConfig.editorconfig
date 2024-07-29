@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ClaimsAPI
 build_property.RootNamespace = ClaimsAPI
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI\
-=======
-build_property.ProjectDir = D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI\
->>>>>>> service-layer
+build_property.ProjectDir = C:\Users\Manav\Desktop\New folder\shipment-claim-portal\Backend\ClaimsAPI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
-build_property.MSBuildProjectDirectory = C:\Users\prakh\OneDrive\Desktop\shipment2\Backend\ClaimsAPI
-=======
-build_property.MSBuildProjectDirectory = D:\.NET_projects\shipment-claim-portal\Backend\ClaimsAPI
->>>>>>> service-layer
+build_property.MSBuildProjectDirectory = C:\Users\Manav\Desktop\New folder\shipment-claim-portal\Backend\ClaimsAPI
 build_property._RazorSourceGeneratorDebug = 
