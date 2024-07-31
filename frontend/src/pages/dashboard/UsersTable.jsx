@@ -6,8 +6,6 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 
-// project import
-import Dot from 'components/@extended/Dot';
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -36,11 +34,12 @@ function stableSort(array, comparator) {
 }
 
 const headCells = [
-  { id: 'name', align: 'left', disablePadding: false, label: 'Name' },
+  { id: 'userId', align: 'left', disablePadding: false, label: 'User ID' },
+  { id: 'firstName', align: 'left', disablePadding: false, label: 'First Name' },
+  { id: 'lastName', align: 'left', disablePadding: false, label: 'Last Name' },
+  { id: 'contactNumber', align: 'left', disablePadding: false, label: 'Contact Number' },
   { id: 'email', align: 'left', disablePadding: false, label: 'Email' },
-  { id: 'role', align: 'left', disablePadding: false, label: 'Role' },
-  { id: 'dateJoined', align: 'left', disablePadding: false, label: 'Date Joined' },
-  { id: 'status', align: 'left', disablePadding: false, label: 'Status' },
+  { id: 'companyId', align: 'left', disablePadding: false, label: 'Company ID' },
   { id: 'actions', align: 'center', disablePadding: false, label: 'Actions' }
 ];
 
@@ -63,35 +62,9 @@ function UserTableHead({ order, orderBy }) {
   );
 }
 
-function UserStatus({ status }) {
-  let color;
-  let title;
-
-  switch (status) {
-    case 1:
-      color = 'success';
-      title = 'Active';
-      break;
-    case 0:
-      color = 'error';
-      title = 'Inactive';
-      break;
-    default:
-      color = 'primary';
-      title = 'Unknown';
-  }
-
-  return (
-    <Stack direction="row" spacing={1} alignItems="center">
-      <Dot color={color} />
-      <Typography>{title}</Typography>
-    </Stack>
-  );
-}
-
 export default function UserTable({ users, setUsers, handleEditClick }) {
   const order = 'asc';
-  const orderBy = 'name';
+  const orderBy = 'userId';
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -111,14 +84,13 @@ export default function UserTable({ users, setUsers, handleEditClick }) {
                   key={user.id}
                 >
                   <TableCell component="th" id={labelId} scope="row" sx={{ padding: '8px' }}>
-                    <Link color="secondary">{user.name}</Link>
+                    <Link color="secondary">{user.userId}</Link>
                   </TableCell>
+                  <TableCell sx={{ padding: '8px' }}>{user.firstName}</TableCell>
+                  <TableCell sx={{ padding: '8px' }}>{user.lastName}</TableCell>
+                  <TableCell sx={{ padding: '8px' }}>{user.contactNumber}</TableCell>
                   <TableCell sx={{ padding: '8px' }}>{user.email}</TableCell>
-                  <TableCell sx={{ padding: '8px' }}>{user.role}</TableCell>
-                  <TableCell sx={{ padding: '8px' }}>{user.dateJoined}</TableCell>
-                  <TableCell sx={{ padding: '8px' }}>
-                    <UserStatus status={user.status} />
-                  </TableCell>
+                  <TableCell sx={{ padding: '8px' }}>{user.companyId}</TableCell>
                   <TableCell align="center" sx={{ padding: '8px' }}>
                     <IconButton color="primary" onClick={() => handleEditClick(user)}>
                       <EditIcon />
@@ -141,4 +113,3 @@ UserTable.propTypes = {
 };
 
 UserTableHead.propTypes = { order: PropTypes.any, orderBy: PropTypes.string };
-UserStatus.propTypes = { status: PropTypes.number };
