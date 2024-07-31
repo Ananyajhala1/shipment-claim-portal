@@ -30,7 +30,10 @@ namespace ClaimsAPI.Service.UserInfoService
                                    FirstName = user.FirstName,
                                    LastName = user.LastName,
                                    email = user.email,
-                                   ContactNumber = user.ContactNumber
+                                   ContactNumber = user.ContactNumber,
+                                   CompanyId = user.CompanyId
+
+
                                }).ToListAsync< GetUserInfoDTO>();
 
             return users;
@@ -47,7 +50,8 @@ namespace ClaimsAPI.Service.UserInfoService
                                    FirstName = user.FirstName,
                                    LastName = user.LastName,
                                    email = user.email,
-                                   ContactNumber = user.ContactNumber
+                                   ContactNumber = user.ContactNumber,
+                                   CompanyId = user.CompanyId
                                }).ToListAsync();
 
             return users2;
