@@ -9,11 +9,7 @@ import jsconfigPaths from 'vite-jsconfig-paths';
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
   // https://github.com/jpuri/react-draft-wysiwyg/issues/1317
-<<<<<<< HEAD
   base: '/main', // accessing env variable is not possible here. So hard coding this.
-=======
-  base: '/', // accessing env variable is not possible here. So hard coding this.
->>>>>>> 875ae59f380a430642698754d35edc6b698f42f2
   define: {
     global: 'window'
   },
