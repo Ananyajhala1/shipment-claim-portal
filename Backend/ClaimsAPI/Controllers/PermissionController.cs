@@ -14,8 +14,8 @@ namespace ClaimsAPI.Controllers
     public class PermissionsController : ControllerBase
     {
         private IPermissionService _permissionService;
-        private IPermissionRoleService _permissionRoleService;
-        public PermissionsController(IPermissionService permissionServie, IPermissionRoleService permissionRoleService)
+        private ITokenInfo _permissionRoleService;
+        public PermissionsController(IPermissionService permissionServie, ITokenInfo permissionRoleService)
         {
             _permissionService = permissionServie;
             _permissionRoleService = permissionRoleService;

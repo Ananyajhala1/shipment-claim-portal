@@ -1,84 +1,107 @@
 ﻿using ClaimsAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
-using System.Data;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-
-//
-
-using Microsoft.AspNetCore.Authorization;
-
-
 
 namespace ClaimsAPI.Service.LoginService
 {
     public class LoginService : ILoginService
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private readonly ShipmentClaimsContext _shipmentClaimsContext;
+
         public LoginService(ShipmentClaimsContext shipmentClaimsContext)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            _shipmentClaimsContext = shipmentClaimsContext;
         }
-        public async Task<AuthDTO> Login(string username, string password,IConfiguration config)
-        {
-            // Find the user by username and password hash (insecure example, use hashed passwords in production)
-            var user = await shipmentClaimsContext.UserCredentials
-                .Include(x => x.User)
-               .ThenInclude(x => x.Company)
-                .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
 
+        public async Task<AuthDTO> Login(string username, string password, IConfiguration config)
+        {
+            var user = await _shipmentClaimsContext.UserCredentials
+                .Include(x => x.User)
+                .ThenInclude(x => x.Company)
+                .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
 
             if (user != null)
             {
-                var token = Genrate(user,config);
-                AuthDTO authdto = new AuthDTO();
-                authdto.AuthToken = token;
-                authdto.RefreshToken = null;
-                authdto.FirstName = user.User.FirstName;
-                authdto.IsLogin = true;
-                authdto.CompanyId = user.User.CompanyId;
-                authdto.CompanyName = user.User.Company.CompanyName;
+                var token = GenerateToken(user, config);
 
+              
+                var userId = GetUserIdFromToken(token);
+         
+                AuthDTO authDto = new AuthDTO
+                {
+                  
 
-                return authdto;
+                    
+                    userId = GetUserIdFromToken(token),
 
+                    AuthToken = token,
+                    RefreshToken = null,
+                    FirstName = user.User.FirstName,
+                    IsLogin = true,
+                    CompanyId = user.User.CompanyId,
+                    CompanyName = user.User.Company.CompanyName
+                };
+
+                return authDto;
             }
-
             else
             {
-                AuthDTO authdto = new AuthDTO();
-                authdto.IsLogin = false;
+                AuthDTO authDto = new AuthDTO
+                {
+                    IsLogin = false
+                };
 
-
-                throw new Exception($"auth failed");
-
+                throw new Exception("auth failed");
             }
-
         }
-        private string Genrate(UserCredential user, IConfiguration config)
+
+        private string GenerateToken(UserCredential user, IConfiguration config)
         {
-           var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+            var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new System.Security.Claims.Claim(ClaimTypes.NameIdentifier, user.UserName)
+                new System.Security.Claims.Claim("userName",user.User.FirstName.ToString()),
+                new System.Security.Claims.Claim("userId", user.User.UserId.ToString()),
+                new System.Security.Claims.Claim("clientId",user.User.CompanyId.ToString()),
+                new System.Security.Claims.Claim("clientName",user.User.Company.CompanyName.ToString())
 
-            };
+                };
 
-            var token = new JwtSecurityToken(config["Jwt:Issuer"],
+            JwtSecurityToken token = new JwtSecurityToken(
+                config["Jwt:Issuer"],
                 config["Jwt:Audience"],
                 claims,
                 expires: DateTime.Now.AddMinutes(15),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public string GetUserIdFromToken(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
+
+            if (jsonToken == null)
+            {
+                throw new ArgumentException("Invalid JWT token");
+            }
+
+            var userIdClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "userId");
+
+            if (userIdClaim == null)
+            {
+                throw new ArgumentException("UserId claim not found in token");
+            }
+
+            return userIdClaim.Value;
         }
     }
 }

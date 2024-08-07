@@ -12,9 +12,11 @@ namespace ClaimsAPI.Service.CompanyTypeService
     public class CompanyTypeService: ICompanyTypeService
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
-        public CompanyTypeService(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly RequestTokenInfo _requestTokenInfo;
+        public CompanyTypeService(ShipmentClaimsContext shipmentClaimsContext, RequestTokenInfo requestTokenInfo)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this._requestTokenInfo = requestTokenInfo;
         }
         public async Task<IEnumerable<CompanyType>> GetCompanyTypes()
         {
@@ -27,7 +29,17 @@ namespace ClaimsAPI.Service.CompanyTypeService
         }
         public async Task<CompanyType> GetCompanyTypeById(int id)
         {
+            
+            
+            if(id.ToString() != _requestTokenInfo.userId)
+
+            {
+                throw new Exception("id is invalid");
+            }
+
             var companyType = await shipmentClaimsContext.CompanyTypes.FirstOrDefaultAsync(ct => ct.CompanyTypeId == id);
+
+
             if (companyType == null)
             {
                 throw new Exception($"company type with id : {id} not found");

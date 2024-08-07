@@ -12,10 +12,12 @@ namespace ClaimsAPI.Controllers
     public class ClaimsController : ControllerBase
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private readonly RequestTokenInfo _requestTokenInfo;
 
-        public ClaimsController(ShipmentClaimsContext shipmentClaimsContext)
+        public ClaimsController(ShipmentClaimsContext shipmentClaimsContext, RequestTokenInfo requestTokenInfo)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this._requestTokenInfo = requestTokenInfo;
         }
 
         [HttpGet]
@@ -33,7 +35,10 @@ namespace ClaimsAPI.Controllers
         [Route("{id:int}")]
 
         public IActionResult GetCompanyTypeById(int id)
-        {
+        {   
+
+
+
             var claim = shipmentClaimsContext.Claims.Find(id);
             if (claim == null)
             {

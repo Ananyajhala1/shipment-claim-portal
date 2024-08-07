@@ -12,11 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Security;
+using ClaimsAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 
 
 builder.Services.AddControllers();
@@ -49,8 +49,7 @@ builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
 builder.Services.AddScoped<IUserInfoService, UserInfoService>();
 builder.Services.AddScoped<ITemplateService, TemplatesService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
-
-
+builder.Services.AddScoped<ITokenInfo, RequestTokenInfo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -65,6 +64,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+app.UseMiddleware<TokenInfoMiddleware>()
 
 app.MapControllers();
 
