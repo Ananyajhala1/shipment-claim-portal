@@ -6,6 +6,7 @@ using ClaimsAPI.Models.ViewModels;
 using System.Threading.Tasks;
 using System.Linq;
 using ClaimsAPI.Service.PermissionService;
+using ClaimsAPI.Middleware;
 
 namespace ClaimsAPI.Controllers
 {
@@ -14,8 +15,8 @@ namespace ClaimsAPI.Controllers
     public class PermissionsController : ControllerBase
     {
         private IPermissionService _permissionService;
-        private ITokenInfo _permissionRoleService;
-        public PermissionsController(IPermissionService permissionServie, ITokenInfo permissionRoleService)
+        private IPermissionRoleService _permissionRoleService;
+        public PermissionsController(IPermissionService permissionServie, IPermissionRoleService permissionRoleService)
         {
             _permissionService = permissionServie;
             _permissionRoleService = permissionRoleService;

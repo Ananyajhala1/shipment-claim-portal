@@ -9,17 +9,17 @@ namespace ClaimsAPI.Middleware
 
 
         private readonly RequestDelegate _next;
-        private readonly RequestTokenInfo _requestTokenInfo;
+        //private readonly RequestTokenInfo _requestTokenInfo;
 
-        public TokenInfoMiddleware(RequestDelegate next, RequestTokenInfo requestTokenInfo)
+        public TokenInfoMiddleware(RequestDelegate next )
         {
             _next = next;
-            _requestTokenInfo = requestTokenInfo;
+            //_requestTokenInfo = requestTokenInfo;
         }
 
 
 
-        public async Task Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context, RequestTokenInfo requestTokenInfo)
 
 
 
@@ -47,10 +47,10 @@ namespace ClaimsAPI.Middleware
                 throw new ArgumentException("UserId claim not found in token");
             }
 
-          _requestTokenInfo.userId = userIdClaim.Value;
-            _requestTokenInfo.clientId = clientIdClaim.Value;
-            _requestTokenInfo.clientName = clientNameClaim.Value;
-            _requestTokenInfo.userName = userNameClaim.Value;
+          requestTokenInfo.userId = userIdClaim.Value;
+          requestTokenInfo.clientId = clientIdClaim.Value;
+          requestTokenInfo.clientName = clientNameClaim.Value;
+          requestTokenInfo.userName = userNameClaim.Value;
 
           
 

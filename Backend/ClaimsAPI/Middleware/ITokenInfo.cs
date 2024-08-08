@@ -3,9 +3,5 @@ using ClaimsAPI.Models.ViewModels;
 
 namespace ClaimsAPI.Middleware
 {
-    public interface ITokenInfo
-    {
-
-         
-    }
+  
 }

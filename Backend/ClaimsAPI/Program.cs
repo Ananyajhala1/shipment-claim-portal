@@ -40,6 +40,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 builder.Services.AddMvc();
+builder.Services.AddScoped<RequestTokenInfo>();
 builder.Services.AddTransient<ICompanyTypeService, CompanyTypeService>();
 builder.Services.AddTransient<IDocumentTypeService, DocumentTypeService>();
 builder.Services.AddTransient<IRolesService, RolesService>();
@@ -49,7 +50,7 @@ builder.Services.AddTransient<IClaimDocumentService, ClaimDocumentService>();
 builder.Services.AddScoped<IUserInfoService, UserInfoService>();
 builder.Services.AddScoped<ITemplateService, TemplatesService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
-builder.Services.AddScoped<ITokenInfo, RequestTokenInfo>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -64,7 +65,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
-app.UseMiddleware<TokenInfoMiddleware>()
+app.UseMiddleware<TokenInfoMiddleware>();
 
 app.MapControllers();
 
