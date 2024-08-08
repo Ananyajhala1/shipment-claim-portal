@@ -4527,37 +4527,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\prakh\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\kunjt\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> 06a30fcf1350ebd4e5213548d5cae04e1b4596ad
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "projectName": "ClaimsAPI",
       "projectPath": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "packagesPath": "C:\\Users\\prakh\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\obj\\",
-=======
-      "projectUniqueName": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
-      "projectName": "ClaimsAPI",
-      "projectPath": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
-      "packagesPath": "C:\\Users\\kunjt\\.nuget\\packages\\",
-      "outputPath": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
->>>>>>> 06a30fcf1350ebd4e5213548d5cae04e1b4596ad
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\prakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\kunjt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 06a30fcf1350ebd4e5213548d5cae04e1b4596ad
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4656,17 +4638,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-<<<<<<< HEAD
-  }
-=======
   },
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\prakh\\OneDrive\\Desktop\\shipment2\\Backend\\ClaimsAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
->>>>>>> 06a30fcf1350ebd4e5213548d5cae04e1b4596ad
 }

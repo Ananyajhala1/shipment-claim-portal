@@ -65,6 +65,7 @@ export default function Profile() {
   };
 
   const [value, setValue] = useState(0);
+  const user = localStorage.getItem('firstName');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -91,7 +92,7 @@ export default function Profile() {
         <Stack direction="row" spacing={1.25} alignItems="center" sx={{ p: 0.5 }}>
           <Avatar alt="profile user" src={avatar1} size="sm" />
           <Typography variant="subtitle1" sx={{ textTransform: 'capitalize' }}>
-            John Doe
+            {user}
           </Typography>
         </Stack>
       </ButtonBase>

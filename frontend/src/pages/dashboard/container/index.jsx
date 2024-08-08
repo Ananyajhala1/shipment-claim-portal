@@ -53,7 +53,7 @@ export default function DashboardDefault() {
     lastName: '',
     contactNumber: '',
     email: '',
-    companyId: 5
+    companyId: localStorage.getItem('companyId') || 0  // Get companyId from local storage
   });
 
   const [order, setOrder] = useState('asc');
@@ -65,7 +65,8 @@ export default function DashboardDefault() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://localhost:7265/api/UserInfo');
+        const companyId = localStorage.getItem('companyId');
+        const response = await axios.get(`https://localhost:7265/api/UserInfo/CompanyUsers?cid=${companyId}`);
         setUsers(response.data);
         setLoading(false);
       } catch (error) {
@@ -91,7 +92,7 @@ export default function DashboardDefault() {
       lastName: '',
       contactNumber: '',
       email: '',
-      companyId: 5
+      companyId: localStorage.getItem('companyId') || 0
     });
   };
 
