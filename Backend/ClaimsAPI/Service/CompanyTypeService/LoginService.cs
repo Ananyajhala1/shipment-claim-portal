@@ -9,6 +9,7 @@ using System.Data;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using ClaimsAPI.Service.RolesService;
 
 //
 
@@ -21,9 +22,11 @@ namespace ClaimsAPI.Service.LoginService
     public class LoginService : ILoginService
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
-        public LoginService(ShipmentClaimsContext shipmentClaimsContext)
+        private  IRolesService _rolesService;
+        public LoginService(ShipmentClaimsContext shipmentClaimsContext, IRolesService _rolesService)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this._rolesService = _rolesService;
         }
         public async Task<AuthDTO> Login(string username, string password,IConfiguration config)
         {
@@ -61,6 +64,7 @@ namespace ClaimsAPI.Service.LoginService
             }
 
         }
+
         private string Genrate(UserCredential user, IConfiguration config)
         {
            var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
@@ -68,8 +72,8 @@ namespace ClaimsAPI.Service.LoginService
 
             var claims = new[]
             {
-                new System.Security.Claims.Claim(ClaimTypes.NameIdentifier, user.UserName)
-
+                new System.Security.Claims.Claim("UserId", user.UserId.ToString()),
+                new System.Security.Claims.Claim("CompanyId", user.User.CompanyId.ToString())
             };
 
             var token = new JwtSecurityToken(config["Jwt:Issuer"],
