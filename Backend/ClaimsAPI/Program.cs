@@ -88,11 +88,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseMiddleware<TokenInfoMiddleware>();
-app.UseAuthentication();
 app.UseCors("AllowSpecificOrigin");
+app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseMiddleware<TokenInfoMiddleware>();
 app.MapControllers();
 
 app.Run();
