@@ -36,6 +36,14 @@ namespace ClaimsAPI.Service.LoginService
                .ThenInclude(x => x.Company)
                 .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
 
+            if (user == null) {
+                throw new Exception("USer not found");
+            }
+
+            if(!verifyPassword(password, user.Password))
+            {
+                throw new Exception("Invalid password");
+            }
 
             if (user != null)
             {
@@ -73,7 +81,9 @@ namespace ClaimsAPI.Service.LoginService
             var claims = new[]
             {
                 new System.Security.Claims.Claim("UserId", user.UserId.ToString()),
-                new System.Security.Claims.Claim("CompanyId", user.User.CompanyId.ToString())
+                new System.Security.Claims.Claim("UserName", user.UserName.ToString()),
+                new System.Security.Claims.Claim("CompanyId", user.User.CompanyId.ToString()),
+                new System.Security.Claims.Claim("CompanyName", user.User.Company.CompanyName.ToString())
             };
 
             var token = new JwtSecurityToken(config["Jwt:Issuer"],
@@ -83,6 +93,11 @@ namespace ClaimsAPI.Service.LoginService
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        private bool verifyPassword(string inputPassword, string userPassword)
+        {
+            return inputPassword == userPassword;
         }
     }
 }
