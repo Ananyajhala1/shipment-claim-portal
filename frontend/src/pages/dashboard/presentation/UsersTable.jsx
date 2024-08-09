@@ -6,8 +6,6 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 
-// Project import
-import Dot from 'components/@extended/Dot';
 
 const headCells = [
   { id: 'firstName', align: 'left', disablePadding: false, label: 'First Name' },

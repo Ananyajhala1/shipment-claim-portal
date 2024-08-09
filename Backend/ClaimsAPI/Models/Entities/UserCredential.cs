@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ClaimsAPI.Models.Entites;
 
@@ -11,5 +12,6 @@ public partial class UserCredential
 
     public string Password { get; set; }
 
+    [JsonIgnore]
     public virtual UserInfo User { get; set; } = null!;
 }

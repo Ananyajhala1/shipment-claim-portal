@@ -18,6 +18,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Security;
 using Microsoft.AspNetCore.Cors;
+using ClaimsAPI.Service.UserCredentialService;
+using Microsoft.Extensions.Azure;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +28,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.WriteIndented = true;
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddCors(options =>
 {
@@ -66,6 +74,7 @@ builder.Services.AddTransient<IClaim, ClaimService>();
 builder.Services.AddTransient<IClaimSettings, ClaimSettingService>();
 builder.Services.AddTransient<ICompany, CompanyService>();
 builder.Services.AddTransient<ILocation, LocationService>();
+builder.Services.AddTransient<IUserCredentialService, UserCredentialService>();
 
 var app = builder.Build();
 

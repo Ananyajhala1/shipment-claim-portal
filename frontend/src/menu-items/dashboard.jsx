@@ -16,7 +16,7 @@ const dashboard = {
       id: 'dashboard',
       title: 'Dashboard',
       type: 'item',
-      url: '/dashboard/default',
+      url: '/',
       icon: icons.DashboardOutlined,
       breadcrumbs: false,
       expandable: true,
@@ -25,7 +25,7 @@ const dashboard = {
           id: '1',
           title: 'Carrier',
           type: 'item',
-          url: '/dashboard/carrier',
+          url: '/carrier',
           icon: icons.DashboardOutlined,
           breadcrumbs: false
         },
@@ -33,15 +33,15 @@ const dashboard = {
           id: '2',
           title: 'CompanyId',
           type: 'item',
-          url: '/dashboard/companyId',
+          url: '/companyId',
           icon: icons.DashboardOutlined,
           breadcrumbs: false
         },
         {
           id: '3',
-          title: 'Cfdsfdsa',
+          title: 'Claim',
           type: 'item',
-          url: '/dashboard/companyId',
+          url: '/claims',
           icon: icons.DashboardOutlined,
           breadcrumbs: false
         },

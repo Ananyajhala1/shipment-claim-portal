@@ -38,21 +38,6 @@ function UserForm({ formData, handleChange, handleSubmit, isEdit, setIsFormVisib
         fullWidth
         sx={{ mb: 2 }}
       />
-     <TextField
-  label="Company ID"
-  name="companyId"
-  select
-  SelectProps={{ native: true }}
-  value={formData.companyId}
-  onChange={(e) => handleChange({ target: { name: 'companyId', value: parseInt(e.target.value, 10) } })}
-  fullWidth
->
-  <option value={0}>0</option>
- <option value={5}>5</option>
-  <option value={6}>6</option>
-  <option value={7}>7</option>
-  <option value={8}>8</option>
-</TextField>
 
       <Stack direction="row" spacing={2} justifyContent="flex-end">
         <Button onClick={() => setIsFormVisible(false)} color="secondary">

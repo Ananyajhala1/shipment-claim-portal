@@ -12,7 +12,6 @@ const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/container/i
 // const Carrier = Loadable(lazy(() => import('pages/Carrier/Presentation/Form/Carrier')));
 
 // ==============================|| MAIN ROUTING ||============================== //
-
 const MainRoutes = {
   path: '/',
   element: <Dashboard />,
@@ -22,10 +21,10 @@ const MainRoutes = {
       element: <DashboardDefault />
     },
     {
-      path: 'dashboard',
+      path: '/',
       children: [
         {
-          path: 'default',
+          path: '/',
           element: <DashboardDefault />
         },
         {
@@ -39,7 +38,7 @@ const MainRoutes = {
         {
           path:'Claims',
           element: <ClaimsList/>
-        }
+        },
       ]
     },
   ]

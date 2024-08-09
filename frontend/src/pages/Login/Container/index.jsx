@@ -20,6 +20,8 @@ const Login = () => {
       if (response.status === 200) {
         const data = response.data;
         console.log(data);
+        // Redirect to a different page on successful login
+        window.location.href = '/';
 
         // Save the token and user details
         localStorage.setItem('authToken', data.authToken);
