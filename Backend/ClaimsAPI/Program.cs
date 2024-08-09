@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Cors;
 using ClaimsAPI.Service.UserCredentialService;
 using Microsoft.Extensions.Azure;
 using System.Text.Json.Serialization;
+using ClaimsAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -75,6 +76,7 @@ builder.Services.AddTransient<IClaimSettings, ClaimSettingService>();
 builder.Services.AddTransient<ICompany, CompanyService>();
 builder.Services.AddTransient<ILocation, LocationService>();
 builder.Services.AddTransient<IUserCredentialService, UserCredentialService>();
+builder.Services.AddScoped<RequestTokenInfo>();
 
 var app = builder.Build();
 
@@ -86,7 +88,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseMiddleware<JwtMiddleware>();
+app.UseMiddleware<TokenInfoMiddleware>();
 app.UseAuthentication();
 app.UseCors("AllowSpecificOrigin");
 app.UseAuthorization();
