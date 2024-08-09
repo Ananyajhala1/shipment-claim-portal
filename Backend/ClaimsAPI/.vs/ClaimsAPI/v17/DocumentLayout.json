@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
+  "WorkspaceRootPath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\companytypeservice\\userinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\companytypeservice\\userinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\companytypeservice\\userinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,15 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
@@ -40,11 +44,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAABKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T13:15:22.494Z",
               "EditorCaption": ""
@@ -53,9 +57,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserInfoService.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\CompanyTypeService\\UserInfoService.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\CompanyTypeService\\UserInfoService.cs",
               "RelativeDocumentMoniker": "Service\\CompanyTypeService\\UserInfoService.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\CompanyTypeService\\UserInfoService.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\CompanyTypeService\\UserInfoService.cs",
               "RelativeToolTip": "Service\\CompanyTypeService\\UserInfoService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
