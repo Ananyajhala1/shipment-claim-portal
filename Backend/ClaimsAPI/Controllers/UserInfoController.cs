@@ -94,9 +94,9 @@ namespace ClaimsAPI.Controllers
 
         // Delete a user
         [HttpDelete("[action]")]
-        public async Task<IActionResult> DeleteUser(UpdateUserInfoDTO userInfoDTO)
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            var UserInfoService = await _UserInfoService.DeleteUser(userInfoDTO);
+            var UserInfoService = await _UserInfoService.DeleteUser(id);
             if (UserInfoService == null)
             {
                 return NotFound();
@@ -106,8 +106,8 @@ namespace ClaimsAPI.Controllers
 
 
 
+        }
     }
-}
 
 
 

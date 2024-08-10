@@ -126,19 +126,17 @@ namespace ClaimsAPI.Service.UserInfoService
             return userInfoDTO;
         }
         // Delete a user
-     
-        public async Task<UpdateUserInfoDTO> DeleteUser(UpdateUserInfoDTO userInfoDTO)
+
+        public async Task<UserInfo> DeleteUser(int id)
         {
-            var user = await shipmentClaimsContext.UserInfos.FindAsync(userInfoDTO.UserId);
+            var user = await shipmentClaimsContext.UserInfos.FirstOrDefaultAsync(u => u.UserId == id);
             if (user == null)
             {
-               throw new Exception($" users is null");
+                throw new Exception("user id is invalid");
             }
-
             shipmentClaimsContext.UserInfos.Remove(user);
             await shipmentClaimsContext.SaveChangesAsync();
-
-            return userInfoDTO;
+            return user;
         }
 
     }
