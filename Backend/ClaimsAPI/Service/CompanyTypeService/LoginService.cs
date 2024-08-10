@@ -80,10 +80,10 @@ namespace ClaimsAPI.Service.LoginService
 
             var claims = new[]
             {
-                new System.Security.Claims.Claim("UserId", user.UserId.ToString()),
+                new System.Security.Claims.Claim("userId", user.UserId.ToString()),
                 new System.Security.Claims.Claim("UserName", user.UserName.ToString()),
-                new System.Security.Claims.Claim("CompanyId", user.User.CompanyId.ToString()),
-                new System.Security.Claims.Claim("CompanyName", user.User.Company.CompanyName.ToString())
+                new System.Security.Claims.Claim("clientId", user.User.CompanyId.ToString()),
+                new System.Security.Claims.Claim("clientName", user.User.Company.CompanyName.ToString())
             };
 
             var token = new JwtSecurityToken(config["Jwt:Issuer"],

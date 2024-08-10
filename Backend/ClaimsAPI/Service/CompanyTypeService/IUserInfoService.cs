@@ -14,7 +14,7 @@ public interface IUserInfoService
     Task<GetUserInfoDTO> UserDetails(int userId);
     Task<CreateUserInfoDTO> CreateUser(CreateUserInfoDTO userInfoDTO);
     Task<UpdateUserInfoDTO> UpdateUser(UpdateUserInfoDTO userInfoDTO);
-    Task<UpdateUserInfoDTO> DeleteUser(UpdateUserInfoDTO userInfoDTO);
+    Task<UserInfo> DeleteUser(int id);
 
 
 
