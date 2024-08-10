@@ -62,8 +62,7 @@
               "RelativeToolTip": "Models\\Entities\\UserCredential.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T11:43:16.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T11:43:16.914Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Controllers\\LoginController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T11:40:59.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T11:40:59.994Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAUwFIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T11:40:43.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T11:40:43.449Z"
             },
             {
               "$type": "Document",
@@ -99,7 +96,7 @@
               "RelativeDocumentMoniker": "Middlewares\\TokenInfoMiddleware.cs",
               "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middlewares\\TokenInfoMiddleware.cs",
               "RelativeToolTip": "Middlewares\\TokenInfoMiddleware.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBYAAAANAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAcwBAAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-09T11:40:12.365Z",
               "EditorCaption": ""
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Service\\CompanyTypeService\\LoginService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T11:33:47.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T11:33:47.333Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Service\\CompanyTypeService\\UserInfoService.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T11:33:40.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T11:33:40.691Z"
             }
           ]
         }
