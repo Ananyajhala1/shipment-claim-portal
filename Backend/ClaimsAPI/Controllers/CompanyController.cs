@@ -5,24 +5,34 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models.DTO.CompanyDTO;
 using ClaimsAPI.Service.company;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 
 namespace ClaimsAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CompanyController : ControllerBase
     {
         private readonly ICompany _company;
+        private readonly RequestTokenInfo _tokenInfo;
+        private readonly ILogger<CompanyController> _logger;
 
-        public CompanyController(ICompany company)
+        public CompanyController(ICompany company, RequestTokenInfo tokenInfo, ILogger<CompanyController> logger)
         {
             this._company = company;
+            _tokenInfo = tokenInfo;
+            _logger = logger;
         }
 
+
         [HttpGet]
+        
         public async Task<IActionResult> GetCompanies()
         {
-            var companies = await _company.GetCompanies();
+            _logger.LogInformation($"GetCompanies called by UserId: {_tokenInfo.userId}, ClientId: {_tokenInfo.clientId}");
+            var companies = await _company.GetCompanies(int.Parse(_tokenInfo.clientId));
             if (companies == null)
             {
                 return NotFound();
@@ -32,7 +42,6 @@ namespace ClaimsAPI.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-
         public async Task<IActionResult> GetCompanyById(int id)
         {
             var company = await _company.GetCompanyById(id);
@@ -47,7 +56,7 @@ namespace ClaimsAPI.Controllers
 
         public async Task<IActionResult> AddCompany(CompanyPostDTO company)
         {
-            var Company = await _company.AddCompany(company);
+            var Company = await _company.AddCompany(company, int.Parse(_tokenInfo.clientId));
             return Ok(company);
         }
 

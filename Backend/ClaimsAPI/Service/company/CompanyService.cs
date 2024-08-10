@@ -13,9 +13,10 @@ namespace ClaimsAPI.Service.company
             this.shipmentClaimsContext = shipmentClaimsContext;
         }
 
-        public async Task<IEnumerable<Company>> GetCompanies()
+        public async Task<IEnumerable<Company>> GetCompanies(int clientID)
         {
-            var companies =await shipmentClaimsContext.Companies.ToListAsync();
+            // will return all the companies that has parentcompanyID equal to clientId
+            var companies =await shipmentClaimsContext.Companies.Where(c => c.ParentCompanyId == clientID || c.CompanyId == 1).ToListAsync();
             if (companies == null)
             {
                 return Enumerable.Empty<Company>();
@@ -33,14 +34,14 @@ namespace ClaimsAPI.Service.company
             return company;
         }
 
-        public async Task<Company> AddCompany(CompanyPostDTO company)
+        public async Task<Company> AddCompany(CompanyPostDTO company, int clientId)
         {
             var Company = new Company()
             {
                 CompanyTypeId = company.CompanyTypeId,
                 CompanyName = company.CompanyName,
                 IsCorporate = company.IsCorporate,
-                ParentCompanyId = company.ParentCompanyId,
+                ParentCompanyId = clientId,
             };
             shipmentClaimsContext.Companies.Add(Company);
             await shipmentClaimsContext.SaveChangesAsync();
