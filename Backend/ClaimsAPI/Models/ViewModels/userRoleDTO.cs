@@ -8,7 +8,10 @@
            public string? FirstName { get; set; }
 
     }
-
+    public class RoleNamesDTO
+    {
+        public int RoleID { get; set; }
+    }
     public class UpdateuserRoleDTO
     {
 

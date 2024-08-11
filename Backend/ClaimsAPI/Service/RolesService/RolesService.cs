@@ -9,9 +9,11 @@ namespace ClaimsAPI.Service.RolesService
     public class RolesService: IRolesService
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
-        public RolesService(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly RequestTokenInfo requestTokenInfo;
+        public RolesService(ShipmentClaimsContext shipmentClaimsContext, RequestTokenInfo requestTokenInfo)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this.requestTokenInfo = requestTokenInfo;
         }
         public async Task<IEnumerable<Role>> GetRole()
         {
@@ -31,19 +33,32 @@ namespace ClaimsAPI.Service.RolesService
             }
             return role;
         }
-        public async Task<Role> CreateRole(CreateUpdateRolesDTO roleDTO)
+        public async Task<Role> CreateRole(CreateUpdateRolesDTO roleDTO, int userID)
         {
-            if (roleDTO == null)
+            var userRoles = await GetRolesInUser(userID);
+            bool isAdmin = userRoles.Any(x => x.RoleID == 3);   
+            if(!isAdmin)
             {
-                throw new Exception("Role is empty please enter valid values");
+                throw new Exception("You are not allowed to create role as you are not assigned admin role");
             }
-            var role = new Role
+            else
             {
-                RoleName = roleDTO.RoleName
-            };
-            await shipmentClaimsContext.Roles.AddAsync(role);
-            await shipmentClaimsContext.SaveChangesAsync();
-            return role;
+                if (roleDTO == null)
+                {
+                    throw new Exception("Role is empty please enter valid values");
+                }
+
+                else
+                {
+                    var role = new Role
+                    {
+                        RoleName = roleDTO.RoleName
+                    };
+                    await shipmentClaimsContext.Roles.AddAsync(role);
+                    await shipmentClaimsContext.SaveChangesAsync();
+                    return role;
+                }
+            }
         }
         public async Task<Role> UpdateRole(int id, CreateUpdateRolesDTO role)
         {
@@ -85,7 +100,7 @@ namespace ClaimsAPI.Service.RolesService
             }
             return roles;
         }
-        public async Task<IEnumerable<GetuserRoleDTO>> GetRolesInUser(int uid)
+        public async Task<IEnumerable<RoleNamesDTO>> GetRolesInUser(int uid)
         {
             var users = await (from UserRole in shipmentClaimsContext.UserRoles.Where(x => x.UserId == uid)
                                select new GetuserRoleDTO
@@ -95,11 +110,15 @@ namespace ClaimsAPI.Service.RolesService
                                    UserId = UserRole.UserId,
                                    FirstName = UserRole.User.FirstName
                                }).ToListAsync();
+            var userRoles = users.Select(x => new RoleNamesDTO
+            {
+                RoleID = x.RoleId,
+            });
             if (users == null)
             {
                 throw new Exception($"User with userid {uid} has not been assigned any role");
             }
-            return  users;
+            return userRoles;
         }
         public async Task<UserRole> CreateUserRole(int uid, int rid)
         {
