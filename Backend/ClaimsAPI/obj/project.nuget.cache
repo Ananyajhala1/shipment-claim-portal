@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6/r23q4fo4g=",
+  "dgSpecHash": "QfaGnL5VK7M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anany\\Source\\Repos\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+  "projectFilePath": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anany\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\anany\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

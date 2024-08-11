@@ -26,6 +26,12 @@ namespace ClaimsAPI.Middleware
 
         {
 
+            if (context.Request.Path.StartsWithSegments("/api/login", StringComparison.OrdinalIgnoreCase))
+            {
+                await _next(context);
+                return;
+            }
+
             var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
             var handler = new JwtSecurityTokenHandler();
             var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
@@ -38,7 +44,7 @@ namespace ClaimsAPI.Middleware
             var userIdClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "userId");
             var clientIdClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "clientId");
             var clientNameClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "clientName");
-            var userNameClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "UserName");
+            var userNameClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "userName");
 
 
 

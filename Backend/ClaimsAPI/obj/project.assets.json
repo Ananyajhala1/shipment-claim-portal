@@ -4532,11 +4532,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anany\\Source\\Repos\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+      "projectUniqueName": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "projectName": "ClaimsAPI",
-      "projectPath": "C:\\Users\\anany\\Source\\Repos\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
+      "projectPath": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
       "packagesPath": "C:\\Users\\anany\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anany\\Source\\Repos\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
+      "outputPath": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anany\\AppData\\Roaming\\NuGet\\NuGet.Config",

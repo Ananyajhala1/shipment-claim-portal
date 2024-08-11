@@ -14,6 +14,6 @@ namespace ClaimsAPI.Service.company
         Task<Company> UpdateCompany(int id, CompanyUpdateDTO company);
         Task<Company> DeleteCompany(int id);
 
-        Task<IEnumerable<Company>> GetCarrier(int clientid, RequestTokenInfo requestToken);
+        Task<IEnumerable<Company>> GetCarrier(int clientid);
     }
 }

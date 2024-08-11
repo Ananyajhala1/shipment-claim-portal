@@ -33,9 +33,9 @@ namespace ClaimsAPI.Controllers
 
 
         [HttpGet("getCarrier")]
-        public async Task<IActionResult> GetCarrier(int clientid, RequestTokenInfo requestToken)     
+        public async Task<IActionResult> GetCarrier(int clientid)     
         {
-            var carriers = await _company.GetCarrier(clientid,requestToken);
+            var carriers = await _company.GetCarrier(clientid);
             if (carriers == null)
             {
                 return NotFound();
