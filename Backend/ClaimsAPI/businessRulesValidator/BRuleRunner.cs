@@ -31,7 +31,7 @@
 
 
 
-        public bool hasError(string error)
+        public bool hasError()
         {
             if(Errors != null && Errors.Count>0 )
             {

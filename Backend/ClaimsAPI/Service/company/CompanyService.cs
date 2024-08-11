@@ -14,6 +14,7 @@ namespace ClaimsAPI.Service.company
         public CompanyService(ShipmentClaimsContext shipmentClaimsContext, RequestTokenInfo requestToken)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this._requestToken = requestToken;
         }
 
         public async Task<IEnumerable<Company>> GetCompanies()
@@ -32,7 +33,7 @@ namespace ClaimsAPI.Service.company
         {
 
 
-            var clientValidatorRule = new ClientValidatorBRule(shipmentClaimsContext,companyid, _requestToken);
+            var clientValidatorRule = new ClientValidatorBRule(shipmentClaimsContext, companyid, _requestToken);
 
 
             var rules = new List<BRuleBase>();
@@ -40,14 +41,28 @@ namespace ClaimsAPI.Service.company
 
             var bRuleRunner = new BRuleRunner(rules);
 
+            bRuleRunner.ExecuteRules();
 
 
-            var carriers = await shipmentClaimsContext.Companies.Where(x => (x.CompanyTypeId == 2) && x.ParentCompanyId==companyid).ToListAsync();
-            if (carriers == null)
-            {
+            if (!bRuleRunner.hasError())
+            { 
+
+            var carriers = await shipmentClaimsContext.Companies.Where(x => (x.CompanyTypeId == 2) && x.ParentCompanyId == companyid).ToListAsync();
+                if (carriers == null)
+                {
                 return Enumerable.Empty<Company>();
+                }
+               return carriers;
             }
-            return carriers;
+
+            else
+            {
+                //todo: return error 
+                  return Enumerable.Empty<Company>(); ;
+
+            }
+
+
         }
 
 

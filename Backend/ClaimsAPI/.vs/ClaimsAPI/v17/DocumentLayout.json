@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\businessrulesvalidator\\brulerunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:businessrulesvalidator\\brulerunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\service\\company\\icompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\company\\icompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|c:\\work\\shipment-claim-portal\\backend\\claimsapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,17 +58,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CompanyController.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "Controllers\\CompanyController.cs",
               "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
               "RelativeToolTip": "Controllers\\CompanyController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCUAAAA0AAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwCUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T11:06:45.44Z",
               "IsPinned": true,
@@ -93,6 +97,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BRuleRunner.cs",
+              "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\businessRulesValidator\\BRuleRunner.cs",
+              "RelativeDocumentMoniker": "businessRulesValidator\\BRuleRunner.cs",
+              "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\businessRulesValidator\\BRuleRunner.cs",
+              "RelativeToolTip": "businessRulesValidator\\BRuleRunner.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAIA2wBMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T15:06:23.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ICompany.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\ICompany.cs",
               "RelativeDocumentMoniker": "Service\\company\\ICompany.cs",
@@ -100,8 +117,7 @@
               "RelativeToolTip": "Service\\company\\ICompany.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T12:33:43.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T12:33:43.886Z"
             },
             {
               "$type": "Document",
@@ -111,14 +127,14 @@
               "RelativeDocumentMoniker": "Service\\company\\CompanyService.cs",
               "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\CompanyService.cs",
               "RelativeToolTip": "Service\\company\\CompanyService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwDAAAAANAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T12:27:13.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
@@ -126,38 +142,37 @@
               "RelativeToolTip": "Controllers\\LoginController.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAzwCMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T12:21:41.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T12:21:41.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TokenInfoMiddleware.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\TokenInfoMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\TokenInfoMiddleware.cs",
               "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\TokenInfoMiddleware.cs",
               "RelativeToolTip": "Middleware\\TokenInfoMiddleware.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAjwDIAAAAkAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAjwDQAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T12:05:03.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwF4AAAAnAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAIwG4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-04T05:06:56.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ClaimDocumentsController.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimDocumentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClaimDocumentsController.cs",
@@ -169,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ClaimSettingsController.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimSettingsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClaimSettingsController.cs",
@@ -181,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ClaimDocumentDTO.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\ViewModels\\ClaimDocumentDTO.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\ClaimDocumentDTO.cs",
@@ -193,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ClaimsController.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\ClaimsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
@@ -205,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ClaimDocument.cs",
               "DocumentMoniker": "C:\\work\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\Entities\\ClaimDocument.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\ClaimDocument.cs",
