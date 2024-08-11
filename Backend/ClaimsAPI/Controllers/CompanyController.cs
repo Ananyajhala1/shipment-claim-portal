@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClaimsAPI.Models.DTO.CompanyDTO;
+using ClaimsAPI.Service.company;
 
 namespace ClaimsAPI.Controllers
 {
@@ -11,17 +12,17 @@ namespace ClaimsAPI.Controllers
     [ApiController]
     public class CompanyController : ControllerBase
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private readonly ICompany _company;
 
-        public CompanyController(ShipmentClaimsContext shipmentClaimsContext)
+        public CompanyController(ICompany company)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            this._company = company;
         }
 
         [HttpGet]
-        public IActionResult GetCompanies()
+        public async Task<IActionResult> GetCompanies()
         {
-            var companies = shipmentClaimsContext.Companies.ToList();
+            var companies = await _company.GetCompanies();
             if (companies == null)
             {
                 return NotFound();
@@ -29,12 +30,37 @@ namespace ClaimsAPI.Controllers
             return Ok(companies);
         }
 
+
+
+        [HttpGet("getCarrier")]
+        public async Task<IActionResult> GetCarrier(int clientid, RequestTokenInfo requestToken)     
+        {
+            var carriers = await _company.GetCarrier(clientid,requestToken);
+            if (carriers == null)
+            {
+                return NotFound();
+            }
+            return Ok(carriers);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
         [HttpGet]
+
         [Route("{id:int}")]
 
-        public IActionResult GetCompanyById(int id)
+       public async Task<IActionResult> GetCompanyById(int id)
         {
-            var company = shipmentClaimsContext.Companies.Find(id);
+            var company = await _company.GetCompanyById(id);
             if (company == null)
             {
                 return NotFound();
@@ -44,78 +70,38 @@ namespace ClaimsAPI.Controllers
 
         [HttpPost]
 
-        public IActionResult AddCompany(CompanyPostDTO company)
+        public async Task<IActionResult> AddCompany(CompanyPostDTO company)
         {
-            var Company = new Company()
-            {
-                CompanyTypeId = company.CompanyTypeId,
-                CompanyName = company.CompanyName,
-                IsCorporate = company.IsCorporate,
-                ParentCompanyId = company.ParentCompanyId,
-                ClaimCarriers = company.ClaimCarriers,
-                ClaimCustomers = company.ClaimCustomers,
-                ClaimDocumentTypes = company.ClaimDocumentTypes,
-                ClaimEmails = company.ClaimEmails,
-                ClaimInsurances = company.ClaimInsurances,
-                ClaimSettings = company.ClaimSettings,
-                ClaimSubStatuses = company.ClaimSubStatuses,
-                Contacts = company.Contacts,
-                InverseParentCompany = company.InverseParentCompany,
-                Locations = company.Locations,
-                ParentCompany = company.ParentCompany,
-                UserInfos = company.UserInfos
-            };
-            shipmentClaimsContext.Companies.Add(Company);
-            shipmentClaimsContext.SaveChanges();
+            var Company = await _company.AddCompany(company);
             return Ok(company);
         }
 
         [HttpPut]
         [Route("{id:int}")]
 
-        public IActionResult UpdateCompany(int id, CompanyUpdateDTO company)
+        public async Task<IActionResult> UpdateCompany(int id, CompanyUpdateDTO company)
         {
-            if(id != company.CompanyId)
-            {
-                return BadRequest();
-            }
-            var Company = shipmentClaimsContext.Companies.Find(id);
+           
+            var Company = await _company.UpdateCompany(id, company);
             if (Company == null)
             {
                 return BadRequest("Company does not exist");
             }
-            Company.CompanyTypeId = company.CompanyTypeId;
-            Company.CompanyName = company.CompanyName;
-            Company.IsCorporate = company.IsCorporate;
-            Company.ParentCompanyId = company.ParentCompanyId;
-            Company.ClaimCarriers = company.ClaimCarriers;
-            Company.ClaimCustomers = company.ClaimCustomers;
-            Company.ClaimDocumentTypes = company.ClaimDocumentTypes;
-            Company.ClaimEmails = company.ClaimEmails;
-            Company.ClaimInsurances = company.ClaimInsurances;
-            Company.ClaimSettings = company.ClaimSettings;
-            Company.ClaimSubStatuses = company.ClaimSubStatuses;
-            Company.Contacts = company.Contacts;
-            Company.InverseParentCompany = company.InverseParentCompany;
-            Company.Locations = company.Locations;
-            Company.ParentCompany = company.ParentCompany;
-            Company.UserInfos = company.UserInfos;
-            shipmentClaimsContext.SaveChanges();
+            
             return Ok(Company);
         }
 
         [HttpDelete]
         [Route("{id:int}")]
 
-        public IActionResult DeleteCompany(int id)
+        public async Task<IActionResult> DeleteCompany(int id)
         {
-            var company = shipmentClaimsContext.Companies.Find(id);
+            var company = await _company.DeleteCompany(id);
             if (company == null)
             {
                 return BadRequest();
             }
-            shipmentClaimsContext.Companies.Remove(company);
-            shipmentClaimsContext.SaveChanges();
+            
             return Ok(company);
         }
     }

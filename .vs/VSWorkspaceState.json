@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Backend",
-    "\\Backend\\ClaimsAPI"
+    ""
   ],
-  "SelectedNode": "\\Backend\\ClaimsAPI",
+  "SelectedNode": "\\ClaimsAPI.sln",
   "PreviewInSolutionExplorer": false
 }

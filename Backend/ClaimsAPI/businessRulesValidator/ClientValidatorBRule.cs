@@ -2,7 +2,7 @@
 
 namespace ClaimsAPI.businessRulesValidator
 {
-    public abstract class ClientValidatorBRule : BRuleBase
+    public class ClientValidatorBRule : BRuleBase
     {
 
         private readonly RequestTokenInfo _requestTokenInfo;

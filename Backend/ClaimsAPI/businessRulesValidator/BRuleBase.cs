@@ -23,13 +23,13 @@ namespace ClaimsAPI.businessRulesValidator
         public BRuleBase(ShipmentClaimsContext shipmentClaimsContext)
         {
             _shipmentClaimsContext = shipmentClaimsContext;
-        
+
         }
 
         public abstract bool Execute();
 
 
+    }
 
-      
-   
-}
+
+    }
