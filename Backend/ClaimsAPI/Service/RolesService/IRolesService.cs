@@ -8,11 +8,11 @@ namespace ClaimsAPI.Service.RolesService
     {
         Task<IEnumerable<Role>> GetRole();
         Task<Role> GetRoleById(int id);
-        Task<Role> CreateRole(CreateUpdateRolesDTO role);
+        Task<Role> CreateRole(CreateUpdateRolesDTO role, int userID);
         Task<Role> UpdateRole(int id, CreateUpdateRolesDTO role);
         Task<Role> DeleteRole(int id);
         Task<IEnumerable<GetuserRoleDTO>> GetUserInRole(int rid);
-        Task<IEnumerable<GetuserRoleDTO>> GetRolesInUser(int uid);
+        Task<IEnumerable<RoleNamesDTO>> GetRolesInUser(int uid);
         Task<UserRole> CreateUserRole(int uid, int rid);
         Task<UserRole> UpdateUserRole(UpdateuserRoleDTO userRoleDTO);
         Task<UserRole> DeleteUserRole(int userRoleId);

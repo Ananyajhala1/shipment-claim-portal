@@ -1,16 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
+  "WorkspaceRootPath": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\permissionservice\\permissionroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\permissionservice\\permissionroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 666c508e7f883c00ea30f4d284c3c9350803e38f
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\permissionservice\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\permissionservice\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +31,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\company\\icompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\company\\icompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\middlewares\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:middlewares\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\rolesservice\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\rolesservice\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 666c508e7f883c00ea30f4d284c3c9350803e38f
     }
   ],
   "DocumentGroupContainers": [
@@ -34,19 +48,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 10,
+=======
+          "SelectedChildIndex": 5,
+>>>>>>> 666c508e7f883c00ea30f4d284c3c9350803e38f
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PermissionService.cs",
+              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\PermissionService\\PermissionService.cs",
+              "RelativeDocumentMoniker": "Service\\PermissionService\\PermissionService.cs",
+              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\PermissionService\\PermissionService.cs",
+              "RelativeToolTip": "Service\\PermissionService\\PermissionService.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowBEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T11:40:22.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -58,14 +85,32 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
-              "Title": "TokenInfoMiddleware.cs",
-              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middlewares\\TokenInfoMiddleware.cs",
-              "RelativeDocumentMoniker": "Middlewares\\TokenInfoMiddleware.cs",
-              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middlewares\\TokenInfoMiddleware.cs",
-              "RelativeToolTip": "Middlewares\\TokenInfoMiddleware.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAAAAAA",
+=======
+              "DocumentIndex": 0,
+              "Title": "PermissionRoleService.cs",
+              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\PermissionService\\PermissionRoleService.cs",
+              "RelativeDocumentMoniker": "Service\\PermissionService\\PermissionRoleService.cs",
+              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\PermissionService\\PermissionRoleService.cs",
+              "RelativeToolTip": "Service\\PermissionService\\PermissionRoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T11:39:56.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+>>>>>>> 666c508e7f883c00ea30f4d284c3c9350803e38f
+              "Title": "TokenInfoMiddleware.cs",
+              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middlewares\\TokenInfoMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\TokenInfoMiddleware.cs",
+              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middlewares\\TokenInfoMiddleware.cs",
+              "RelativeToolTip": "Middlewares\\TokenInfoMiddleware.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-08-09T20:30:46.57Z"
             },
             {
@@ -130,6 +175,23 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-09T18:37:26.947Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-08-12T11:09:27.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RolesService.cs",
+              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
+              "RelativeDocumentMoniker": "Service\\RolesService\\RolesService.cs",
+              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
+              "RelativeToolTip": "Service\\RolesService\\RolesService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T11:08:07.956Z",
+              "EditorCaption": ""
+>>>>>>> 666c508e7f883c00ea30f4d284c3c9350803e38f
             }
           ]
         }

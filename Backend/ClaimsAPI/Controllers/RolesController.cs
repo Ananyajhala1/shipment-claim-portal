@@ -7,21 +7,22 @@ using ClaimsAPI.Models;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
 using ClaimsAPI.Service.RolesService;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace ClaimsAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-        
-
     public class RolesController : ControllerBase
     {
         private IRolesService _rolesService;
-
-        public RolesController(IRolesService rolesService)
+        private readonly RequestTokenInfo _requestTokenInfo;
+        public RolesController(IRolesService rolesService, RequestTokenInfo requestTokenInfo)
         {
             _rolesService = rolesService;
+            _requestTokenInfo = requestTokenInfo;
         }
         [HttpGet]
         //get all roles
@@ -55,7 +56,7 @@ namespace ClaimsAPI.Controllers
         [HttpPost("[action]")]
         public async Task<ActionResult<Role>> CreateRole(CreateUpdateRolesDTO roleDTO)
         {
-            var role = await _rolesService.CreateRole(roleDTO);
+            var role = await _rolesService.CreateRole(roleDTO, int.Parse(_requestTokenInfo.userId));
             if(role == null)
             {
                 return BadRequest();
@@ -83,7 +84,7 @@ namespace ClaimsAPI.Controllers
 
         // Delete role
         [HttpDelete("[action]")]
-        public async Task<ActionResult<Role>> DeleteUser(int id)
+        public async Task<ActionResult<Role>> DeleteRole(int id)
         {
             var role = await _rolesService.DeleteRole(id);
             if(role == null)
