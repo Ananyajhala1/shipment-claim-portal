@@ -3,33 +3,26 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import List from '@mui/material/List';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
-import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
-import IconButton from '@mui/material/IconButton';
-import FormGroup from '@mui/material/FormGroup'; // Import FormGroup
+import FormGroup from '@mui/material/FormGroup';
 
 // project import
 import MainCard from 'components/MainCard';
-import OrdersTable from './OrdersTable';
+import OrdersTable from './UsersTable';
 import RolesTable from './RolesTable';
 
 // Function to create a user
-function createUser(id, name, email, role, dateJoined, status) {
-  return { id, name, email, role, dateJoined, status };
+function createUser(userId, id, firstName, lastName, contactNumber, email, companyId) {
+  return { userId, id, firstName, lastName, contactNumber, email, companyId };
 }
 
 const initialUsers = [
-  createUser(1, 'John Doe', 'john@example.com', 'Admin', '2021-05-20', 1),
-  createUser(2, 'Jane Smith', 'jane@example.com', 'User', '2022-03-14', 0),
-  createUser(3, 'Sam Wilson', 'sam@example.com', 'Moderator', '2023-01-10', 1)
+  createUser(101, 1, 'John', 'Doe', '123-456-7890', 'john@example.com', 1),
+  createUser(102, 2, 'Jane', 'Smith', '234-567-8901', 'jane@example.com', 0),
+  createUser(103, 3, 'Sam', 'Wilson', '345-678-9012', 'sam@example.com', 1)
 ];
 
 export default function DashboardDefault() {
@@ -38,11 +31,11 @@ export default function DashboardDefault() {
   const [isEdit, setIsEdit] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    contactNumber: '',
     email: '',
-    role: '',
-    dateJoined: '',
-    status: 1
+    companyId: 0
   });
 
   const handleClickOpen = () => {
@@ -50,11 +43,11 @@ export default function DashboardDefault() {
     setIsEdit(false);
     setSelectedUser(null);
     setFormData({
-      name: '',
+      firstName: '',
+      lastName: '',
+      contactNumber: '',
       email: '',
-      role: '',
-      dateJoined: '',
-      status: 1
+      companyId: 0
     });
   };
 
@@ -73,9 +66,10 @@ export default function DashboardDefault() {
   };
 
   const handleAddUser = () => {
+    const newUserId = 101 + users.length;
     setUsers([
       ...users,
-      createUser(users.length + 1, formData.name, formData.email, formData.role, formData.dateJoined, formData.status)
+      createUser(newUserId, users.length + 1, formData.firstName, formData.lastName, formData.contactNumber, formData.email, formData.companyId)
     ]);
     setIsFormVisible(false);
   };
@@ -114,29 +108,21 @@ export default function DashboardDefault() {
         {isFormVisible && (
           <Paper sx={{ mt: 2, p: 2 }}>
             <FormGroup>
-            <TextField label="Name" name="name" value={formData.name} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
-<TextField label="Email" name="email" value={formData.email} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
-<TextField label="Role" name="role" value={formData.role} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="First Name" name="firstName" value={formData.firstName} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Last Name" name="lastName" value={formData.lastName} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Contact Number" name="contactNumber" value={formData.contactNumber} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
+              <TextField label="Email" name="email" value={formData.email} onChange={handleChange} fullWidth sx={{ mb: 2 }} />
               <TextField
-                label="Date Joined"
-                name="dateJoined"
-                type="date"
-                InputLabelProps={{ shrink: true }}
-                value={formData.dateJoined}
-                onChange={handleChange}
-                fullWidth sx={{ mb: 2 }}
-              />
-              <TextField
-                label="Status"
-                name="status"
+                label="Company ID"
+                name="companyId"
                 select
                 SelectProps={{ native: true }}
-                value={formData.status}
+                value={formData.companyId}
                 onChange={handleChange}
                 fullWidth
               >
-                <option value={1}>Active</option>
-                <option value={0}>Inactive</option>
+                <option value={1}>1</option>
+                <option value={0}>0</option>
               </TextField>
               <Stack direction="row" spacing={2} justifyContent="flex-end">
                 <Button onClick={() => setIsFormVisible(false)} color="secondary">

@@ -1,10 +1,12 @@
 ﻿using ClaimsAPI.Models;
 using ClaimsAPI.Models.DTO.ClaimSettingsDTO;
 using ClaimsAPI.Models.Entites;
+using ClaimsAPI.Service.claimSettings;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
 using System.Security.Claims;
+using System.Linq;
 
 namespace ClaimsAPI.Controllers
 {
@@ -12,17 +14,17 @@ namespace ClaimsAPI.Controllers
     [ApiController]
     public class ClaimSettingsController : ControllerBase
     {
-        private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private readonly IClaimSettings _ClaimSettings;
 
-        public ClaimSettingsController(ShipmentClaimsContext shipmentClaimsContext)
+        public ClaimSettingsController(IClaimSettings claimSettings)
         {
-            this.shipmentClaimsContext = shipmentClaimsContext;
+            this._ClaimSettings = claimSettings;
         }
 
         [HttpGet]
-        public IActionResult GetClaimSettings()
+        public async Task<IActionResult> GetClaimSettings()
         {
-            var claimSettings = shipmentClaimsContext.ClaimSettings.ToList();
+            var claimSettings = await _ClaimSettings.GetClaimSettings();
             if(claimSettings == null)
             {
                 return BadRequest();
@@ -33,9 +35,9 @@ namespace ClaimsAPI.Controllers
         [HttpGet]
         [Route("{id:int}")]
 
-        public IActionResult GetClaimSettingById(int id)
+        public async Task<IActionResult> GetClaimSettingById(int id)
         {
-            var claimSetting = shipmentClaimsContext.ClaimSettings.Find(id);
+            var claimSetting = await _ClaimSettings.GetClaimSettingById(id);
             if(claimSetting == null)
             {
                 return BadRequest();
@@ -45,32 +47,17 @@ namespace ClaimsAPI.Controllers
 
         [HttpPost]
 
-        public IActionResult PostClaimSetting(ClaimSettingsPostDTO claimSetting)
+        public async Task<IActionResult> PostClaimSetting(ClaimSettingsPostDTO claimSetting)
         {
-            var claimsetting = new ClaimSetting()
-            {
-                ClaimId = claimSetting.ClaimId,
-                CompanyId = claimSetting.CompanyId,
-                DocId = claimSetting.DocId,
-                IsRequired = claimSetting.IsRequired,
-                Claim = claimSetting.Claim,
-                Company = claimSetting.Company,
-                Doc = claimSetting.Doc
-            };
-            shipmentClaimsContext.ClaimSettings.Add(claimsetting);
-            shipmentClaimsContext.SaveChanges();
-            return Ok(claimsetting);
+           var claimsetting = await _ClaimSettings.PostClaimSetting(claimSetting);
+           return Ok(claimsetting);
         }
 
         [HttpPut("{id:int}")]
 
-        public IActionResult UpdateClaimSetting(int id, ClaimSettingsUpdateDTO claimSetting)
+        public async Task<IActionResult> UpdateClaimSetting(int id, ClaimSettingsUpdateDTO claimSetting)
         {
-            if(id != claimSetting.SettingsId)
-            {
-                return BadRequest();
-            }
-            var claimsetting = shipmentClaimsContext.ClaimSettings.Find(id);
+            var claimsetting =await _ClaimSettings.UpdateClaimSetting(id, claimSetting);
             if(claimsetting == null)
             {
                 return BadRequest();
@@ -80,16 +67,10 @@ namespace ClaimsAPI.Controllers
 
         [HttpDelete("{id:int}")]
 
-        public IActionResult DeleteClaimSetting(int id)
+        public async Task<IActionResult> DeleteClaimSetting(int id)
         {
-            var claimSetting = shipmentClaimsContext.ClaimSettings.Find(id);
-            if(claimSetting == null)
-            {
-                return BadRequest();
-            }
-            shipmentClaimsContext.ClaimSettings.Remove(claimSetting);
-            shipmentClaimsContext.SaveChanges();
-            return Ok();
+            var claimSetting = await _ClaimSettings.DeleteClaimSetting(id);
+            return Ok(claimSetting);
         }
     }
 }

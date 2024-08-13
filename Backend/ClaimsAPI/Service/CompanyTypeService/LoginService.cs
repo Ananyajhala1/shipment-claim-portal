@@ -1,81 +1,92 @@
 ﻿using ClaimsAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
+using System.Data;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using ClaimsAPI.Service.RolesService;
+
+//
+
+using Microsoft.AspNetCore.Authorization;
+
+
 
 namespace ClaimsAPI.Service.LoginService
 {
     public class LoginService : ILoginService
     {
-        private readonly ShipmentClaimsContext _shipmentClaimsContext;
-
-        public LoginService(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly ShipmentClaimsContext shipmentClaimsContext;
+        private  IRolesService _rolesService;
+        public LoginService(ShipmentClaimsContext shipmentClaimsContext, IRolesService _rolesService)
         {
-            _shipmentClaimsContext = shipmentClaimsContext;
+            this.shipmentClaimsContext = shipmentClaimsContext;
+            this._rolesService = _rolesService;
         }
-
-        public async Task<AuthDTO> Login(string username, string password, IConfiguration config)
+        public async Task<AuthDTO> Login(string username, string password,IConfiguration config)
         {
-            var user = await _shipmentClaimsContext.UserCredentials
+            // Find the user by username and password hash (insecure example, use hashed passwords in production)
+            var user = await shipmentClaimsContext.UserCredentials
                 .Include(x => x.User)
-                .ThenInclude(x => x.Company)
+               .ThenInclude(x => x.Company)
                 .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
+
+            if (user == null) {
+                throw new Exception("USer not found");
+            }
+
+            if(!verifyPassword(password, user.Password))
+            {
+                throw new Exception("Invalid password");
+            }
 
             if (user != null)
             {
-                var token = GenerateToken(user, config);
+                var token = Genrate(user,config);
+                AuthDTO authdto = new AuthDTO();
+                authdto.AuthToken = token;
+                authdto.RefreshToken = null;
+                authdto.FirstName = user.User.FirstName;
+                authdto.IsLogin = true;
+                authdto.CompanyId = user.User.CompanyId;
+                authdto.CompanyName = user.User.Company.CompanyName;
 
-              
-                var userId = GetUserIdFromToken(token);
-         
-                AuthDTO authDto = new AuthDTO
-                {
-                  
 
-                    
-                    userId = GetUserIdFromToken(token),
+                return authdto;
 
-                    AuthToken = token,
-                    RefreshToken = null,
-                    FirstName = user.User.FirstName,
-                    IsLogin = true,
-                    CompanyId = user.User.CompanyId,
-                    CompanyName = user.User.Company.CompanyName
-                };
-
-                return authDto;
             }
+
             else
             {
-                AuthDTO authDto = new AuthDTO
-                {
-                    IsLogin = false
-                };
+                AuthDTO authdto = new AuthDTO();
+                authdto.IsLogin = false;
 
-                throw new Exception("auth failed");
+
+                throw new Exception($"auth failed");
+
             }
+
         }
 
-        private string GenerateToken(UserCredential user, IConfiguration config)
+        private string Genrate(UserCredential user, IConfiguration config)
         {
-            var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+           var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new System.Security.Claims.Claim("userName",user.User.FirstName.ToString()),
-                new System.Security.Claims.Claim("userId", user.User.UserId.ToString()),
-                new System.Security.Claims.Claim("clientId",user.User.CompanyId.ToString()),
-                new System.Security.Claims.Claim("clientName",user.User.Company.CompanyName.ToString())
+                new System.Security.Claims.Claim("userId", user.UserId.ToString()),
+                new System.Security.Claims.Claim("UserName", user.UserName.ToString()),
+                new System.Security.Claims.Claim("clientId", user.User.CompanyId.ToString()),
+                new System.Security.Claims.Claim("clientName", user.User.Company.CompanyName.ToString())
+            };
 
-                };
-
-            JwtSecurityToken token = new JwtSecurityToken(
-                config["Jwt:Issuer"],
+            var token = new JwtSecurityToken(config["Jwt:Issuer"],
                 config["Jwt:Audience"],
                 claims,
                 expires: DateTime.Now.AddMinutes(15),
@@ -84,24 +95,9 @@ namespace ClaimsAPI.Service.LoginService
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public string GetUserIdFromToken(string token)
+        private bool verifyPassword(string inputPassword, string userPassword)
         {
-            var handler = new JwtSecurityTokenHandler();
-            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
-
-            if (jsonToken == null)
-            {
-                throw new ArgumentException("Invalid JWT token");
-            }
-
-            var userIdClaim = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "userId");
-
-            if (userIdClaim == null)
-            {
-                throw new ArgumentException("UserId claim not found in token");
-            }
-
-            return userIdClaim.Value;
+            return inputPassword == userPassword;
         }
     }
 }

@@ -38,8 +38,6 @@ namespace ClaimsAPI.Service.DocumentTypeService
             var documentType = new ClaimDocumentType
             {
                 DoctypeDes = cdt.DoctypeDes,
-                ClaimDocuments = cdt.ClaimDocuments,
-                Company = cdt.Company,
                 CompanyId = (int)cdt.CompanyId
             };
             await shipmentClaimsContext.ClaimDocumentTypes.AddAsync(documentType);
@@ -59,8 +57,6 @@ namespace ClaimsAPI.Service.DocumentTypeService
                 throw new Exception($"document type with id : {id} not found");
             }
             docType.DoctypeDes = cdt.DoctypeDes;
-            docType.ClaimDocuments = cdt.ClaimDocuments;
-            docType.Company = cdt.Company;
             docType.CompanyId = (int)cdt.CompanyId;
             await shipmentClaimsContext.SaveChangesAsync();
             return docType;

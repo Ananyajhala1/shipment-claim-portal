@@ -30,7 +30,10 @@ namespace ClaimsAPI.Service.UserInfoService
                                    FirstName = user.FirstName,
                                    LastName = user.LastName,
                                    email = user.email,
-                                   ContactNumber = user.ContactNumber
+                                   ContactNumber = user.ContactNumber,
+                                   CompanyId = user.CompanyId
+
+
                                }).ToListAsync< GetUserInfoDTO>();
 
             return users;
@@ -47,7 +50,8 @@ namespace ClaimsAPI.Service.UserInfoService
                                    FirstName = user.FirstName,
                                    LastName = user.LastName,
                                    email = user.email,
-                                   ContactNumber = user.ContactNumber
+                                   ContactNumber = user.ContactNumber,
+                                   CompanyId = user.CompanyId
                                }).ToListAsync();
 
             return users2;
@@ -123,18 +127,16 @@ namespace ClaimsAPI.Service.UserInfoService
         }
         // Delete a user
      
-        public async Task<UpdateUserInfoDTO> DeleteUser(UpdateUserInfoDTO userInfoDTO)
+        public async Task<UserInfo> DeleteUser(int id)
         {
-            var user = await shipmentClaimsContext.UserInfos.FindAsync(userInfoDTO.UserId);
-            if (user == null)
+            var user = await shipmentClaimsContext.UserInfos.FirstOrDefaultAsync(u => u.UserId == id);
+            if(user == null)
             {
-               throw new Exception($" users is null");
+                throw new Exception("user id is invalid");
             }
-
             shipmentClaimsContext.UserInfos.Remove(user);
             await shipmentClaimsContext.SaveChangesAsync();
-
-            return userInfoDTO;
+            return user;
         }
 
     }
