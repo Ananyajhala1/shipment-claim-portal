@@ -1,32 +1,44 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
+  "WorkspaceRootPath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:middleware\\tokeninfomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\middleware\\itokeninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:middleware\\itokeninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\rolesservice\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\rolesservice\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\rolesservice\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kunjt\\AppData\\Local\\SourceServer\\3a1184ca282926d1e165d7d6f5cb5b575e77847fc5e9c23c4e6c3a589f40d1e1\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\rolesservice\\irolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\rolesservice\\irolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\rolesservice\\irolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\models\\viewmodels\\userroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\models\\viewmodels\\userroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:models\\viewmodels\\userroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:service\\company\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\shipmentclaim\\backend\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|d:\\.net_projects\\shipment-claim-portal\\backend\\claimsapi\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58B91EFD-BA92-4C5E-BB7E-9424DD6838E9}|ClaimsAPI.csproj|solutionrelative:controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -37,15 +49,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TokenInfoMiddleware.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\TokenInfoMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\TokenInfoMiddleware.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\TokenInfoMiddleware.cs",
+              "RelativeToolTip": "Middleware\\TokenInfoMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:19:28.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITokenInfo.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\ITokenInfo.cs",
+              "RelativeDocumentMoniker": "Middleware\\ITokenInfo.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Middleware\\ITokenInfo.cs",
+              "RelativeToolTip": "Middleware\\ITokenInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:19:23.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:17:25.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
@@ -57,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RolesService.cs",
               "DocumentMoniker": "C:\\Users\\kunjt\\AppData\\Local\\SourceServer\\3a1184ca282926d1e165d7d6f5cb5b575e77847fc5e9c23c4e6c3a589f40d1e1\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
               "ToolTip": "C:\\Users\\kunjt\\AppData\\Local\\SourceServer\\3a1184ca282926d1e165d7d6f5cb5b575e77847fc5e9c23c4e6c3a589f40d1e1\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs [Read Only]",
@@ -68,81 +123,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "userRoleDTO.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\ViewModels\\userRoleDTO.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\ViewModels\\userRoleDTO.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\userRoleDTO.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\ViewModels\\userRoleDTO.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Models\\ViewModels\\userRoleDTO.cs",
               "RelativeToolTip": "Models\\ViewModels\\userRoleDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:31:38.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T11:31:38.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRolesService.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\IRolesService.cs",
+              "RelativeDocumentMoniker": "Service\\RolesService\\IRolesService.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\IRolesService.cs",
+              "RelativeToolTip": "Service\\RolesService\\IRolesService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T11:06:47.086Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IRolesService.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\IRolesService.cs",
-              "RelativeDocumentMoniker": "Service\\RolesService\\IRolesService.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\IRolesService.cs",
-              "RelativeToolTip": "Service\\RolesService\\IRolesService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:06:47.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "RolesController.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\RolesController.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\RolesController.cs",
               "RelativeDocumentMoniker": "Controllers\\RolesController.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\RolesController.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\RolesController.cs",
               "RelativeToolTip": "Controllers\\RolesController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAwFIAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-10T11:03:02.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CompanyController.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "Controllers\\CompanyController.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\CompanyController.cs",
               "RelativeToolTip": "Controllers\\CompanyController.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwCYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:03:00.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T11:03:00.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "CompanyService.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\CompanyService.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\CompanyService.cs",
               "RelativeDocumentMoniker": "Service\\company\\CompanyService.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\CompanyService.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\company\\CompanyService.cs",
               "RelativeToolTip": "Service\\company\\CompanyService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T10:54:27.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T10:54:27.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RolesService.cs",
-              "DocumentMoniker": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
+              "DocumentMoniker": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
               "RelativeDocumentMoniker": "Service\\RolesService\\RolesService.cs",
-              "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
+              "ToolTip": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\Service\\RolesService\\RolesService.cs",
               "RelativeToolTip": "Service\\RolesService\\RolesService.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAADwvyYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T10:54:21.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T10:54:21.232Z"
             }
           ]
         }

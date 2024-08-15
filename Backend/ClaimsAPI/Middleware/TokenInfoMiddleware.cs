@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace ClaimsAPI.Middlewares
+namespace ClaimsAPI.Middleware
 {
     public class TokenInfoMiddleware : ITokenInfo
     {

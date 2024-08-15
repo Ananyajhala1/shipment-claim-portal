@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Cors;
 using ClaimsAPI.Service.UserCredentialService;
 using Microsoft.Extensions.Azure;
 using System.Text.Json.Serialization;
-using ClaimsAPI.Middlewares;
+using ClaimsAPI.Middleware;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
