@@ -4,22 +4,14 @@
     {
 
         IList<string> Errors = new List<string>();
-
-
-
         private IList<BRuleBase> _Brules;
-
-
         public BRuleRunner(IList<BRuleBase> bRules)
         {
             _Brules = bRules;
         }
-
-
-
-       public void ExecuteRules()
+        public void ExecuteRules()
         {
-            foreach ( var Brule in _Brules)
+            foreach (var Brule in _Brules)
             {
                 if (!Brule.Execute())
                 {
@@ -28,12 +20,9 @@
 
             }
         }
-
-
-
         public bool hasError()
         {
-            if(Errors != null && Errors.Count>0 )
+            if (Errors != null && Errors.Count > 0)
             {
                 return true;
             }
@@ -43,24 +32,12 @@
                 return false;
             }
         }
-
-
         public IList<string> getErrorList()
         {
 
             return Errors;
 
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 }

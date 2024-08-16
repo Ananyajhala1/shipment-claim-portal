@@ -1,4 +1,5 @@
-﻿using ClaimsAPI.Models;
+﻿using ClaimsAPI.businessRulesValidator;
+using ClaimsAPI.Models;
 using ClaimsAPI.Models.Entites;
 using ClaimsAPI.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -35,30 +36,24 @@ namespace ClaimsAPI.Service.RolesService
         }
         public async Task<Role> CreateRole(CreateUpdateRolesDTO roleDTO, int userID)
         {
-            var userRoles = await GetRolesInUser(userID);
-            bool isAdmin = userRoles.Any(x => x.RoleID == 3);   
-            if(!isAdmin)
+            var adminRoleValidatorBRule = new AdminRoleValidatorBRule(shipmentClaimsContext, userID, this);
+            var ruleRunner = new BRuleRunner(new List<BRuleBase> { adminRoleValidatorBRule });
+            ruleRunner.ExecuteRules();
+            if (ruleRunner.hasError())
             {
-                throw new Exception("You are not allowed to create role as you are not assigned admin role");
+                throw new Exception(ruleRunner.getErrorList().First());
             }
-            else
+            if (roleDTO == null)
             {
-                if (roleDTO == null)
-                {
-                    throw new Exception("Role is empty please enter valid values");
-                }
-
-                else
-                {
-                    var role = new Role
-                    {
-                        RoleName = roleDTO.RoleName
-                    };
-                    await shipmentClaimsContext.Roles.AddAsync(role);
-                    await shipmentClaimsContext.SaveChangesAsync();
-                    return role;
-                }
+                throw new Exception("Role is empty please enter valid rules");
             }
+            var role = new Role
+            {
+                RoleName = roleDTO.RoleName
+            };
+            await shipmentClaimsContext.Roles.AddAsync(role);
+            await shipmentClaimsContext.SaveChangesAsync();
+            return role;
         }
         public async Task<Role> UpdateRole(int id, CreateUpdateRolesDTO role)
         {

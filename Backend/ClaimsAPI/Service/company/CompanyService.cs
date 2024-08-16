@@ -1,28 +1,105 @@
-﻿using ClaimsAPI.Models;
+﻿using ClaimsAPI.businessRulesValidator;
+using ClaimsAPI.Models;
 using ClaimsAPI.Models.DTO.CompanyDTO;
 using ClaimsAPI.Models.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClaimsAPI.Service.company
 {
-    public class CompanyService: ICompany
+    public class CompanyService : ICompany
     {
         private readonly ShipmentClaimsContext shipmentClaimsContext;
-        public CompanyService(ShipmentClaimsContext shipmentClaimsContext)
+        private readonly RequestTokenInfo _requestToken;
+
+        public CompanyService(ShipmentClaimsContext shipmentClaimsContext, RequestTokenInfo requestToken)
         {
             this.shipmentClaimsContext = shipmentClaimsContext;
+            this._requestToken = requestToken;
         }
 
-        public async Task<IEnumerable<Company>> GetCompanies(int clientID)
+        public async Task<IEnumerable<Company>> GetCompanies()
         {
-            // will return all the companies that has parentcompanyID equal to clientId
-            var companies =await shipmentClaimsContext.Companies.Where(c => c.ParentCompanyId == clientID || c.CompanyId == 1).ToListAsync();
+            var companies = await shipmentClaimsContext.Companies.ToListAsync();
             if (companies == null)
             {
                 return Enumerable.Empty<Company>();
             }
             return companies;
         }
+
+
+
+        public async Task<IEnumerable<Company>> GetCarrier(int companyid)
+        {
+
+
+            var clientValidatorRule = new ClientValidatorBRule(shipmentClaimsContext, companyid, _requestToken);
+
+
+            var rules = new List<BRuleBase>();
+            rules.Add(clientValidatorRule);
+
+            var bRuleRunner = new BRuleRunner(rules);
+
+            bRuleRunner.ExecuteRules();
+
+
+            if (!bRuleRunner.hasError())
+            {
+
+                var carriers = await shipmentClaimsContext.Companies.Where(x => (x.CompanyTypeId == 2) && x.ParentCompanyId == companyid).ToListAsync();
+                if (carriers == null)
+                {
+                    return Enumerable.Empty<Company>();
+                }
+                return carriers;
+            }
+
+            else
+            {
+                //todo: return error 
+                return Enumerable.Empty<Company>(); ;
+
+            }
+
+
+        }
+        public async Task<IEnumerable<Company>> GetInsurance(int companyid)
+        {
+
+
+            var clientValidatorRule = new ClientValidatorBRule(shipmentClaimsContext, companyid, _requestToken);
+
+
+            var rules = new List<BRuleBase>();
+            rules.Add(clientValidatorRule);
+
+            var bRuleRunner = new BRuleRunner(rules);
+
+            bRuleRunner.ExecuteRules();
+
+
+            if (!bRuleRunner.hasError())
+            {
+
+                var carriers = await shipmentClaimsContext.Companies.Where(x => (x.CompanyTypeId == 3) && x.ParentCompanyId == companyid).ToListAsync();
+                if (carriers == null)
+                {
+                    return Enumerable.Empty<Company>();
+                }
+                return carriers;
+            }
+
+            else
+            {
+                //todo: return error 
+                return Enumerable.Empty<Company>(); ;
+
+            }
+
+
+        }
+
 
         public async Task<Company> GetCompanyById(int id)
         {
@@ -34,14 +111,14 @@ namespace ClaimsAPI.Service.company
             return company;
         }
 
-        public async Task<Company> AddCompany(CompanyPostDTO company, int clientId)
+        public async Task<Company> AddCompany(CompanyPostDTO company)
         {
             var Company = new Company()
             {
                 CompanyTypeId = company.CompanyTypeId,
                 CompanyName = company.CompanyName,
                 IsCorporate = company.IsCorporate,
-                ParentCompanyId = clientId,
+                ParentCompanyId = company.ParentCompanyId,
             };
             shipmentClaimsContext.Companies.Add(Company);
             await shipmentClaimsContext.SaveChangesAsync();

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "kziAkAFAb18=",
+=======
+  "dgSpecHash": "rWaIioWch50=",
+>>>>>>> 5beb36c0d49d895cf7c004cb12127e7bef4dfade
   "success": true,
   "projectFilePath": "D:\\.NET_projects\\shipment-claim-portal\\Backend\\ClaimsAPI\\ClaimsAPI.csproj",
   "expectedPackageFiles": [
