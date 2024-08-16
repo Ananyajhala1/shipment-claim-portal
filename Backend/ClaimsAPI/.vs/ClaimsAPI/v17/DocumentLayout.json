@@ -76,8 +76,7 @@
               "RelativeToolTip": "Models\\ViewModels\\userRoleDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:31:38.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T11:31:38.838Z"
             },
             {
               "$type": "Document",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "Service\\RolesService\\IRolesService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:06:47.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T11:06:47.086Z"
             },
             {
               "$type": "Document",
@@ -100,7 +98,7 @@
               "RelativeDocumentMoniker": "Controllers\\RolesController.cs",
               "ToolTip": "D:\\ShipmentClaim\\backend\\shipment-claim-portal\\Backend\\ClaimsAPI\\Controllers\\RolesController.cs",
               "RelativeToolTip": "Controllers\\RolesController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAwFIAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-10T11:03:02.716Z",
               "EditorCaption": ""
@@ -115,8 +113,7 @@
               "RelativeToolTip": "Controllers\\CompanyController.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwCYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T11:03:00.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T11:03:00.354Z"
             },
             {
               "$type": "Document",
@@ -128,8 +125,7 @@
               "RelativeToolTip": "Service\\company\\CompanyService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T10:54:27.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T10:54:27.612Z"
             },
             {
               "$type": "Document",
@@ -141,8 +137,7 @@
               "RelativeToolTip": "Service\\RolesService\\RolesService.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAADwvyYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T10:54:21.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T10:54:21.232Z"
             }
           ]
         }
