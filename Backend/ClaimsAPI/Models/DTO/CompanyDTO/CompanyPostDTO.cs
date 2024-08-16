@@ -11,7 +11,7 @@ namespace ClaimsAPI.Models.DTO.CompanyDTO
 
         public bool IsCorporate { get; set; }
 
-        public int? ParentCompanyId { get; set; }
+
 
         
     }

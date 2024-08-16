@@ -1,4 +1,4 @@
-﻿using ClaimsAPI.businessRulesValidator;
+﻿﻿using ClaimsAPI.businessRulesValidator;
 using ClaimsAPI.Models;
 using ClaimsAPI.Models.DTO.CompanyDTO;
 using ClaimsAPI.Models.Entites;
@@ -118,7 +118,7 @@ namespace ClaimsAPI.Service.company
                 CompanyTypeId = company.CompanyTypeId,
                 CompanyName = company.CompanyName,
                 IsCorporate = company.IsCorporate,
-                ParentCompanyId = company.ParentCompanyId,
+                ParentCompanyId = int.Parse(_requestToken.clientId),
             };
             shipmentClaimsContext.Companies.Add(Company);
             await shipmentClaimsContext.SaveChangesAsync();
